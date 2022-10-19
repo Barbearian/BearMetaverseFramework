@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 498602020
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 78bcd9eeabc0f139de24f1aaa771b2d4
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 8c9ba18e0d90f63ba357e71aeb82cbcf
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.FontData
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+Assets:
+- Assets/xasset/Example/Arts/Prefabs/Preload/Copyright.prefab
+Dependencies:
+- C:/UnityProject/BearFramework/BearFramework/My project/Bundles/Windows/assets_xasset_example_arts_fonts_helvetica_ttc.bundle
