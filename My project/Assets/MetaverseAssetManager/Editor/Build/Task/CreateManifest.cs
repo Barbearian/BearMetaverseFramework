@@ -15,7 +15,10 @@ namespace Bear.editor{
 			var forceRebuild = _task.forceRebuild;
 			var buildNumber = _task.buildVersion;
 			var versions = BuildVersions.Load(GetBuildPath(Versions.Filename));
+			//	Debug.Log(GetBuildPath(Versions.Filename));
 			var version = versions.Get(_task.name);
+			//Debug.Log(GetBuildPath(version?.file));
+
 			var manifest = Manifest.LoadFromFile(GetBuildPath(version?.file));
 			if (buildNumber > 0)
 				manifest.data.version = buildNumber;
@@ -74,6 +77,8 @@ namespace Bear.editor{
 			manifest.data.dirs = dirs;
 			manifest.data.bundleExtension = Settings.BundleExtension;
 			_task.changes.AddRange(changes);
+			_task.SaveManifest(manifest);
+
 
 		}
 		

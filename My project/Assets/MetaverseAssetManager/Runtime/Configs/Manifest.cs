@@ -17,13 +17,16 @@ namespace Bear
 	
 	public class Manifest:ScriptableObject
 	{
-		public ManifestData data;
+		public ManifestData data = new ManifestData();
 		private Dictionary<string, string> aliasWithAssets = new Dictionary<string, string>();
 		private Dictionary<string, List<int>> directoryWithAssets = new Dictionary<string, List<int>>();
 		private Dictionary<string, ManifestAsset> nameWithAssets = new Dictionary<string, ManifestAsset>();
 		private Dictionary<string, ManifestBundle> nameWithBundles = new Dictionary<string, ManifestBundle>();
+		
 		public static Func<string, string> customLoader { get; set; }
 		public string nameWithAppendHash { get; internal set; }
+		
+		
 		public string[] GetAssets()
 		{
 			var list = new List<string>();
@@ -79,17 +82,16 @@ namespace Bear
 			OnLoad();
 		}
 		
-		public Manifest(ManifestData data)
-		{
-			Init(data);
-		}
-		
 		
 		public void OnLoad(){
 			Init(data);
 		}
 		public void Init(ManifestData data){
-
+			
+			nameWithBundles.Clear();
+			aliasWithAssets.Clear();
+			nameWithAssets.Clear();
+			
 			var dirs = data.dirs;
 			var bundles = data.bundles;
 			var assets = data.assets;
@@ -207,6 +209,8 @@ namespace Bear
 		{
 			return aliasWithAssets.TryGetValue(assetName, out actualPath);
 		}
+		
+		
 	}
 	
 	

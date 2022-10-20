@@ -13,7 +13,15 @@ namespace Bear.editor{
 	{
 		
 		public static string BundleExtension { get; set; } = ".bundle";
-
+		
+		public static Settings GetDefaultSettings()
+		{
+			return EditorUtility.FindOrCreateAsset<Settings>("Assets/BearFramework/BearAsset/Settings.asset");
+		}
+		public void Initialize()
+		{
+			ExcludeFiles = excludeFiles;
+		}
 		/// <summary>
 		///     采集资源或依赖需要过滤掉的文件
 		/// </summary>

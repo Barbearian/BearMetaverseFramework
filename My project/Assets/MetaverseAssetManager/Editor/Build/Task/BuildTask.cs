@@ -7,6 +7,8 @@ namespace Bear.editor{
 	using UnityEditor;
 	using System;
 	using System.IO;
+	using Debug = UnityEngine.Debug;
+
 	public class BuildTask
 	{
 		public readonly List<ManifestBundle> bundles = new List<ManifestBundle>();
@@ -29,6 +31,30 @@ namespace Bear.editor{
 			outputPath = Settings.PlatformBuildPath;
 		}
 		public string name { get; }
+
+		public void Run()
+		{
+			stopwatch.Start();
+			foreach (var job in jobs)
+			{
+				try
+				{
+					job.Run();
+				}
+					catch (Exception e)
+					{
+						job.error = e.Message;
+						Debug.LogException(e);
+					}
+
+				if (string.IsNullOrEmpty(job.error)) continue;
+				break;
+			}
+
+			stopwatch.Stop();
+			var elapsed = stopwatch.ElapsedMilliseconds / 1000f;
+			Debug.LogFormat("Run BuildTask for {0} with {1}s", name, elapsed);
+		}
 
 		public string GetBuildPath(string filename)
 		{
