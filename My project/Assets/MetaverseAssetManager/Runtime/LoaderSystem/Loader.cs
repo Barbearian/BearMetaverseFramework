@@ -6,7 +6,12 @@ namespace Bear{
 	using System;
 	public class AssetLoader 
 	{
+		
 		public Manifest manifest;
+		
+		public AssetLoader(Manifest newmanifest){
+			manifest = newmanifest;
+		}
 		
 		#region Loadable
 		LoadableUpdater LoadableUpdater = new LoadableUpdater();
@@ -37,7 +42,7 @@ namespace Bear{
 		
 		#region version
 		
-		public Versions versions;
+		public Versions versions = new Versions();
 		public List<string> StreamingAssets =>versions.StreamingAssets;
 		#endregion 
 		

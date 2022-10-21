@@ -6,7 +6,21 @@ namespace Bear{
 	using System;
 	public class Downloader 
 	{
+		public Downloader(){
+			DownloadURL = downloadURL;
+			DownloadDataPath = $"{Application.persistentDataPath}/{Utility.buildPath}";
+		}
 		
+		[Tooltip("资源下载地址，指向平台目录的父目录")] [SerializeField]
+		private string downloadURL = "http://127.0.0.1/Bundles/";
+		
+		[Tooltip("最大并发下载数量")] [SerializeField] [Range(1, 10)]
+		private uint maxDownloads;
+
+		[Tooltip("单个下载最大带宽")] [SerializeField] private int maxDownloadSpeed = 1024 * 1024 * 4; // 4 MB
+
+		[Tooltip("最大自修复异常次数")] [SerializeField] [Range(0, 5)]
+		private int maxRetryTimes = 3;
 		/// <summary>
 		///     自定义下载地址
 		/// </summary>

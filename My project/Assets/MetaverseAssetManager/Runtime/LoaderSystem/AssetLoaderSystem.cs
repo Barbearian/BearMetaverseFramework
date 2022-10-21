@@ -14,6 +14,12 @@ namespace Bear{
 			return loader.AssetCreator(path, type);
 		}
 		
+		public static Asset LoadAssetAsync<T>(this AssetLoader loader,string path, Action<Asset> completed = null)
+		{
+			var type = typeof(T);
+			return loader.LoadAssetInternal(path, type, completed);
+		}
+		
 		public static Asset LoadAssetAsync(this AssetLoader loader,string path, Type type, Action<Asset> completed = null)
 		{
 			return loader.LoadAssetInternal(path, type, completed);
