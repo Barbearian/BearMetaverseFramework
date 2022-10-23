@@ -8,7 +8,7 @@ namespace Bear{
 		public static Dependencies LoadDependencies(this AssetLoader loader,string path){
 			if (!loader.DependenciesCache.TryGetValue(path, out var item))
 			{
-				item = new Dependencies {pathOrURL = path};
+				item = new Dependencies {Loader = loader,pathOrURL = path};
 				loader.DependenciesCache.Add(path, item);
 			}
 

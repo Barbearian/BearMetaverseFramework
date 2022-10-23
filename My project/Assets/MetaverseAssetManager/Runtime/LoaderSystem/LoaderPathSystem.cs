@@ -24,7 +24,7 @@ namespace Bear{
 			if (loader.BundleWithPathOrUrLs.TryGetValue(assetBundleName, out var path)) return path;
 
 			var containsKey = loader.StreamingAssets.Contains(assetBundleName);
-			if(LoaderVersionSystem.OfflineMode || containsKey){
+			if(loader.OfflineMode|| containsKey){
 				path = loader.GetPlayerDataPath(assetBundleName);
 				loader.BundleWithPathOrUrLs[assetBundleName] = path;
 				return path;

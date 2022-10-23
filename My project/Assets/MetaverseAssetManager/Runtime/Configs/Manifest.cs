@@ -18,10 +18,10 @@ namespace Bear
 	public class Manifest:ScriptableObject
 	{
 		public ManifestData data = new ManifestData();
-		private Dictionary<string, string> aliasWithAssets = new Dictionary<string, string>();
-		private Dictionary<string, List<int>> directoryWithAssets = new Dictionary<string, List<int>>();
-		private Dictionary<string, ManifestAsset> nameWithAssets = new Dictionary<string, ManifestAsset>();
-		private Dictionary<string, ManifestBundle> nameWithBundles = new Dictionary<string, ManifestBundle>();
+		public Dictionary<string, string> aliasWithAssets = new Dictionary<string, string>();
+		public Dictionary<string, List<int>> directoryWithAssets = new Dictionary<string, List<int>>();
+		public Dictionary<string, ManifestAsset> nameWithAssets = new Dictionary<string, ManifestAsset>();
+		public Dictionary<string, ManifestBundle> nameWithBundles = new Dictionary<string, ManifestBundle>();
 		
 		public static Func<string, string> customLoader { get; set; }
 		public string nameWithAppendHash { get; internal set; }

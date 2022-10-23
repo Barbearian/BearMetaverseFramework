@@ -14,9 +14,9 @@ namespace Bear{
 				
 				if(item == null){
 					if (url.StartsWith("http://") || url.StartsWith("https://") || url.StartsWith("ftp://"))
-						item = new DownloadBundle {pathOrURL = url, info = bundle};
+						item = new DownloadBundle {Loader = loader,pathOrURL = url, info = bundle};
 					else
-						item = new LocalBundle {pathOrURL = url, info = bundle};
+						item = new LocalBundle {Loader = loader,pathOrURL = url, info = bundle};
 				}
 				
 				loader.BundleCache.Add(bundle.nameWithAppendHash, item);

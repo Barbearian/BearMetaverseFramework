@@ -14,10 +14,6 @@ namespace Bear{
 	{
 		public static VerifyMode VerifyMode { get; set; } = VerifyMode.Hash;
 
-		/// <summary>
-		///     是否是离线模式
-		/// </summary>
-		public static bool OfflineMode { get; private set; }
 		
 		public static bool ContainsAsset(this AssetLoader Loader,string assetPath)
 		{
@@ -46,7 +42,7 @@ namespace Bear{
 		{
 			if (bundle == null) return false;
 
-			if (OfflineMode || (checkStreamingAssets && loader.StreamingAssets.Contains(bundle.nameWithAppendHash))) return true;
+			if (loader.OfflineMode || (checkStreamingAssets && loader.StreamingAssets.Contains(bundle.nameWithAppendHash))) return true;
 
 			var path = loader.GetDownloadDataPath(bundle.nameWithAppendHash);
 			var file = new FileInfo(path);

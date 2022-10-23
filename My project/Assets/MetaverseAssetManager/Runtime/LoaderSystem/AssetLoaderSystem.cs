@@ -10,8 +10,9 @@ namespace Bear{
 		internal static Asset CreateAssetInstance(this AssetLoader loader,string path, Type type)
 		{
 			if (string.IsNullOrEmpty(path)) throw new ArgumentException(nameof(path));
-
-			return loader.AssetCreator(path, type);
+			Asset rs = loader.AssetCreator(path, type);
+			rs.Loader = loader;
+			return rs;
 		}
 		
 		public static Asset LoadAssetAsync<T>(this AssetLoader loader,string path, Action<Asset> completed = null)

@@ -33,8 +33,40 @@ namespace Bear.editor{
 			".giparams",
 			"LightingData.asset"
             }; 
+         
+		/// <summary>
+		///     播放器的运行模式。Preload 模式不更新资源，并且打包的时候会忽略分包配置。
+		/// </summary>
+		[Tooltip("播放器的运行模式")] public ScriptPlayMode scriptPlayMode = ScriptPlayMode.Simulation;
+          
+		/// <summary>
+		///     安装包资源目录, 打包安装包的时候会自动根据分包配置将资源拷贝到这个目录
+		/// </summary>
+		public static string BuildPlayerDataPath => $"{Application.streamingAssetsPath}/{Utility.buildPath}";
+
             
 		public static List<string> ExcludeFiles { get; private set; }
+		
+		/// <summary>
+		///     获取包含在安装包的资源
+		/// </summary>
+		/// <returns></returns>
+		public List<ManifestBundle> GetBundlesInBuild(BuildVersions versions)
+		{
+			var bundles = new List<ManifestBundle>();
+			foreach (var version in versions.data)
+			{
+				var manifest = Manifest.LoadFromFile(GetBuildPath(version.file));
+				bundles.AddRange(manifest.data.bundles);
+			}
+
+			return bundles;
+		}
+		
+		public static string GetBuildPath(string file)
+		{
+			return $"{PlatformBuildPath}/{file}";
+		}
             
 		public static string GetPlatformName()
 		{

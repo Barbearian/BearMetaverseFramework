@@ -4,8 +4,22 @@ using UnityEngine;
 
 namespace Bear{
 	using System;
-	public class Downloader 
+	using System.Diagnostics;
+	using System.Net.Security;
+
+	public class Downloader:IUpdatable
 	{
+		
+		/// <summary>
+		///     ftp 用户名
+		/// </summary>
+		public string FtpUserID { get; set; }
+
+		/// <summary>
+		///     ftp 用户密码
+		/// </summary>
+		public string FtpPassword { get; set; }
+		
 		public Downloader(){
 			DownloadURL = downloadURL;
 			DownloadDataPath = $"{Application.persistentDataPath}/{Utility.buildPath}";
@@ -59,6 +73,20 @@ namespace Bear{
 
 			var url = CustomDownloader(file);
 			return !string.IsNullOrEmpty(url) ? url : $"{DownloadURL}{LoaderPathSystem.PlatformName}/{file}";
+		}
+		
+		
+		
+		public void Update(){
+			
+		}
+		
+		[Conditional("UNITY_EDITOR")]
+		private void DebugUpdate()
+		{
+			DownloadSystem.MaxBandwidth = maxDownloadSpeed;
+			DownloadSystem.MaxDownloads = maxDownloads;
+			DownloadSystem.MaxRetryTimes = maxRetryTimes;
 		}
 	}
 }
