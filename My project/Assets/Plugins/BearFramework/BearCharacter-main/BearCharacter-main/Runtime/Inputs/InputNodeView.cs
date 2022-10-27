@@ -44,9 +44,12 @@ namespace Bear
         }
     }
 
-    public class InputAssociateNodeData:INodeData{
+	public class InputAssociateNodeData:INodeData,IOnDetachedFromNode{
         public Dictionary<string,List<System.Action<InputAction.CallbackContext>>> actions = new Dictionary<string, List<System.Action<InputAction.CallbackContext>>>();
-    }
+		public void Detached(INode node){
+			this.Dispose();
+		}
+	}
 
     public static class InputAssociateNodeDataSystem{
         public static void Register(this InputAssociateNodeData nodedata, string code, System.Action<InputAction.CallbackContext> DOnPerformed){
