@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: d5ab6fbbeca9dc64b9a34851453b8e1d
+  m_SerializeEntries:
+  - m_GUID: d7abfea8f15f36c499137cff64cc47d8
+    m_Address: Clothing
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 05ad499a3516abe41a6c695650a1ff51
+    m_Address: female
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 87085bb977d922b4db946526c87785fe, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: eb5b70123ea14ad49bbb97499ffad09d, type: 2}
+    - {fileID: 11400000, guid: 4c67a817e6cd20e4ea66639ae2053f4e, type: 2}

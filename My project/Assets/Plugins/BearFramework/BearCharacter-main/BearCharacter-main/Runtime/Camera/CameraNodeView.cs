@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,6 +25,8 @@ namespace Bear
             if(!this.TryGetGlobalNodeData<CameraNodeData>(out cnd)){
                 cnd = new CameraNodeData();
                 this.AddGlobalNodeData<CameraNodeData>(cnd);
+            }else{
+            	this.cnd = cnd;
             }
             
         }

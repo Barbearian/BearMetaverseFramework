@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ namespace Bear
     }
 
    
-
+	[System.Serializable]
     public class ResourceMakeSignal : ISignal
     {
         public string id;
