@@ -15,8 +15,7 @@ namespace Bear{
         public CameraTargetNodeData dcland;
 
         
-        private void Awake() {
-            this.GetCineMachineBrainNodeData();
+	    private void Awake() {
             cam = GetComponent<CinemachineVirtualCamera>();
 
             cam.LookAt = dcland.lookAt;
@@ -29,18 +28,6 @@ namespace Bear{
     }
 
     public static class CinemachineVirtualCameraNodeViewSystem{
-        public static CinemachineBrainNodeData GetCineMachineBrainNodeData(this ICinemachineBrainAccessor view,CinemachineBrainNodeData defaultData = new CinemachineBrainNodeData()){
-	        if(INodeSystem.GlobalNode.TryGetNodeData<CinemachineBrainNodeData>(out var data)){
-		        data.Init();
-
-                return data;
-            }else{
-                INodeSystem.GlobalNode.AddNodeData(defaultData);
-                defaultData.Init();
-                return defaultData;
-            }
-            //return INodeSystem.GlobalNode.GetOrCreateNodeData<CinemachineBrainNodeData>(defaultData);
-        }
 
         public static void UpdateLookAt(this CinemachineVirtualCameraNodeView view, Transform transform){
             view.cam.LookAt = transform;
@@ -51,8 +38,20 @@ namespace Bear{
         }
     }
 
-    public struct CinemachineBrainNodeData:INodeData{
-        public CinemachineBrain brain;
+
+	public struct CinemachineBrainNodeData:INodeData,IOnAttachedToNode,IOnDetachedFromNode{
+	    public CinemachineBrain brain;
+        
+		public void Attached(INode node){
+			var cam = Camera.main;
+			if(!cam.TryGetComponent<CinemachineBrain>(out var brain)){
+				cam.gameObject.AddComponent<CinemachineBrain>();
+			}
+		}
+		
+		public void Detached(INode node){
+			Debug.Log("Cinemachine Camera detached");
+		}
     }
 
     public static class CinemachineBrainNodeDataSystem{

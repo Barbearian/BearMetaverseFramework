@@ -28,6 +28,7 @@ namespace Bear
 		    //Make Camera 
 		    var cam = Camera.main;
 		    var camview = cam.gameObject.AddNodeView<CameraNodeView>();
+		    camview.AddNodeData(new CinemachineBrainNodeData());
 		    camview.Init();
 		    
 		    var camNode = camera.gameObject.AddNodeView<CinemachineVirtualCameraNodeView>();
