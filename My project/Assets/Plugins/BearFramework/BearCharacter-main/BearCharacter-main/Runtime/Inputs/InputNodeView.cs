@@ -44,9 +44,15 @@ namespace Bear
         }
     }
 
-	public class InputAssociateNodeData:INodeData,IOnDetachedFromNode{
+	public class InputAssociateNodeData:INodeData,IOnDetachedFromNode,IOnAttachedToNode{
         public Dictionary<string,List<System.Action<InputAction.CallbackContext>>> actions = new Dictionary<string, List<System.Action<InputAction.CallbackContext>>>();
+		public void Attached(INode node){
+			Debug.Log("I am attached");
+		}
+		
 		public void Detached(INode node){
+			Debug.Log("I am detached");
+
 			this.Dispose();
 		}
 	}
