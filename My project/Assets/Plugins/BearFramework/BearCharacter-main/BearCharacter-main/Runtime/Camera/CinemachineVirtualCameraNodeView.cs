@@ -31,7 +31,7 @@ namespace Bear{
     public static class CinemachineVirtualCameraNodeViewSystem{
         public static CinemachineBrainNodeData GetCineMachineBrainNodeData(this ICinemachineBrainAccessor view,CinemachineBrainNodeData defaultData = new CinemachineBrainNodeData()){
 	        if(INodeSystem.GlobalNode.TryGetNodeData<CinemachineBrainNodeData>(out var data)){
-		        defaultData.Init();
+		        data.Init();
 
                 return data;
             }else{
