@@ -7,7 +7,7 @@ namespace Bear{
 	using System.Diagnostics;
 	using System.Net.Security;
 
-	public class Downloader:IUpdatable
+	public class Downloader
 	{
 		
 		/// <summary>
@@ -24,17 +24,18 @@ namespace Bear{
 			DownloadURL = downloadURL;
 			DownloadDataPath = $"{Application.persistentDataPath}/{Utility.buildPath}";
 		}
-		
+
+		public Downloader(string downloadURL)
+		{
+			this.downloadURL = downloadURL;
+			DownloadURL = downloadURL;
+			DownloadDataPath = $"{Application.persistentDataPath}/{Utility.buildPath}";
+		}
+
 		[Tooltip("资源下载地址，指向平台目录的父目录")] [SerializeField]
 		private string downloadURL = "http://127.0.0.1/Bundles/";
 		
-		[Tooltip("最大并发下载数量")] [SerializeField] [Range(1, 10)]
-		private uint maxDownloads;
 
-		[Tooltip("单个下载最大带宽")] [SerializeField] private int maxDownloadSpeed = 1024 * 1024 * 4; // 4 MB
-
-		[Tooltip("最大自修复异常次数")] [SerializeField] [Range(0, 5)]
-		private int maxRetryTimes = 3;
 		/// <summary>
 		///     自定义下载地址
 		/// </summary>
@@ -75,18 +76,5 @@ namespace Bear{
 			return !string.IsNullOrEmpty(url) ? url : $"{DownloadURL}{LoaderPathSystem.PlatformName}/{file}";
 		}
 		
-		
-		
-		public void Update(){
-			
-		}
-		
-		[Conditional("UNITY_EDITOR")]
-		private void DebugUpdate()
-		{
-			DownloadSystem.MaxBandwidth = maxDownloadSpeed;
-			DownloadSystem.MaxDownloads = maxDownloads;
-			DownloadSystem.MaxRetryTimes = maxRetryTimes;
-		}
-	}
+    }
 }

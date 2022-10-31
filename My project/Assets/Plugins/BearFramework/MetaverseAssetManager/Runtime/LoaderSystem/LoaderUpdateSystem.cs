@@ -7,6 +7,7 @@ namespace Bear{
 	{
 		public static void Update(this AssetLoader loader){
 			loader.LoadableUpdater.Update();
+			//loader.downloader.Update();
 		}
 	}
 }

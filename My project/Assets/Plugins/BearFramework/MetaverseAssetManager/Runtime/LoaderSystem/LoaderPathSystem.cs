@@ -52,6 +52,13 @@ namespace Bear{
 			loader.BundleWithPathOrUrLs[assetBundleName] = path;
 			return path;
 		}
+		
+		public static string GetTemporaryPath(this AssetLoader loader,string file){
+			var path = $"{Application.temporaryCachePath}/{file}";
+			Utility.CreateDirectoryIfNecessary(path);
+			return path;
+
+		}
 
 	}
 }

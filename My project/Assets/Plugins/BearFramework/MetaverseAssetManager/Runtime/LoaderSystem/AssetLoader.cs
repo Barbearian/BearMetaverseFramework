@@ -6,19 +6,15 @@ namespace Bear{
 	using System;
 	public class AssetLoader 
 	{
-		
-		public Manifest manifest;
-		
-		public AssetLoader(Manifest newmanifest){
-			manifest = newmanifest;
-			versions = new Versions(manifest);
-		}
-		
-		public AssetLoader(Manifest newmanifest,BuildVersion version){
-			manifest = newmanifest;
-			versions = new Versions(manifest);
 
+		
+		public AssetLoader(Versions version,Downloader downloader = null){
+			this.versions = version;
+			if (downloader != null) {
+				this.downloader = downloader;
+			}
 		}
+	
 		
 		#region Loadable
 		public LoadableUpdater LoadableUpdater = new LoadableUpdater();
@@ -52,8 +48,10 @@ namespace Bear{
 		public Versions versions;
 		public List<string> StreamingAssets =>versions.StreamingAssets;
 		public bool OfflineMode => versions.OfflineMode;
-		#endregion 
+		public Manifest manifest => versions.Manifest;
 		
+		#endregion
+
 		#region dependencies
 		public readonly Dictionary<string, Dependencies> DependenciesCache = new Dictionary<string, Dependencies>();
 		#endregion
@@ -69,7 +67,11 @@ namespace Bear{
 		/// </summary>
 		public Downloader downloader = new Downloader();
 		#endregion
-		
-		
-	}
+
+		#region operations
+		public OperationUpdater operationUpdater = new OperationUpdater();
+		public List<Operation> Processing => operationUpdater.Processing;
+		#endregion
+
+    }
 }

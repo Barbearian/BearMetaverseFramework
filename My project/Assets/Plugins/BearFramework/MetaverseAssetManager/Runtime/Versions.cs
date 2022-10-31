@@ -6,12 +6,12 @@ namespace Bear{
 	public class Versions 
 	{
 		public Versions(Manifest manifest){
-			manifest = manifest;
+			Manifest = manifest;
 			ReloadPlayerVersions(null);
 		}
 		
 		public Versions(Manifest manifest,BuildVersions versions){
-			manifest = manifest;
+			Manifest = manifest;
 			ReloadPlayerVersions(versions);
 		}
 		
@@ -26,17 +26,17 @@ namespace Bear{
 		/// <summary>
 		///     是否是仿真模式
 		/// </summary>
-		public bool SimulationMode { get; private set; }
+		public bool SimulationMode { get;  set; }
 
 		/// <summary>
 		///     是否是离线模式
 		/// </summary>
-		public bool OfflineMode { get; private set; }
+		public bool OfflineMode { get; set; }
 
 		/// <summary>
 		///     本地版本的时间戳
 		/// </summary>
-		public long Timestamp { get; private set; }
+		public long Timestamp { get;  set; }
 
 		/// <summary>
 		///     获取清单的版本号

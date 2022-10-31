@@ -76,6 +76,46 @@ namespace Bear{
             };
 			return info;
 		}
+		
+		public static void LoadVersion(this AssetLoader loader,BuildVersion version){
+			var path = loader.GetDownloadDataPath(version.file);
+			var manifest = Manifest.LoadFromFile(path);
+			manifest.name = version.name;
+			Logger.I("LoadVersion:{0} with file {1}.", version.name, path);
+			manifest.nameWithAppendHash = version.file;
+			loader.LoadVersion(manifest);
+			
+		}
+		
+		public static void LoadVersion(this AssetLoader loader,Manifest manifest){
+			loader.manifest.Copy(manifest);
+			
+		}
+		
+		public static bool Exist(this AssetLoader loader,BuildVersion version){
+			if(version == null) return false;
+			
+			var info = new FileInfo(loader.GetDownloadDataPath(version.file));
+			return 
+			(
+				info.Exists && 
+				info.Length == version.size &&
+				VerifyMode == VerifyMode.Size
+			)		
+				||
+			Utility.ComputeHash(info.FullName) == version.hash;
+			
+			
+		}
+		
+		public static bool Changed(AssetLoader loader,BuildVersion version){
+			return loader.manifest.nameWithAppendHash != version.file;
+		}
+		
+		public static void ReloadPlayerVersions(this AssetLoader loader,BuildVersions versions){
+			loader.ReloadPlayerVersions(versions);
+
+		}
 
 	}
 }
