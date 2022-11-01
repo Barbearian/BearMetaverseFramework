@@ -17,7 +17,7 @@ namespace Bear{
 		/// <summary>
 		///     下载中的队列，通过 <see cref="MaxDownloads" />> 控制并发数量
 		/// </summary>
-		public static readonly List<Download> Progressing = new List<Download>();
+		private static readonly List<Download> Progressing = new List<Download>();
 
 		/// <summary>
 		///     下载失败的队列，在 <see cref="Progressing" /> 处理完后，会自动添加到 Prepared 中重新下载。
@@ -35,12 +35,12 @@ namespace Bear{
 		/// </summary>
 		public static uint MaxDownloads { get; set; } = 5;
 		
-		//public static float AverageMaxBandwidth = DownloadSystem.MaxBandwidth / DownloadSystem.Progressing.Count;
+		public static float AverageMaxBandwidth = DownloadSystem.MaxBandwidth / DownloadSystem.Progressing.Count;
 
 		/// <summary>
 		///     单个下载线程最大下载带宽，0 为限速，单位 byte
 		/// </summary>
-		public static long MaxBandwidth { get; set; } = 1024 * 1024 * 4; // 4 MB
+		public static long MaxBandwidth { get; set; }
 
 		/// <summary>
 		///     获取当前下载的总带宽，可以用来显示速度
@@ -207,6 +207,5 @@ namespace Bear{
 		{
 			return true;
 		}
-
 	}
 }

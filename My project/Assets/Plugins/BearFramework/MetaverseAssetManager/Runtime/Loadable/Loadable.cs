@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Bear{
 	using System.IO;
 	using System;
-	public interface ILoadble{
+	public interface ILoadble:IUpdatable{
 		public AssetLoader Loader{get;set;}
 	}
 	public class Loadable:ILoadble

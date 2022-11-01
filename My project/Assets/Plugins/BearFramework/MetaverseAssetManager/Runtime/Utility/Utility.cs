@@ -55,17 +55,13 @@ namespace Bear
 		
 		public static T LoadScriptableObjectWithJson<T>(string filename) where T:ScriptableObject
 		{
-			if (!File.Exists(filename))
-			{
-				Debug.Log($"File {filename} Doesn't Exist, Created a new one");
-				return ScriptableObject.CreateInstance<T>();
-			}
+			if(!File.Exists(filename)) return ScriptableObject.CreateInstance<T>();
 			
 			var json = File.ReadAllText(filename);
 			var asset = ScriptableObject.CreateInstance<T>();
 			try{
 				JsonUtility.FromJsonOverwrite(json, asset);
-				Debug.Log("Loaded file\n"+json);
+
 			}catch (Exception e){
 				Debug.LogException(e);
 				File.Delete(filename);

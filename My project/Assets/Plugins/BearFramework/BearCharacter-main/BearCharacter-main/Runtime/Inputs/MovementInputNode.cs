@@ -26,11 +26,6 @@ namespace Bear
             
             
         }
-
-        public INode GetNode()
-        {
-            return this.GetDefaultNode();
-        }
     }
 
     public interface IMovementInputReceiver{

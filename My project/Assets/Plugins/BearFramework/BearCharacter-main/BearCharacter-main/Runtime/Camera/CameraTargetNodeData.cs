@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Bear{
     [System.Serializable]
-    public struct CameraTargetNodeData :INodeData
+    public struct CameraTargetNodeData :INode
     {
         public Transform lookAt;
         public Transform follow;

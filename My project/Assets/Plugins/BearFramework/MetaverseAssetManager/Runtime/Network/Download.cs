@@ -208,11 +208,10 @@ namespace Bear{
 		
 		private void UpdateBandwidth(ref DateTime startTime)
 		{
-			var average = DownloadSystem.MaxBandwidth / DownloadSystem.Progressing.Count;
 			var elapsed = (DateTime.Now - startTime).TotalMilliseconds;
 			while (DownloadSystem.MaxBandwidth > 0 &&
 				status == DownloadStatus.Progressing &&
-				_bandWidth >= average &&
+				_bandWidth >= DownloadSystem.AverageMaxBandwidth &&
 				elapsed < 1000)
 			{
 				var wait = Mathf.Clamp((int) (1000 - elapsed), 1, 33);
