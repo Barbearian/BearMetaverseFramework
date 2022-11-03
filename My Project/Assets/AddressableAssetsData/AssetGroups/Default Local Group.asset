@@ -16,15 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: d5ab6fbbeca9dc64b9a34851453b8e1d
-  m_SerializeEntries:
-  - m_GUID: d7abfea8f15f36c499137cff64cc47d8
-    m_Address: Clothing
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 05ad499a3516abe41a6c695650a1ff51
-    m_Address: female
-    m_ReadOnly: 0
-    m_SerializedLabels: []
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 87085bb977d922b4db946526c87785fe, type: 2}
   m_SchemaSet:

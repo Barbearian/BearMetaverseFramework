@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,20 +7,29 @@ using UnityEngine.AddressableAssets;
 namespace Bear
 {
     public class ResourceManagerService : IResourceManager
-    {
+	{
+		public static Func<IResource> CreateResource {get;set;} = Resource.Make;
         public Dictionary<string, IResource> allResource = new Dictionary<string, IResource>();
         public void Init(IBearFramework framewrok)
         {
-           
+	        allResource = new Dictionary<string, IResource>();
         }
+        
+	
 
-        public void Load<T>(string key,System.Action<T> DOnComplete) {
+		public void Load<T>(string key,System.Action<T> DOnComplete) {
+			
             if (allResource.TryGetValue(key, out var value))
             {
+	            //  Debug.Log(key+" Exists");
+	            //   value.SetPath(key);
                 value.LoadResource<T>(DOnComplete);
             }
             else {
-                var resource = new Resource(key);
+	            var resource = CreateResource();
+	            string mykey = key;
+	            resource.SetPath(mykey);
+	            // Debug.Log(key+" is loaded ");
                 allResource[key] = resource;
                 resource.LoadResource<T>(DOnComplete);
             }
@@ -40,14 +49,21 @@ namespace Bear
 
     public interface IResource {
         void LoadResource<T>(System.Action<T> DOnComplete);
-        void UnloadResource();
+	    void UnloadResource();
+	    void SetPath(string path);
     }
 
     public class Resource: IResource
-    {
+	{
+		public static IResource Make(){
+			return new Resource();
+		}
         public string ResourceName;
         object resource;
         UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle handle;
+
+	    public Resource() {
+	    }
 
         public Resource(string rname) {
             ResourceName = rname.Replace("\r", "");
@@ -79,30 +95,11 @@ namespace Bear
             resource = null;
             Addressables.Release(handle);
         }
+        
+	    public void SetPath(string path){
+	    	ResourceName = path;
+	    }
     }
 
-    public class AssetReferenceResource : IResource
-    {
-        AssetReference _reference;
-        public AssetReferenceResource(AssetReference reference) {
-            _reference = reference;
-        }
-        public void LoadResource<T>(Action<T> DOnComplete)
-        {
-            if (_reference!=null) {
-                _reference.LoadAssetAsync<T>().Completed += (handler) =>
-                {
-                    DOnComplete?.Invoke(handler.Result);
-                     
-                };
-            }
-        }
-
-        public void UnloadResource()
-        {
-            if (_reference!=null) {
-                _reference.ReleaseAsset();
-            }
-        }
-    }
+   
 }
