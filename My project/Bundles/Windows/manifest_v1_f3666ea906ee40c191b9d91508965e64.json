@@ -1,1 +1,0 @@
-{"data":{"bundleExtension":".bundle","version":1,"dirs":["Assets/ReadyForBundle"],"assets":[{"id":0,"dir":0,"name":"MatTest.mat","deps":[],"bundle":0},{"id":1,"dir":0,"name":"Sphere.prefab","deps":[0],"bundle":0}],"bundles":[{"id":0,"name":"test","size":56066,"hash":"be5eab96c9562f529b00dec3080539da","deps":[]}]}}
