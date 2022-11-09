@@ -12,7 +12,7 @@ namespace Bear{
 	}
 	
 	public static class AssetLoaderRequestSystem{
-		public static Func<AssetRequest, AssetRequestHandler> CreateHandler { get; set; }
+		public static Func<AssetRequest, IAssetRequestHandler> CreateHandler { get; set; } = AssetRequestHandlerRuntime.CreateInstance;
 
 		private static readonly Queue<AssetRequest> Unused = new Queue<AssetRequest>();
 		private static readonly Dictionary<string, AssetRequest> Loaded = new Dictionary<string, AssetRequest>();
@@ -38,7 +38,7 @@ namespace Bear{
 			return request.assets as T[];
 		}
 		
-		internal static AssetRequest LoadAssetRequest(this AssetLoader loader,string path, Type type, bool isAll = false){
+		public static AssetRequest LoadAssetRequest(this AssetLoader loader,string path, Type type, bool isAll = false){
 			if (!loader.Versions.TryGetAsset(path, out var info))
 			{
 				Logger.E($"File not found:{path}");
@@ -61,5 +61,7 @@ namespace Bear{
 			request.LoadAsync();
 			return request;
 		}
+		
+		
 	}
 }
