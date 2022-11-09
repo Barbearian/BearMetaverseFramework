@@ -1,2 +1,0 @@
-# BearFramework
-Used UniTask
