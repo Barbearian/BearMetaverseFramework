@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 8}
   m_MinSize: {x: 875, y: 350}
   m_MaxSize: {x: 10000, y: 10000}
@@ -42,12 +42,12 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 973.3333
-    height: 576.00006
+    height: 414.6667
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 21}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &3
@@ -68,13 +68,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 723.3333
+    y: 884.6667
     width: 1748
-    height: 576.00006
+    height: 414.6667
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 90
+  controlID: 26
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 62
+  controlID: 20
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -121,13 +121,14 @@ MonoBehaviour:
     height: 1299.3334
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 22}
   m_Panes:
-  - {fileID: 21}
-  - {fileID: 19}
-  - {fileID: 16}
+  - {fileID: 22}
+  - {fileID: 20}
+  - {fileID: 17}
+  - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 3
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,12 +147,12 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 668.6667
-    height: 723.3333
+    height: 884.6667
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 23}
   m_Panes:
-  - {fileID: 22}
+  - {fileID: 23}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &7
@@ -172,16 +173,16 @@ MonoBehaviour:
     x: 973.3333
     y: 0
     width: 774.6667
-    height: 576.00006
+    height: 414.6667
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 25}
+  m_ActualView: {fileID: 26}
   m_Panes:
-  - {fileID: 25}
+  - {fileID: 26}
+  - {fileID: 16}
   - {fileID: 15}
-  - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -277,7 +278,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 153
+  controlID: 25
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -298,11 +299,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1748
-    height: 723.3333
+    height: 884.6667
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 154
+  controlID: 63
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -321,18 +322,75 @@ MonoBehaviour:
     x: 668.6667
     y: 0
     width: 1079.3333
-    height: 723.3333
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 23}
+    height: 884.6667
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 24}
   m_Panes:
-  - {fileID: 23}
   - {fileID: 24}
+  - {fileID: 25}
+  - {fileID: 19}
   - {fileID: 18}
-  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12141, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 300, y: 360}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Navigation
+    m_Image: {fileID: 1087843850482249999, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1748
+    y: 72.66667
+    width: 811
+    height: 1278.3334
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45294caac1977dd4c92766360eb688c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: SI Console
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 973.3334
+    y: 957.3334
+    width: 772.6667
+    height: 393.6667
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -353,20 +411,20 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 973.3334
-    y: 796
+    y: 957.3334
     width: 772.6667
-    height: 555.00006
+    height: 393.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  infoText: References to xasset.Dependencies._bundleRequest
-  resultsCountText: Found 3 results in 1 files.
+  infoText: References to UnityEngine.InputSystem.PlayerInput
+  resultsCountText: Found 67 results in 28 files.
   assetGuids: []
   skippedGuids: []
   searchOptions:
-    text: _bundleRequest
-    altText1: 
+    text: PlayerInput
+    altText1: var
     altText2: 
     matchCase: 1
     matchWord: 1
@@ -391,30 +449,14 @@ MonoBehaviour:
   scrollPosition: {x: 0, y: 0}
   currentItem: 0
   flatResults:
-  - description: private BundleRequest _bundleRequest;
-    assetGuid: 0990cd6fa7f44a2c882fd6f81a1baee9
-    assetPath: Assets/xasset/Runtime/API/Requests/Dependencies.cs
-    fileName: Dependencies.cs
-    line: 11
-    characterIndex: 30
-    length: 14
-    trimOffset: 8
-    selected: 1
-    resultType: 2
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public AssetBundle assetBundle => _bundleRequest.assetBundle;
-    assetGuid: 0990cd6fa7f44a2c882fd6f81a1baee9
-    assetPath: Assets/xasset/Runtime/API/Requests/Dependencies.cs
-    fileName: Dependencies.cs
-    line: 13
-    characterIndex: 42
-    length: 14
-    trimOffset: 8
+  - description: PlayerInput
+    assetGuid: b28074a9f6f2b5e44bb9d37177e7b0f5
+    assetPath: Assets/Plugins/BearFramework/BearCharacter-main/BearCharacter-main/Runtime/Hint/HintUI.cs
+    fileName: HintUI.cs
+    line: 37
+    characterIndex: 3
+    length: 11
+    trimOffset: 3
     selected: 1
     resultType: 3
     rcHighlight:
@@ -423,55 +465,1071 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-  - description: _bundleRequest = Load(bundle);
-    assetGuid: 0990cd6fa7f44a2c882fd6f81a1baee9
-    assetPath: Assets/xasset/Runtime/API/Requests/Dependencies.cs
-    fileName: Dependencies.cs
-    line: 31
-    characterIndex: 16
-    length: 14
-    trimOffset: 16
+  - description: foreach (var (c, state) in secondaryContinuationList)
+    assetGuid: ed03524d09e7eb24a9fb9137198feb84
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/UniTaskCompletionSource.cs
+    fileName: UniTaskCompletionSource.cs
+    line: 727
+    characterIndex: 33
+    length: 3
+    trimOffset: 24
     selected: 1
-    resultType: 2
+    resultType: 11
     rcHighlight:
       serializedVersion: 2
       x: 0
       y: 0
       width: 0
       height: 0
-  resultsCount: 3
-  filesCount: 1
+  - description: foreach (var (c, state) in secondaryContinuationList)
+    assetGuid: ed03524d09e7eb24a9fb9137198feb84
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/UniTaskCompletionSource.cs
+    fileName: UniTaskCompletionSource.cs
+    line: 918
+    characterIndex: 33
+    length: 3
+    trimOffset: 24
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: var paths = Array.ConvertAll(builds, AssetDatabase.GetAssetPath);
+    assetGuid: d34e3cfd90064fa28ccbc0b938da494f
+    assetPath: Assets/xasset/Editor/Build/Builder.cs
+    fileName: Builder.cs
+    line: 39
+    characterIndex: 12
+    length: 3
+    trimOffset: 12
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: The PlayerInput component has an auto-switch control scheme action
+      that allows automatic changing of connected devices.
+    assetGuid: 901182334643ba1438a25accc6bd0c79
+    assetPath: Assets/StarterAssets/Mobile/Scripts/Utilities/MobileDisableAutoSwitchControls.cs
+    fileName: MobileDisableAutoSwitchControls.cs
+    line: 1
+    characterIndex: 4
+    length: 11
+    trimOffset: 0
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: In Input System 1.0.2, if the PlayerInput component has Auto Switch
+      enabled, it will search the mobile device for connected devices; which is very
+      costly and results in bad performance.
+    assetGuid: 901182334643ba1438a25accc6bd0c79
+    assetPath: Assets/StarterAssets/Mobile/Scripts/Utilities/MobileDisableAutoSwitchControls.cs
+    fileName: MobileDisableAutoSwitchControls.cs
+    line: 4
+    characterIndex: 30
+    length: 11
+    trimOffset: 0
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: For the time-being; this script will disable a PlayerInput's auto
+      switch control schemes; when project is built to mobile.
+    assetGuid: 901182334643ba1438a25accc6bd0c79
+    assetPath: Assets/StarterAssets/Mobile/Scripts/Utilities/MobileDisableAutoSwitchControls.cs
+    fileName: MobileDisableAutoSwitchControls.cs
+    line: 6
+    characterIndex: 47
+    length: 11
+    trimOffset: 0
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: public PlayerInput playerInput;
+    assetGuid: 901182334643ba1438a25accc6bd0c79
+    assetPath: Assets/StarterAssets/Mobile/Scripts/Utilities/MobileDisableAutoSwitchControls.cs
+    fileName: MobileDisableAutoSwitchControls.cs
+    line: 20
+    characterIndex: 11
+    length: 11
+    trimOffset: 4
+    selected: 1
+    resultType: 12
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: var task = f();
+    assetGuid: 01d1404ca421466419a7db7340ff5e77
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/AsyncLazy.cs
+    fileName: AsyncLazy.cs
+    line: 76
+    characterIndex: 24
+    length: 3
+    trimOffset: 24
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: var task = f();
+    assetGuid: 01d1404ca421466419a7db7340ff5e77
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/AsyncLazy.cs
+    fileName: AsyncLazy.cs
+    line: 195
+    characterIndex: 24
+    length: 3
+    trimOffset: 24
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: var rs = await value.LoadResourceAsync<T>(key);
+    assetGuid: b0e216a1b5ee8254ead922ea59d1a944
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/ResourceLoaderNode/ResourceLoaderNodeData.cs
+    fileName: ResourceLoaderNodeData.cs
+    line: 36
+    characterIndex: 16
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: var rs = await resource.LoadResourceAsync<T>(key);
+    assetGuid: b0e216a1b5ee8254ead922ea59d1a944
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/ResourceLoaderNode/ResourceLoaderNodeData.cs
+    fileName: ResourceLoaderNodeData.cs
+    line: 44
+    characterIndex: 16
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: var pref = await loader.LoadAsync<GameObject>(key);
+    assetGuid: 27864e32f58dc174a890badba1dda417
+    assetPath: Assets/Plugins/BearFramework/BearCharacter-main/BearCharacter-main/Runtime/Factory/LocalPlayerControllerFactory.cs
+    fileName: LocalPlayerControllerFactory.cs
+    line: 11
+    characterIndex: 16
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: var rs = await loader.LoadAsync<GameObject>("Player");
+    assetGuid: 27864e32f58dc174a890badba1dda417
+    assetPath: Assets/Plugins/BearFramework/BearCharacter-main/BearCharacter-main/Runtime/Factory/LocalPlayerControllerFactory.cs
+    fileName: LocalPlayerControllerFactory.cs
+    line: 59
+    characterIndex: 16
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: foreach (var item in ChoiceGroup.choiceByGroup.Values)
+    assetGuid: dccd06d0253f78e48bd7a638523964f3
+    assetPath: Assets/Plugins/BearFramework/BearCustomization/AvatarSystem/AvatarCustomizationService.cs
+    fileName: AvatarCustomizationService.cs
+    line: 37
+    characterIndex: 25
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: var choice = item.ToArray().RandomValue();
+    assetGuid: dccd06d0253f78e48bd7a638523964f3
+    assetPath: Assets/Plugins/BearFramework/BearCustomization/AvatarSystem/AvatarCustomizationService.cs
+    fileName: AvatarCustomizationService.cs
+    line: 39
+    characterIndex: 20
+    length: 3
+    trimOffset: 20
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: //     from Assets/Plugins/BearFramework/BearCharacter-main/BearCharacter-main/Runtime/Inputs/PlayerInput.inputactions
+    assetGuid: 70e87763861351342868d31f33ad3d73
+    assetPath: Assets/Plugins/BearFramework/BearCharacter-main/BearCharacter-main/Runtime/Inputs/PlayerInput.cs
+    fileName: PlayerInput.cs
+    line: 4
+    characterIndex: 94
+    length: 11
+    trimOffset: 0
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '""name"": ""PlayerInput"",'
+    assetGuid: 70e87763861351342868d31f33ad3d73
+    assetPath: Assets/Plugins/BearFramework/BearCharacter-main/BearCharacter-main/Runtime/Inputs/PlayerInput.cs
+    fileName: PlayerInput.cs
+    line: 23
+    characterIndex: 16
+    length: 11
+    trimOffset: 4
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 12bda324162f15349afefc2c152ac07f
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/TakeUntil.cs
+    fileName: TakeUntil.cs
+    line: 131
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 510aa9fd35b45fc40bcdb7e59f01fd1b
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/TakeLast.cs
+    fileName: TakeLast.cs
+    line: 126
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 42f02cb84e5875b488304755d0e1383d
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Take.cs
+    fileName: Take.cs
+    line: 97
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 4b1a778aef7150d47b93a49aa1bc34ae
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SkipUntilCanceled.cs
+    fileName: SkipUntilCanceled.cs
+    line: 115
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: de932d79c8d9f3841a066d05ff29edc9
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SkipUntil.cs
+    fileName: SkipUntil.cs
+    line: 135
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: df1d7f44d4fe7754f972c9e0b6fa72d5
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SkipLast.cs
+    fileName: SkipLast.cs
+    line: 111
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.sourceAwaiter, out var result))
+    assetGuid: d81862f0eb12680479ccaaf2ac319d24
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SelectMany.cs
+    fileName: SelectMany.cs
+    line: 237
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.selectedAwaiter, out var result))
+    assetGuid: d81862f0eb12680479ccaaf2ac319d24
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SelectMany.cs
+    fileName: SelectMany.cs
+    line: 272
+    characterIndex: 64
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.sourceAwaiter, out var result))
+    assetGuid: d81862f0eb12680479ccaaf2ac319d24
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SelectMany.cs
+    fileName: SelectMany.cs
+    line: 477
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.selectedAwaiter, out var result))
+    assetGuid: d81862f0eb12680479ccaaf2ac319d24
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SelectMany.cs
+    fileName: SelectMany.cs
+    line: 520
+    characterIndex: 64
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.collectionSelectorAwaiter, out var result))
+    assetGuid: d81862f0eb12680479ccaaf2ac319d24
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SelectMany.cs
+    fileName: SelectMany.cs
+    line: 583
+    characterIndex: 74
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.resultSelectorAwaiter, out var result))
+    assetGuid: d81862f0eb12680479ccaaf2ac319d24
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SelectMany.cs
+    fileName: SelectMany.cs
+    line: 594
+    characterIndex: 70
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.sourceAwaiter, out var result))
+    assetGuid: d81862f0eb12680479ccaaf2ac319d24
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SelectMany.cs
+    fileName: SelectMany.cs
+    line: 753
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.selectedAwaiter, out var result))
+    assetGuid: d81862f0eb12680479ccaaf2ac319d24
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SelectMany.cs
+    fileName: SelectMany.cs
+    line: 796
+    characterIndex: 64
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.collectionSelectorAwaiter, out var result))
+    assetGuid: d81862f0eb12680479ccaaf2ac319d24
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SelectMany.cs
+    fileName: SelectMany.cs
+    line: 859
+    characterIndex: 74
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.resultSelectorAwaiter, out var result))
+    assetGuid: d81862f0eb12680479ccaaf2ac319d24
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/SelectMany.cs
+    fileName: SelectMany.cs
+    line: 870
+    characterIndex: 70
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: cddbf051d2a88f549986c468b23214af
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Pairwise.cs
+    fileName: Pairwise.cs
+    line: 91
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: e82f498cf3a1df04cbf646773fc11319
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/TakeUntilCanceled.cs
+    fileName: TakeUntilCanceled.cs
+    line: 109
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.firstAwaiter, out var result))
+    assetGuid: acc1acff153e347418f0f30b1c535994
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Zip.cs
+    fileName: Zip.cs
+    line: 119
+    characterIndex: 61
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.secondAwaiter, out var result))
+    assetGuid: acc1acff153e347418f0f30b1c535994
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Zip.cs
+    fileName: Zip.cs
+    line: 153
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.firstAwaiter, out var result))
+    assetGuid: acc1acff153e347418f0f30b1c535994
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Zip.cs
+    fileName: Zip.cs
+    line: 273
+    characterIndex: 61
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.secondAwaiter, out var result))
+    assetGuid: acc1acff153e347418f0f30b1c535994
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Zip.cs
+    fileName: Zip.cs
+    line: 307
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
+    assetGuid: acc1acff153e347418f0f30b1c535994
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Zip.cs
+    fileName: Zip.cs
+    line: 339
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.firstAwaiter, out var result))
+    assetGuid: acc1acff153e347418f0f30b1c535994
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Zip.cs
+    fileName: Zip.cs
+    line: 445
+    characterIndex: 61
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.secondAwaiter, out var result))
+    assetGuid: acc1acff153e347418f0f30b1c535994
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Zip.cs
+    fileName: Zip.cs
+    line: 479
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
+    assetGuid: acc1acff153e347418f0f30b1c535994
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Zip.cs
+    fileName: Zip.cs
+    line: 511
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Join.cs
+    fileName: Join.cs
+    line: 220
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Join.cs
+    fileName: Join.cs
+    line: 415
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.outerKeyAwaiter, out var key))
+    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Join.cs
+    fileName: Join.cs
+    line: 449
+    characterIndex: 64
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
+    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Join.cs
+    fileName: Join.cs
+    line: 472
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Join.cs
+    fileName: Join.cs
+    line: 645
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.outerKeyAwaiter, out var key))
+    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Join.cs
+    fileName: Join.cs
+    line: 679
+    characterIndex: 64
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
+    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Join.cs
+    fileName: Join.cs
+    line: 702
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 93999a70f5d57134bbe971f3e988c4f2
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Intersect.cs
+    fileName: Intersect.cs
+    line: 85
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/GroupJoin.cs
+    fileName: GroupJoin.cs
+    line: 191
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/GroupJoin.cs
+    fileName: GroupJoin.cs
+    line: 337
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.outerKeyAwaiter, out var result))
+    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/GroupJoin.cs
+    fileName: GroupJoin.cs
+    line: 371
+    characterIndex: 64
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
+    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/GroupJoin.cs
+    fileName: GroupJoin.cs
+    line: 397
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/GroupJoin.cs
+    fileName: GroupJoin.cs
+    line: 532
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.outerKeyAwaiter, out var result))
+    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/GroupJoin.cs
+    fileName: GroupJoin.cs
+    line: 566
+    characterIndex: 64
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
+    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/GroupJoin.cs
+    fileName: GroupJoin.cs
+    line: 592
+    characterIndex: 62
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: a2de80df1cc8a1240ab0ee7badd334d0
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/GroupBy.cs
+    fileName: GroupBy.cs
+    line: 661
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: a2de80df1cc8a1240ab0ee7badd334d0
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/GroupBy.cs
+    fileName: GroupBy.cs
+    line: 903
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 38c1c4129f59dcb49a5b864eaf4ec63c
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Except.cs
+    fileName: Except.cs
+    line: 85
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 3268ec424b8055f45aa2a26d17c80468
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/AppendPrepend.cs
+    fileName: AppendPrepend.cs
+    line: 114
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 19e437c039ad7e1478dbce1779ef8660
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/DefaultIfEmpty.cs
+    fileName: DefaultIfEmpty.cs
+    line: 104
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 7cb9e19c449127a459851a135ce7d527
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Concat.cs
+    fileName: Concat.cs
+    line: 113
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 951310243334a3148a7872977cb31c5c
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Buffer.cs
+    fileName: Buffer.cs
+    line: 134
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (self.TryGetResult(self.awaiter, out var result))
+    assetGuid: 951310243334a3148a7872977cb31c5c
+    assetPath: Assets/Plugins/BearFramework/BearFramework-OnlineUniTask/BearFramework-OnlineUniTask/Runtime/UniTask/Linq/Buffer.cs
+    fileName: Buffer.cs
+    line: 290
+    characterIndex: 56
+    length: 3
+    trimOffset: 16
+    selected: 1
+    resultType: 11
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  resultsCount: 67
+  filesCount: 28
   keepResults: 0
   groupByFile: 1
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45294caac1977dd4c92766360eb688c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: SI Console
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 973.3334
-    y: 796
-    width: 772.6667
-    height: 555.00006
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
---- !u!114 &16
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -524,7 +1582,7 @@ MonoBehaviour:
   accessModifiers: 6
   showMemberNameFilter: 
   searchFilter: 
---- !u!114 &17
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -545,17 +1603,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 716.6667
+    x: 668.6667
     y: 72.66667
-    width: 1066
-    height: 705.6667
+    width: 1077.3333
+    height: 863.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_ViewTransforms:
     m_KeySerializationHelper:
-    - {fileID: 7104254750888593826, guid: 78efac70939bcf348a290bb84ee47e69, type: 2}
+    - {fileID: -5602963042399094863, guid: 40db3173a05ae3242b1c182a09b0a183, type: 2}
     m_ValueSerializationHelper:
     - e00: 1
       e01: 0
@@ -574,10 +1632,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 78efac70939bcf348a290bb84ee47e69,
+  m_AnimatorController: {fileID: 9100000, guid: 40db3173a05ae3242b1c182a09b0a183,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 7104254750888593826, guid: 78efac70939bcf348a290bb84ee47e69,
+  - m_Target: {fileID: -5602963042399094863, guid: 40db3173a05ae3242b1c182a09b0a183,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -588,10 +1646,10 @@ MonoBehaviour:
   m_MiniTool: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_CurrentEditor: 0
+  m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &18
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -611,10 +1669,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 716.6667
+    x: 668.6667
     y: 72.66667
-    width: 1066
-    height: 705.6667
+    width: 1077.3333
+    height: 863.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -622,8 +1680,8 @@ MonoBehaviour:
   m_GroupEditor:
     m_TreeState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2a687891
-      m_LastClickedID: -1854379990
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: 341d6ad2fffffffff0d4065923ee3464
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -707,9 +1765,9 @@ MonoBehaviour:
         userData: 0
       m_VisibleColumns: 00000000010000000200000003000000
       m_SortedColumns: 
-    window: {fileID: 18}
+    window: {fileID: 19}
     m_VerticalSplitterPercent: 0.8
---- !u!114 &19
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -762,7 +1820,7 @@ MonoBehaviour:
   accessModifiers: 6
   showMemberNameFilter: 
   searchFilter: 
---- !u!114 &20
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -784,15 +1842,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 796
+    y: 957.3334
     width: 972.3333
-    height: 555.00006
+    height: 393.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: csc
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -802,24 +1860,24 @@ MonoBehaviour:
     m_SceneHandles: 
     m_ShowAllHits: 0
     m_SkipHidden: 0
-    m_SearchArea: 1
+    m_SearchArea: 0
     m_Folders:
-    - Assets/AssetBundleTest
+    - Assets/Plugins/BearFramework/BearCharacter-main/BearCharacter-main/Runtime/Inputs
     m_Globs: []
-    m_OriginalText: 
+    m_OriginalText: csc
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/AssetBundleTest
+  - Assets/Plugins/BearFramework/BearCharacter-main/BearCharacter-main/Runtime/Inputs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity\UnityProject\BearMetaverseFramework\My Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 175}
-    m_SelectedIDs: b8910000
-    m_LastClickedID: 37304
-    m_ExpandedIDs: 000000008c9100008e910000929100009491000096910000989100009a9100009c9100009e910000b4910000c4910000c8910000dc910000c2950000669c0000d69c0000de9c000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 330.3333}
+    m_SelectedIDs: 00790000
+    m_LastClickedID: 30976
+    m_ExpandedIDs: 00000000f4750000f6750000fa750000fc750000fe75000000760000027600000476000006760000087600000c7600000e7600001076000012760000367600003a7600004276000046760000ae780000b4780000d8780000e6780000f478000080890000dc89000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -847,7 +1905,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c9100008e91000090910000929100009491000096910000989100009a9100009c9100009e910000
+    m_ExpandedIDs: 00000000f4750000f6750000f8750000fa750000fc750000fe75000000760000027600000476000006760000087600000a7600000c7600000e7600001076000012760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -874,19 +1932,19 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000ec840000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: AssetLoaderDependencies
-      m_OriginalName: AssetLoaderDependencies
+      m_Name: InputStream
+      m_OriginalName: InputStream
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 44992
+      m_UserData: 30978
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -903,7 +1961,7 @@ MonoBehaviour:
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 295.5
---- !u!114 &21
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -935,7 +1993,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 675
+    m_CachedPref: -675
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -945,7 +2003,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &22
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -967,9 +2025,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 19
+    y: 72.66667
     width: 667.6667
-    height: 702.3333
+    height: 863.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -977,9 +2035,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b8910000
+      m_SelectedIDs: 941c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: 9af7ffff
+      m_ExpandedIDs: 205af7ff22e7f8ffbce6ffff4ef3ffff12fbfffff4ffffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -995,7 +2053,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 6}
+        m_ClientGUIView: {fileID: 5}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1003,7 +2061,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &23
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1027,7 +2085,7 @@ MonoBehaviour:
     x: 668.6667
     y: 72.66667
     width: 1077.3333
-    height: 702.3333
+    height: 863.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1229,9 +2287,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 15.9275465, y: 0.638536, z: 2.3805504}
+    m_Target: {x: 0.7087536, y: -1.2097967, z: -9.508777}
     speed: 2
-    m_Value: {x: 15.9275465, y: 0.638536, z: 2.3805504}
+    m_Value: {x: 0.7087536, y: -1.2097967, z: -9.508777}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1278,13 +2336,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.0023803392, y: 0.9958259, z: -0.027202422, w: 0.08715821}
+    m_Target: {x: -0.0014977764, y: 0.99846846, z: -0.04377004, w: -0.034160472}
     speed: 2
-    m_Value: {x: 0.0023803257, y: 0.99582016, z: -0.027202265, w: 0.08715771}
+    m_Value: {x: -0.0014977583, y: 0.9984564, z: -0.043769516, w: -0.034160063}
   m_Size:
-    m_Target: 0.5101904
+    m_Target: 7.9011436
     speed: 2
-    m_Value: 0.5101904
+    m_Value: 7.9011436
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1309,7 +2367,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &24
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1330,10 +2388,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 313.5
-    y: 72
-    width: 790.5
-    height: 502.5
+    x: 668.6667
+    y: 72.66667
+    width: 1077.3333
+    height: 863.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1380,10 +2438,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 790.5
-      height: 481.5
-    m_Scale: {x: 0.61757815, y: 0.61757815}
-    m_Translation: {x: 395.25, y: 240.74998}
+      width: 1077.3333
+      height: 842.6667
+    m_Scale: {x: 0.8416666, y: 0.8416666}
+    m_Translation: {x: 538.6666, y: 421.33334}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -1391,18 +2449,18 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -640
-      y: -389.8292
+      y: -500.59412
       width: 1280
-      height: 779.6584
+      height: 1001.18823
     m_MinimalGUI: 1
-  m_defaultScale: 0.61757815
-  m_LastWindowPixelSize: {x: 1185.75, y: 753.75}
+  m_defaultScale: 0.8416666
+  m_LastWindowPixelSize: {x: 1615.9999, y: 1295.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &25
+--- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1424,9 +2482,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 973.3334
-    y: 796
+    y: 957.3334
     width: 772.6667
-    height: 555.00006
+    height: 393.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

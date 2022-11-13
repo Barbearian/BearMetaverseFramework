@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System;
 
@@ -227,6 +227,19 @@ namespace Bear{
             }
 
         }
+        
+	    public static T GetOrCreateNodeData<T>(this INode node) where T:INodeData{
+		    if (node.TryGetNodeData<T>(out T data))
+		    {
+			    return data;
+		    }
+		    else {
+
+			    var defaultNode = (T)Activator.CreateInstance(typeof(T));
+			    return (T)node.AddNodeData(defaultNode);
+		    }
+
+	    }
 
         public static bool TryGetGlobalNodeData<T>(this IGlobalNodeDataAccessor accessor, out T data) where T: INodeData{
 

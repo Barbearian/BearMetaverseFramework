@@ -16,7 +16,11 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: d5ab6fbbeca9dc64b9a34851453b8e1d
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 64dce48905ffd9b4293e595fa6941544
+    m_Address: Assets/StarterAssets/ThirdPersonController/Prefabs/PlayerArmature.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 87085bb977d922b4db946526c87785fe, type: 2}
   m_SchemaSet:

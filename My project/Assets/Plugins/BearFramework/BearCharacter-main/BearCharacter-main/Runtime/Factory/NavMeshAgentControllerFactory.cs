@@ -1,4 +1,4 @@
-
+﻿
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AI;
@@ -13,7 +13,7 @@ namespace Bear
 
             //Add nanvData
             var nanvData = view.GetOrCreateNodeData(new NavMeshAgentNodeData());
-            
+	        view.RegisterAction(MovementKeyword.StopMoving,nanvData.Stop);
             
 
             //Add state machine
@@ -22,6 +22,8 @@ namespace Bear
             //Trigger when move
             nanvData.MovementObserver.DOnStartMove += () => { naivesm.EnterState("Moving"); };
 
+
+	        
             return view;
 
         }
@@ -49,6 +51,9 @@ namespace Bear
                     nanv.MoveToMouseClick();
                 }
             );
+            
+            
+            
         }
 
         public static NodeView AddAnimatorNodeData(this Animator anim, int maxSpeedBlend, string SpeedAttribute, string SpeedMultiAttribute) {
@@ -83,6 +88,7 @@ namespace Bear
             var state = naivesm.GetOrCreateNaiveState("Moving");
             state.DOnEnterState += () =>
             {
+            	animatorView.transform.RestoreFromAnchor();
                 animator.EnterDefaultState();
             };
 
@@ -92,9 +98,13 @@ namespace Bear
                 nanvData.Stop();
                 Debug.Log("I tried to let player stop");
             };
+            
+            
+	        //add sit
+	        controller.RegisterAction(SitterNodeDataKeyword.PlaySitAnimation,()=>{animator.Play("Sit",0,0);});
         }
 
-        public static void LinkInputToAnimator(this NodeView controller, NodeView animatorView,int count) {
+	    public static void LinkInputToAnimator(this NodeView controller, NodeView animatorView,int count = 0) {
             var inputData = controller.GetOrCreateNodeData(new InputAssociateNodeData());
             var data = animatorView.GetOrCreateNodeData(new AnimatorNodeData());
             var naivesm = controller.GetOrCreateNodeData(new NaiveStateMachineNodeData());

@@ -30,6 +30,13 @@ namespace Bear{
             }
             return false;
         }
+        
+	    public void Awake(){
+		    var parent = transform.parent;
+		    if(parent != null && parent.TryGetComponent<NodeView>(out var view)){
+		    	view.AddChildrenNode(this);
+		    }
+	    }
 
     }
 }

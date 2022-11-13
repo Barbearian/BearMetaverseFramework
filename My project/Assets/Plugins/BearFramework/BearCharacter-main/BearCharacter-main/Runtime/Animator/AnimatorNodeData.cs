@@ -35,4 +35,5 @@ namespace Bear {
             AnimatorNodeSystem.Play(this,index);
         }
     }
+    
 }

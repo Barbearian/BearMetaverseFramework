@@ -1,4 +1,4 @@
-
+﻿
 using UnityEngine;
 
 namespace Bear{
@@ -90,6 +90,7 @@ namespace Bear{
         public static void SetFloat(this IAnimatorNode view,string floatName,float value){
             view.Anim.SetFloat(floatName,value);
         }
+        
     }
 
     
