@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Bear.Asset.Editor{
+	using UnityEditor;
 	public class BuildProduct
 	{
 
+		//inputs
+		public IFolderPathProvider PlatformCachePath;
+		public BuildAssetBundleOptions BuildOptions = BuildAssetBundleOptions.ChunkBasedCompression;
 		
 		//outputs
 		public List<BuildAsset> assets = new List<BuildAsset>();

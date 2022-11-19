@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Bear.Asset.Editor{
-	using System;
-	[Serializable]
-	public class BuildAsset 
+	public static class BuildUtils
 	{
-		public string path;
-		public string bundle;
+		public static string BundleExtension => ".bundle";
+
 	}
 }

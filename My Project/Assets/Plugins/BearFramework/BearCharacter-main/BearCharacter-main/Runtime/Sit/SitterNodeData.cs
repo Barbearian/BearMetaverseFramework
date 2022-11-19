@@ -11,6 +11,7 @@ namespace Bear{
 					var sitting = sm.GetOrCreateNaiveState(SitterNodeDataKeyword.Sitting);
 					sitting.DOnEnterState+=()=>{Sit(node);};
 				}
+				
 			}
 		}
 		
@@ -30,6 +31,24 @@ namespace Bear{
 		
 		
 		public const string Sitting = "Sitting";
+	}
+	
+	public static class SitterNodeDataSystem{
+		public static void AddSitterNodeData(NodeView controller,NodeView animator){
+			//add sit
+			controller.AddNodeData(new SitterNodeData());
+			if(animator.TryGetNodeData<AnimatorNodeData>(out var adata)){controller.RegisterAction(SitterNodeDataKeyword.PlaySitAnimation,()=>{adata.Play("Sit",0,0);});}
+			
+			controller.RegisterSignalReceiver<AnchorNodeSignal>(new ActionNodeSignalReceiver((signal)=>{
+				if(signal is AnchorNodeSignal asignal){
+					Debug.Log("I snapped this boy");
+					animator.transform.SnapTo(asignal.data);
+
+				}
+			}));
+			
+			controller.AddNodeData(new SitterNodeData());
+		}
 	}
 	
 }

@@ -9,9 +9,9 @@ namespace Bear
     {
         public CameraNodeData cnd;
         
-        private void Awake()
+	    public override void Awake()
         {
-            
+	        base.Awake();
             Init();
         }
 
@@ -25,8 +25,6 @@ namespace Bear
             if(!this.TryGetGlobalNodeData<CameraNodeData>(out cnd)){
                 cnd = new CameraNodeData();
                 this.AddGlobalNodeData<CameraNodeData>(cnd);
-            }else{
-            	this.cnd = cnd;
             }
             
         }

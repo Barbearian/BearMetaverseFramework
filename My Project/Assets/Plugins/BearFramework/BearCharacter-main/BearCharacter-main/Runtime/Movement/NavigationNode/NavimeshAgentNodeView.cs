@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,8 +28,9 @@ namespace Bear
         public MovementObserverNodeData MovementObserver => movementObserver;
         public NavMeshAgent Agent => agent;
 
-        private void Awake()
-        {
+	    public override void Awake()
+	    {
+		    base.Awake();
             
             Init(GetComponent<NavMeshAgent>());
             

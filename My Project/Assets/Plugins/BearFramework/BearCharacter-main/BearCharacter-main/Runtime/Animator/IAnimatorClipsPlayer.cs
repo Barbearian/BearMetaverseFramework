@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,4 +8,8 @@ namespace Bear{
     {
         void Play(int index);
     }
+    
+	public class AnimatorClipsPlayerNodeSignal:INodeSignal{
+		public PlayAnimationClipInfo info;
+	}
 }

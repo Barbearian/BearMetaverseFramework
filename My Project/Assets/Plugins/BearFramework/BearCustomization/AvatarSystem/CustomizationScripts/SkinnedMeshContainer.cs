@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +7,6 @@ namespace Bear
     public class SkinnedMeshContainer : MonoBehaviour,ISkinnedMeshContainer
     {
         public SkinnedMeshRenderer[] renderers = new SkinnedMeshRenderer[0];
-        int Filled = 0;
 
         public SkinnedMeshRenderer[] GetSkinnedMeshes()
         {

@@ -100,8 +100,13 @@ namespace Bear
             };
             
             
-	        //add sit
-	        controller.RegisterAction(SitterNodeDataKeyword.PlaySitAnimation,()=>{animator.Play("Sit",0,0);});
+	        //add play to controller
+	        controller.RegisterSignalReceiver<AnimatorClipsPlayerNodeSignal>(new ActionNodeSignalReceiver((signal)=>{
+	        	if(signal is AnimatorClipsPlayerNodeSignal asignal){
+	        		var info = asignal.info;
+	        		AnimatorNodeSystem.PlayInfo(animator,info);
+	        	}
+	        }));
         }
 
 	    public static void LinkInputToAnimator(this NodeView controller, NodeView animatorView,int count = 0) {
@@ -120,7 +125,9 @@ namespace Bear
             }
         }
 
-        
+	    public static void AddGlobalPlayerControllerNodeData(this NodeView view){
+	    	view.GetOrCreateNodeData<GlobalPlayerControllerNodeData>();
+	    }
 
 
     }

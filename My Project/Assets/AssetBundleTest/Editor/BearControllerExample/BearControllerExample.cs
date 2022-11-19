@@ -10,7 +10,7 @@ namespace Bear{
 		public NavMeshAgent agent;
 		public Animator playerPref;
 		public Cinemachine.CinemachineVirtualCamera cameraPref;
-		public async void Start(){
+		public void Start(){
 			var view = NavMeshAgentControllerFactory.AddNavMeshAgentCharacterNodeData(Instantiate(agent));
 			view.AddNavMeshAgentMovementInput();
 			if(view.TryGetNodeData<MovementNodeData>(out var data)){data.speedMulti = 4;}

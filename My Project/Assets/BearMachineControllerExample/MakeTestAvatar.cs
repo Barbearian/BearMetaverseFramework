@@ -17,13 +17,15 @@ namespace Bear{
 			var animView = NavMeshAgentControllerFactory.AddAnimatorNodeData(Instantiate(anim),6,"Speed","MotionSpeed");
 			var camView = CinemachineCameraFactory.AddCinemachineView(Instantiate(cam));
 			
-			
+			nanvView.AddGlobalPlayerControllerNodeData();
 			nanvView.AddNavMeshAgentMovementInput();
 			if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti = 6;
 			
 			nanvView.LinkNavMeshAgentToAnimator(animView);
 			nanvView.LinkInputToAnimator(animView);
 			camView.Link(animView);
+			
+			SitterNodeDataSystem.AddSitterNodeData(nanvView,animView);
 		}
 	}
 }

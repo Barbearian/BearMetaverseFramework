@@ -9,9 +9,17 @@ namespace Bear.Asset.Editor{
 		public override List<BuildAsset> GetAssets()
 		{
 			List<BuildAsset> rs = new List<BuildAsset>();
-			foreach (var item in AssetDatabase.GetAllAssetBundleNames())
+			foreach (var bundle in AssetDatabase.GetAllAssetBundleNames())
 			{
-				
+				foreach (string asset in AssetDatabase.GetAssetPathsFromAssetBundle(bundle))
+				{
+					rs.Add(
+						new BuildAsset(){
+							path = asset,
+							bundle = bundle,
+						}
+					);
+				}
 			}
 			return rs;
 		}

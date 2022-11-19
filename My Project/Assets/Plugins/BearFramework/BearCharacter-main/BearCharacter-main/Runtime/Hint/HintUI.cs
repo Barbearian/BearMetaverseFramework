@@ -5,9 +5,11 @@ using UnityEngine;
 namespace Bear{
 	using UnityEngine.EventSystems;
 	using UnityEngine.InputSystem;
+	using UnityEngine.UI;
 	[RequireComponent(typeof(RectTransform))]
 	public class HintUI : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 	{
+		public Button button;
 		public InputActionReference reference;
 		public static Camera Cam{get{
 			if(_cam==null)
@@ -44,6 +46,16 @@ namespace Bear{
 			InputHelper.GetAction(reference.action.name).Enable();
 
 		}
+		
+		public void OnDisable(){
+			InputHelper.GetAction(reference.action.name).Enable();
+
+		}
+		
+		public void Register(System.Action action){
+			button.onClick.RemoveAllListeners();
+			button.onClick.AddListener(()=>{action.Invoke();});
+		}
 	}
 	
 	public static class HintUISystem{
@@ -60,6 +72,11 @@ namespace Bear{
 		public static void SetActive(bool isActive){
 			if(Hint!=null) 
 				Hint.gameObject.SetActive(isActive);
+		}
+		
+		public static void Register(System.Action action){
+			if(Hint!=null) 
+				Hint.Register(action);
 		}
 	}
 }

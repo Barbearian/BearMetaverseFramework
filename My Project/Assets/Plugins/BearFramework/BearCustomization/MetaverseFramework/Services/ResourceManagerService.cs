@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
-namespace Bear
+namespace Bear.Asset
 {
     public class ResourceManagerService : IResourceManager
     {

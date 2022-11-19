@@ -54,9 +54,7 @@ namespace Bear{
 			var sceneName = SceneManager.GetActiveScene().name;
 			if(!_records.TryGetValue(name,out var value)){
 				value = new Record();
-				switch(request){
-				
-				}
+
 			}
 		}
 		

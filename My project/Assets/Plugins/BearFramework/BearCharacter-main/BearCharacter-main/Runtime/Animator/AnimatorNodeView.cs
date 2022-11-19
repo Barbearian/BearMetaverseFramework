@@ -65,24 +65,25 @@ namespace Bear{
     public static class AnimatorNodeSystem{
         public static void Play(this IAnimatorNode view, string clipName, int layer = 0, float mixedTime = 0){
             PlayAnimationClipInfo info = PlayAnimationClipInfo.Create(clipName,layer,mixedTime);
-            view.Play(info);
+            view.PlayInfo(info);
         }
+        
 
         public static void EnterDefaultState(this IAnimatorNode view){
             var clip = view.ClipData.EntryClip;
-            view.Play(clip);
+            view.PlayInfo(clip);
             view.DOnEnterDefaule.invoker?.Invoke();
         }
 
         public static void Play(this IAnimatorNode view,int index){
             if(index>=0 && index < view.ClipData.defaultClips.Length){
                 var clip = view.ClipData.defaultClips[index];
-                view.Play(clip);
+                view.PlayInfo(clip);
                 view.DOnPlayedIndexed.invoker?.Invoke(index);
             }
         }
 
-        public static void Play(this IAnimatorNode view, PlayAnimationClipInfo info){
+	    public static void PlayInfo(this IAnimatorNode view, PlayAnimationClipInfo info){
             view.Anim.Play(info.clipName,info.layer,info.mixedTime);
             view.DOnPlayedAnimation.invoker?.Invoke(info);
         }

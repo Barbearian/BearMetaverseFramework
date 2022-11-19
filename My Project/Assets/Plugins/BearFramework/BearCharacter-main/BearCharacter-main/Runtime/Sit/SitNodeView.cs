@@ -7,18 +7,30 @@ namespace Bear{
 	{
 		public NodeView Anchor;
 		private SitNodeData sitData;
+		
 		// Awake is called when the script instance is being loaded.
-		protected void Awake()
+		public override void Awake()
 		{
+			base.Awake();
 			if(Anchor == null){
 				Anchor = new GameObject("SitAnchor").AddNodeView<NodeView>();
 				this.AddNodeViewChild(Anchor);
 			}
 			
 			var anchorData = Anchor.GetOrCreateNodeData<TransformAnchorNodeData>(new TransformAnchorNodeData());
-			this.GetOrCreateNodeData<SitNodeData>(new SitNodeData()).anchor =anchorData ;
+			
+			sitData = this.GetOrCreateNodeData<SitNodeData>(new SitNodeData());
+			sitData.anchor = anchorData;
 		}
 		
+		public void GoToSit(){
+			GlobalPlayerControllerSystem.MoveTo(transform.position);
+		}
+		
+		public void Sit(){
+			GlobalPlayerControllerSystem.EnterState(SitterNodeDataKeyword.Sitting);
+			GlobalPlayerControllerSystem.SnapTo(sitData.anchor);
+		}
 		
 		
 	}
@@ -29,5 +41,7 @@ namespace Bear{
 				view.SitOn(data);
 			}
 		}
+		
+	
 	}
 }

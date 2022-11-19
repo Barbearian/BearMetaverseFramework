@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
-using Bear;
-namespace LGUVirtualOffice
+using Bear.Asset;
+namespace Bear
 {
     public class BearFrameworkInjector : IFrameworkInjector
     {

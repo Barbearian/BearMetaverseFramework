@@ -15,7 +15,8 @@ namespace Bear{
         public CameraTargetNodeData dcland;
 
         
-	    private void Awake() {
+	    public override void Awake() {
+	    	base.Awake();
             cam = GetComponent<CinemachineVirtualCamera>();
 
             cam.LookAt = dcland.lookAt;

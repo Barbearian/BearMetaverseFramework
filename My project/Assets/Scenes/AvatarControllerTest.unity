@@ -548,6 +548,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anchor: {fileID: 0}
+  DOnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1030326396}
+        m_TargetAssemblyTypeName: Bear.SitNodeView, com.oozingbear.bearcharacter
+        m_MethodName: Sit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   Shown: 1
 --- !u!65 &1030326400
 BoxCollider:
@@ -911,6 +926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b28074a9f6f2b5e44bb9d37177e7b0f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 2093472188}
   reference: {fileID: 4673402166045485083, guid: 3719d46a32ff2cd40b17e53c59b67bca,
     type: 3}
 --- !u!114 &2093472188
