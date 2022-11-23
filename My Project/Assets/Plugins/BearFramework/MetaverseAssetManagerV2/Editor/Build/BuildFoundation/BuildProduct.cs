@@ -9,11 +9,16 @@ namespace Bear.Asset.Editor{
 
 		//inputs
 		public IFolderPathProvider PlatformCachePath;
+		public IFolderPathProvider DataPath;
+		public bool ForceRebuild;
+
 		public BuildAssetBundleOptions BuildOptions = BuildAssetBundleOptions.ChunkBasedCompression;
 		
 		//outputs
 		public List<BuildAsset> assets = new List<BuildAsset>();
 		public List<BuildBundle> bundles = new List<BuildBundle>();
+		
+		//changes
 		public List<string> changes = new List<string>();
 	}
 }

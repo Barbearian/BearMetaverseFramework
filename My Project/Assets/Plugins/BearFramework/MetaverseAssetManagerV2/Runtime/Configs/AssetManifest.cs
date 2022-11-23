@@ -5,6 +5,10 @@ using UnityEngine;
 namespace Bear.Asset{
 	public class ManifestAsset 
 	{
-
+		public string name;
+		public int bundle; //bundle index in manifest bundle list
+		public int id;// self index in manifest asset list
+		public int dir; // dir index in manifest dir list
+		
 	}
 }

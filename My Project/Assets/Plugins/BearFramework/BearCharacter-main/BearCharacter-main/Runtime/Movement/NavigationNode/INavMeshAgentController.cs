@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 namespace Bear
@@ -37,12 +37,14 @@ namespace Bear
             var agent = view.Agent;
 
             var dir = view.MovementData.dir;
-            if (dir.sqrMagnitude > 0f || agent.velocity.sqrMagnitude > 0)
-            {
-                if (!view.MovementData.isMoving)
-                {
-                    mond.DOnStartMove?.Invoke();
-                }
+	        if ( agent.velocity.magnitude > 0f)
+	        {
+
+                //if (!view.MovementData.isMoving)
+                //{
+
+                //    mond.DOnStartMove?.Invoke();
+                //}
 
                 view.MovementData.isMoving = true;
             }
@@ -61,7 +63,8 @@ namespace Bear
             var agent = view.Agent;
             agent.isStopped = true;
             agent.velocity = Vector3.zero;
-            view.MovementData.dir = Vector3.zero;
+	        view.MovementData.dir = Vector3.zero;
+	        view.MovementData.isMoving = false;
         }
 
         public static void MoveAndRotate(this INavMeshAgentController view, Vector3 dir)
@@ -116,9 +119,12 @@ namespace Bear
         public static void MoveTo(this INavMeshAgentController view, Vector3 des)
         {
 
+	        view.MovementObserver.DOnStartMove.Invoke();
             var agent = view.Agent;
-            agent.isStopped = false;
-            agent.SetDestination(des);
+	        agent.isStopped = false;
+	        agent.SetDestination(des);
+	        view.MovementData.isMoving = true;
+
         }
 
         public static void NotifySpeed(this INavMeshAgentController view)

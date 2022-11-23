@@ -35,7 +35,7 @@ namespace Bear{
 	
 	public static class AnchorNodeDataSystem{
 		public static void SnapTo(this Transform transform,IAnchorNodeData data){
-			Debug.Log("LOL");
+			//Debug.Log("LOL");
 			transform.position = data.Position;
 			transform.rotation = data.Rotation;
 		}

@@ -13,14 +13,16 @@ namespace Bear
 
             //Add nanvData
             var nanvData = view.GetOrCreateNodeData(new NavMeshAgentNodeData());
-	        view.RegisterAction(MovementKeyword.StopMoving,nanvData.Stop);
+	        view.RegisterAction(MovementKeyword.StopMoving,()=>{nanvData.Stop();});
             
 
             //Add state machine
             var naivesm = view.GetOrCreateNodeData(new NaiveStateMachineNodeData());
 
             //Trigger when move
-            nanvData.MovementObserver.DOnStartMove += () => { naivesm.EnterState("Moving"); };
+	        nanvData.MovementObserver.DOnStartMove += () => { 
+		        naivesm.EnterState("Moving"); 
+	        };
 
 
 	        
@@ -128,7 +130,6 @@ namespace Bear
 	    public static void AddGlobalPlayerControllerNodeData(this NodeView view){
 	    	view.GetOrCreateNodeData<GlobalPlayerControllerNodeData>();
 	    }
-
 
     }
 }

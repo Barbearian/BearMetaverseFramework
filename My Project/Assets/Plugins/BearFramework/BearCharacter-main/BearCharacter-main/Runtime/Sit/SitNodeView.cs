@@ -3,11 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Bear{
+	using UnityEngine.Events;
 	public class SitNodeView : NodeView
 	{
-		public NodeView Anchor;
-		private SitNodeData sitData;
 		
+		public NodeView Anchor;
+		public UnityEvent<bool> DOnSetFree;
+		
+		private SitNodeData sitData;
+		bool free = true;
+		public bool IsFree{
+			get{
+				return free;
+			}
+			
+			private set{
+				free = value;
+				DOnSetFree.Invoke(free);
+			}
+		}
+		int playerCount = 0;
+		int sitterCount = 0;
 		// Awake is called when the script instance is being loaded.
 		public override void Awake()
 		{
@@ -24,7 +40,22 @@ namespace Bear{
 		}
 		
 		public void GoToSit(){
+
+			if(playerCount > 0){
+				GlobalPlayerControllerSystem.EnterState(SitterNodeDataKeyword.GoToSeat);
+				CheckThenSit();
+				return;
+			}
+			
 			GlobalPlayerControllerSystem.MoveTo(transform.position);
+			GlobalPlayerControllerSystem.EnterState(SitterNodeDataKeyword.GoToSeat);
+
+		}
+		
+		public void CheckThenSit(){
+			if(CanSit()){
+				Sit();
+			}
 		}
 		
 		public void Sit(){
@@ -32,6 +63,52 @@ namespace Bear{
 			GlobalPlayerControllerSystem.SnapTo(sitData.anchor);
 		}
 		
+		public void OnTriggerEnter(Collider c){
+			
+			
+			if(IsPlayer(c)){
+				playerCount++;
+				CheckThenSit();
+			}
+		}
+		
+		public void OnTriggerExit(Collider c){
+			if(IsPlayer(c))
+				playerCount--;
+		}
+		
+		private bool CanSit(){
+			if(GlobalPlayerControllerSystem.GetState().Equals(SitterNodeDataKeyword.GoToSeat)){
+				return true;
+			}
+			
+			return false;
+		}
+		
+		public bool IsPlayer(Collider c){
+			if(c.gameObject.TryGetComponent<NodeView>(out var view) && c.gameObject.CompareTag("Player")){
+				return true;
+			}else{
+				return false;
+			}
+		}
+		
+		public void AddSitter(){
+			sitterCount++;
+			IsFree = false;
+
+			if(sitterCount >1){
+				GlobalPlayerControllerSystem.EnterState("Moving");
+			}
+		}
+		
+		public void RemoveSitter(){
+			sitterCount--;
+			Debug.Log("I removed sitter");
+			if(sitterCount == 0){
+				IsFree = true;
+			}
+		}
 		
 	}
 	

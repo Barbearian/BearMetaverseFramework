@@ -11,10 +11,11 @@ namespace Bear{
 		
 		public Transform anchor;
 		public UnityEvent DOnClick;
+		bool showUI = true;
+		bool overme;
 		// Awake is called when the script instance is being loaded.
 		protected void Awake()
 		{
-			
 			if(anchor == null){
 				anchor = transform;
 			}
@@ -25,8 +26,11 @@ namespace Bear{
 		// OnMouseEnter is called when the mouse entered the GUIElement or Collider.
 		protected void OnMouseEnter()
 		{
-			HintUISystem.SetActive(true);
-			HintUISystem.Register(()=>{DOnClick.Invoke();});
+			overme = true;
+			if(showUI){
+				HintUISystem.SetActive(true);
+				HintUISystem.Register(()=>{DOnClick.Invoke();});
+			}
 		}
 		
 		// OnMouseOver is called every frame while the mouse is over the GUIElement or Collider.
@@ -38,9 +42,22 @@ namespace Bear{
 		// OnMouseEnter is called when the mouse entered the GUIElement or Collider.
 		protected void OnMouseExit()
 		{
+			overme = false;
+
 			HintUISystem.SetActive(false);
 
 		}
+		
+		public void SetActiveHint(bool isActive){
+			showUI = isActive;
+			if(isActive && overme){
+				HintUISystem.SetActive(true);
+			}else{
+				HintUISystem.SetActive(false);
+			}
+		}
+		
+		
 		
 		
 	}

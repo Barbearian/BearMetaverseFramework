@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -49,7 +49,9 @@ namespace Bear{
             statemachine.states.Remove(stateName);
         }
 
-        
+	    public static string GetCurrentStateName(this NaiveStateMachineNodeData statemachine){
+	    	return statemachine.CurrentStateName;
+	    }
     }
 
     public class NaiveState{

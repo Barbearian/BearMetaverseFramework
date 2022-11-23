@@ -9,7 +9,11 @@ namespace Bear{
 			if(node.Can(MovementKeyword.StopMoving,SitterNodeDataKeyword.PlaySitAnimation)){
 				if(node.TryGetNodeData<NaiveStateMachineNodeData>(out var sm)){
 					var sitting = sm.GetOrCreateNaiveState(SitterNodeDataKeyword.Sitting);
-					sitting.DOnEnterState+=()=>{Sit(node);};
+					sitting.DOnEnterState+=()=>{
+						Sit(node);
+					};
+					
+					var GoToSeat = sm.GetOrCreateNaiveState(SitterNodeDataKeyword.GoToSeat);
 				}
 				
 			}
@@ -31,6 +35,8 @@ namespace Bear{
 		
 		
 		public const string Sitting = "Sitting";
+		
+		public const string GoToSeat = "GoToSeat";
 	}
 	
 	public static class SitterNodeDataSystem{
@@ -46,6 +52,8 @@ namespace Bear{
 
 				}
 			}));
+			
+			
 			
 			controller.AddNodeData(new SitterNodeData());
 		}

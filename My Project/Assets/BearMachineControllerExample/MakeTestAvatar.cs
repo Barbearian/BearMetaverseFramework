@@ -16,6 +16,8 @@ namespace Bear{
 			var nanvView = NavMeshAgentControllerFactory.AddNavMeshAgentCharacterNodeData(Instantiate(agent));
 			var animView = NavMeshAgentControllerFactory.AddAnimatorNodeData(Instantiate(anim),6,"Speed","MotionSpeed");
 			var camView = CinemachineCameraFactory.AddCinemachineView(Instantiate(cam));
+			if(animView.TryGetNodeData<AnimatorNodeData>(out var aData)){aData.clipData.EntryClip = new PlayAnimationClipInfo(){clipName = "Default"};}
+			
 			
 			nanvView.AddGlobalPlayerControllerNodeData();
 			nanvView.AddNavMeshAgentMovementInput();

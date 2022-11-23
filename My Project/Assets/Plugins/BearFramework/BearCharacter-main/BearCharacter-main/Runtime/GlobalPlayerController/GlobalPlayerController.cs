@@ -40,6 +40,16 @@ namespace Bear{
 			}
 		}
 		
+		public static string GetState(){
+			if(player != null){
+				if(player.TryGetNodeData<NaiveStateMachineNodeData>(out var sm)){
+					return sm.GetCurrentStateName();
+				}
+			}
+			
+			return "";
+		}
+		
 
 	}
 }

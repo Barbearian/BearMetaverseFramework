@@ -12,6 +12,17 @@ namespace Bear.Asset.Editor{
 				BuildBundle(product);
 		}
 		
+		private ulong MoveAssetBundle(string path, string newPath){
+			var bytes = File.ReadAllBytes(path);
+			var size = bytes.Length;
+			Utility.CreateDirectoryIfNecessary(newPath);
+			using(var writer = new BinaryWriter(File.OpenWrite(newPath))){
+				writer.Write(bytes);
+			}
+
+			return (ulong) size;
+
+		}
 		
 		private void BuildBundle(BuildProduct product){
 			var name2bundle = product.bundles.ToDictionary(o=>o.name);
@@ -80,6 +91,17 @@ namespace Bear.Asset.Editor{
 						var buildPath = product.PlatformCachePath.GetFilePath(nameWithAppendHash);
 						
 						bundle.nameWithAppendHash = nameWithAppendHash;
+						bundle.size = MoveAssetBundle(cachePath,buildPath); // Move asset bundle from cachedPath to new new path
+						bundle.hash = Utility.ComputeHash(buildPath);
+						bundle.nameWithAppendHash = $"{name}_{bundle.hash}{BuildUtils.BundleExtension}";
+
+						//Rename file with hash
+						var newPath = product.DataPath.GetFilePath(bundle.nameWithAppendHash);
+						Utility.CreateDirectoryIfNecessary(newPath);
+						if (File.Exists(newPath)) File.Delete(newPath);
+						File.Move(buildPath, newPath);
+
+
 					}
 				}
 			}
