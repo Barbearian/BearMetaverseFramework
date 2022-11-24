@@ -24,9 +24,16 @@ using System;
 			nobj?.DOnReceiveMessages.Remove(key);
 		}
 		
-		public static string GetID(this NetworkedObjectNodeData nobj){
-			return nobj.userID+"_"+(int)nobj.type;
+		public static string GetID(this NetworkedObjectNodeData nobj, NetworkedObjectType target = NetworkedObjectType.networked){
+			if(target!=NetworkedObjectType.networked){
+				return nobj.userID+"_"+(int)nobj.type;
+
+			}else{
+				return nobj.userID+"_"+(int)target;
+			}
 		}
+		
+	
 		
 	}
 }

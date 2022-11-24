@@ -9,17 +9,39 @@ namespace Bear{
 		public NavMeshAgentNodeData navi;
 		NetworkedObjectNodeData nobj;
 		public void Attached(INode node){
+			
 			if(node.TryGetNodeData<NavMeshAgentNodeData>(out navi) && node.TryGetNodeData<NetworkedObjectNodeData>(out nobj)){
-				nobj.SubscribeData(NetworkedNavigatorNodeDataSystem.key,(data)=>{
-					var md = JsonUtility.FromJson<MoveData>(data);
-					navi.MoveTo(md.position);
-				});
+				Init(node);
+
 				
 			}
 		}
 		
 		public void Detached(INode node){
 			nobj.UnsubscribeData(NetworkedNavigatorNodeDataSystem.key);
+		}
+		
+		private void Init(INode node){
+			switch(nobj.type){
+				case NetworkedObjectType.local:
+					nobj.SubscribeData(NetworkedNavigatorNodeDataSystem.key,(data)=>{
+						var md = JsonUtility.FromJson<MoveData>(data);
+						navi.MoveTo(md.position);
+					});
+					break;
+				
+				case NetworkedObjectType.networked:
+					if(node is UpdaterNodeView view){
+						Ticker ticker = new Ticker(Tick);	
+						view.DOnFixedUpdate.Subscribe(ticker.Tick);
+					}
+					break;
+			}
+
+		}
+		
+		private void Tick(){
+			
 		}
 		
 	}
@@ -31,5 +53,6 @@ namespace Bear{
 	[System.Serializable]
 	public struct MoveData{
 		public Vector3 position;
+		public Quaternion rotation;
 	}
 }
