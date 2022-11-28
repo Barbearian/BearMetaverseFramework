@@ -8,11 +8,19 @@ namespace Bear{
 		
 		public NavMeshAgentNodeData navi;
 		NetworkedObjectNodeData nobj;
+		MoveData data;
+		Transform transform;
+		NaiveStateMachineNodeData nm;
 		public void Attached(INode node){
 			
-			if(node.TryGetNodeData<NavMeshAgentNodeData>(out navi) && node.TryGetNodeData<NetworkedObjectNodeData>(out nobj)){
+			if(
+				node.TryGetNodeData<NavMeshAgentNodeData>(out navi) && 
+				node.TryGetNodeData<NetworkedObjectNodeData>(out nobj) &&
+				node is NodeView view
+			){
+				transform = view.transform;
 				Init(node);
-
+				
 				
 			}
 		}
@@ -24,24 +32,46 @@ namespace Bear{
 		private void Init(INode node){
 			switch(nobj.type){
 				case NetworkedObjectType.local:
-					nobj.SubscribeData(NetworkedNavigatorNodeDataSystem.key,(data)=>{
-						var md = JsonUtility.FromJson<MoveData>(data);
-						navi.MoveTo(md.position);
-					});
-					break;
-				
-				case NetworkedObjectType.networked:
+
+					
 					if(node is UpdaterNodeView view){
 						Ticker ticker = new Ticker(Tick);	
 						view.DOnFixedUpdate.Subscribe(ticker.Tick);
+						
+						view.TryGetNodeData<NaiveStateMachineNodeData>(out nm);
 					}
+					
+					break;
+				
+				case NetworkedObjectType.networked:
+					nobj.SubscribeData(NetworkedNavigatorNodeDataSystem.key,(data)=>{
+						var md = JsonUtility.FromJson<MoveData>(data);
+						SetDestination(md);
+					});
+					
+					if(node.TryGetNodeData<MovementObserverNodeData>(out var obs)){
+						obs.DOnStop += ()=>{
+							transform.rotation = data.rotation;
+						};
+					}	
 					break;
 			}
 
 		}
 		
 		private void Tick(){
-			
+			Debug.Log("Ticked");
+			nobj.SendData(NetworkedNavigatorNodeDataSystem.key,JsonUtility.ToJson(new MoveData(){
+				position = transform.position,
+				rotation = transform.rotation,
+				moving = nm.GetCurrentStateName().Equals(MovementKeyword.MovingState)
+			}));
+		}
+		
+		public void SetDestination(MoveData data){
+			this.data = data;
+			navi.MoveTo(data.position);
+
 		}
 		
 	}
@@ -54,5 +84,6 @@ namespace Bear{
 	public struct MoveData{
 		public Vector3 position;
 		public Quaternion rotation;
+		public bool moving;
 	}
 }

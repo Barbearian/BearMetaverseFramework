@@ -123,6 +123,7 @@ namespace Bear
             var agent = view.Agent;
 	        agent.isStopped = false;
 	        agent.SetDestination(des);
+	        
 	        view.MovementData.isMoving = true;
 
         }

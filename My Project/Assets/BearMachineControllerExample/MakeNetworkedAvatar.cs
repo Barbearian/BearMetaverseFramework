@@ -35,6 +35,10 @@ namespace Bear{
 			camView.Link(animView);
 		
 			SitterNodeDataSystem.AddSitterNodeData(nanvView,animView);
+			
+			nanvView.AddNodeData<NetworkedObjectNodeData>(new NetworkedObjectNodeData("Bear"));
+			nanvView.AddNodeData<NetworkedNavigatorNodeData>(new NetworkedNavigatorNodeData());
+				
 		}
 		
 		public void MakeNetworkedPlayer(){
@@ -47,6 +51,10 @@ namespace Bear{
 		
 			nanvView.LinkNavMeshAgentToAnimator(animView);
 			nanvView.LinkInputToAnimator(animView);
+			
+			nanvView.AddNodeData<NetworkedObjectNodeData>(new NetworkedObjectNodeData("Bear",NetworkedObjectType.networked));
+			nanvView.AddNodeData<NetworkedNavigatorNodeData>(new NetworkedNavigatorNodeData());
+
 		
 		}
 	}

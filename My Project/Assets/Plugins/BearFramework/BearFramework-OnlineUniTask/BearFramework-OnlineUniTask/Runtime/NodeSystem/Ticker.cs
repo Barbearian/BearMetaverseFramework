@@ -16,6 +16,8 @@ namespace Bear{
 		}
 		
 		public void Tick(){
+			remain -= Time.deltaTime;
+			
 			if(remain<=0){
 				action.Invoke();
 				remain = max;

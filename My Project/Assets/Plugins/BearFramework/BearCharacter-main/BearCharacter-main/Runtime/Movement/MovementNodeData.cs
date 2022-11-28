@@ -19,5 +19,6 @@ namespace Bear
     
 	public static class MovementKeyword{
 		public const string StopMoving = "StopMoving";
+		public const string MovingState = "Moving";
 	}
 }

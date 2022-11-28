@@ -9,7 +9,9 @@ using System;
 		public static Dictionary<string,NetworkedObjectNodeData> networkedObjects = new Dictionary<string, NetworkedObjectNodeData>();
 		
 		public static void SendData(this NetworkedObjectNodeData nobj,string key,string data){
-			if(networkedObjects.TryGetValue(nobj.userID,out var value)){
+			
+			if(networkedObjects.TryGetValue(nobj.GetID(NetworkedObjectType.networked),out var value)){
+				
 				if(value.DOnReceiveMessages.TryGetValue(key,out var action)){
 					action.Invoke(data);
 				}
@@ -24,13 +26,11 @@ using System;
 			nobj?.DOnReceiveMessages.Remove(key);
 		}
 		
-		public static string GetID(this NetworkedObjectNodeData nobj, NetworkedObjectType target = NetworkedObjectType.networked){
-			if(target!=NetworkedObjectType.networked){
+		public static string GetID(this NetworkedObjectNodeData nobj, NetworkedObjectType target = NetworkedObjectType.unknow){
+			if(target == NetworkedObjectType.unknow)
 				return nobj.userID+"_"+(int)nobj.type;
-
-			}else{
+			else
 				return nobj.userID+"_"+(int)target;
-			}
 		}
 		
 	
