@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 namespace Bear.Asset.Editor{
 	using System.IO;
 	using System.Text;
@@ -9,7 +8,7 @@ namespace Bear.Asset.Editor{
 	{
 		List<ManifestAsset> assets = new List<ManifestAsset>();
 		List<string> dirs = new List<string>();
-		Dictionary<string,ManifestBundle> name2bundle = new Dictionary<string, Bear.ManifestBundle>();
+		Dictionary<string,ManifestBundle> name2bundle = new Dictionary<string, ManifestBundle>();
 		
 		public void Start(BuildProduct product){
 
@@ -36,8 +35,10 @@ namespace Bear.Asset.Editor{
 			if(!CheckChanges(product,manifest)) return false;
 			
 			if(BuildManifestAssets(product,manifest))
-				if(BuildManifestBundles(product,manifest))
+				if(BuildManifestBundles(product,manifest)){
+					manifest.build = product.build;
 					return true;
+				}
 					
 			return false;
 		}
@@ -139,7 +140,8 @@ namespace Bear.Asset.Editor{
 			version.file = file;
 			version.size = size;
 			version.hash = hash;
-			
+			version.build = product.build;
+
 			
 			File.WriteAllText(
 				product.DataPath.GetFilePath(Version.Filename), 

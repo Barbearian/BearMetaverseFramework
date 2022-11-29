@@ -25,6 +25,10 @@ namespace Bear{
 			Physics.queriesHitTriggers = true;
 
 			rectTrans = GetComponent<RectTransform>();
+			
+			if(HintUISystem.Hint != null){
+				Destroy(HintUISystem.Hint);
+			}
 			HintUISystem.Hint = this;
 			
 			this.gameObject.SetActive(false);

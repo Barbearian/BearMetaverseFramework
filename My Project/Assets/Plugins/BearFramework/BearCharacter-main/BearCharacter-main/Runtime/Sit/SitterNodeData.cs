@@ -40,11 +40,20 @@ namespace Bear{
 	}
 	
 	public static class SitterNodeDataSystem{
-		public static void AddSitterNodeData(NodeView controller,NodeView animator){
+		public static void AddSitterNodeData(NodeView controller,NodeView animator,int sitIndex = -1){
 			//add sit
 			controller.AddNodeData(new SitterNodeData());
-			if(animator.TryGetNodeData<AnimatorNodeData>(out var adata)){controller.RegisterAction(SitterNodeDataKeyword.PlaySitAnimation,()=>{adata.Play("Sit",0,0);});}
 			
+			if(sitIndex >= 0){
+				if(animator.TryGetNodeData<AnimatorNodeData>(out var adata)){
+					controller.RegisterAction(SitterNodeDataKeyword.PlaySitAnimation,()=>{adata.Play(sitIndex);});
+				}
+
+			}else{
+				if(animator.TryGetNodeData<AnimatorNodeData>(out var adata)){
+					controller.RegisterAction(SitterNodeDataKeyword.PlaySitAnimation,()=>{adata.Play("Sit",0,0);});
+				}
+			}
 			controller.RegisterSignalReceiver<AnchorNodeSignal>(new ActionNodeSignalReceiver((signal)=>{
 				if(signal is AnchorNodeSignal asignal){
 					Debug.Log("I snapped this boy");

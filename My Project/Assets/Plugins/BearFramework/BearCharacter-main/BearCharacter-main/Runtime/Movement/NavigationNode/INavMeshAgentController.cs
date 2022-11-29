@@ -37,7 +37,7 @@ namespace Bear
             var agent = view.Agent;
 
             var dir = view.MovementData.dir;
-	        if ( agent.velocity.magnitude > 0f)
+	        if ( agent.velocity.magnitude > 0.01f)
 	        {
 
                 //if (!view.MovementData.isMoving)

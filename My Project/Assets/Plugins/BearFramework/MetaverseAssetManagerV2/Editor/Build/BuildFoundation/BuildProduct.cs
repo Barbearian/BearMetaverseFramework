@@ -11,6 +11,7 @@ namespace Bear.Asset.Editor{
 		public IFolderPathProvider PlatformCachePath;
 		public IFolderPathProvider DataPath;
 		public bool ForceRebuild;
+		public string build = "manifest";
 
 		public BuildAssetBundleOptions BuildOptions = BuildAssetBundleOptions.ChunkBasedCompression;
 		
@@ -21,4 +22,6 @@ namespace Bear.Asset.Editor{
 		//changes
 		public List<string> changes = new List<string>();
 	}
+	
+	
 }
