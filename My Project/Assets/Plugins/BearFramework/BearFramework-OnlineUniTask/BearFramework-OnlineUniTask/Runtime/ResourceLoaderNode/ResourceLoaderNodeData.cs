@@ -1,4 +1,4 @@
-
+﻿
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
@@ -8,7 +8,7 @@ namespace Bear
 {
     public class ResourceLoaderNodeData : ANodeData
     {
-        public Dictionary<string, IResource> allResource = new Dictionary<string, IResource>();
+	    public Dictionary<string, IBearResource> allResource = new Dictionary<string, IBearResource>();
         
     }
 
@@ -22,7 +22,7 @@ namespace Bear
             }
             else
             {
-                var resource = new Resource(key);
+                var resource = new BearResource(key);
                 allResource[key] = resource;
                 resource.LoadResource<T>(DOnComplete);
             }
@@ -39,7 +39,7 @@ namespace Bear
             }
             else
             {
-                var resource = new Resource(key);
+                var resource = new BearResource(key);
                 allResource[key] = resource;
 
                 var rs = await resource.LoadResourceAsync<T>(key);
@@ -58,26 +58,16 @@ namespace Bear
         }
     }
 
-    
-
-    public interface IResource
-    {
-        void LoadResource<T>(System.Action<T> DOnComplete);
-
-        UniTask<T> LoadResourceAsync<T>(string address);
-
-        void UnloadResource();
-    }
 
     
 
-    public class Resource : IResource
+	public class BearResource : IBearResource
     {
         public string ResourceName;
         object resource;
         UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle handle;
 
-        public Resource(string rname)
+        public BearResource(string rname)
         {
             ResourceName = rname.Replace("\r", "");
         }

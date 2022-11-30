@@ -58,7 +58,7 @@ namespace Bear
             
         }
 
-        public static NodeView AddAnimatorNodeData(this Animator anim, int maxSpeedBlend, string SpeedAttribute, string SpeedMultiAttribute) {
+	    public static NodeView AddAnimatorNodeData(this Animator anim, float maxSpeedBlend, string SpeedAttribute, string SpeedMultiAttribute) {
             var view = anim.gameObject.AddNodeView<NodeView>();
 
             var rs = view.GetOrCreateNodeData(new AnimatorNodeData());

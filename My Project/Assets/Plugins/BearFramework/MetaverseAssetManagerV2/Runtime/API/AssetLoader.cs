@@ -5,6 +5,6 @@ using UnityEngine;
 namespace Bear.Asset{
 	public class AssetLoader
 	{
-	    
+		
 	}
 }
