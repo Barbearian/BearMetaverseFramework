@@ -10,6 +10,7 @@ namespace Bear{
 	{
 		
 		public Transform anchor;
+		public Vector3 offset;
 		public UnityEvent DOnClick;
 		bool showUI = true;
 		bool overme;
@@ -36,7 +37,7 @@ namespace Bear{
 		// OnMouseOver is called every frame while the mouse is over the GUIElement or Collider.
 		protected void OnMouseOver()
 		{
-			HintUISystem.MoveToWorldPosition(transform.position);
+			HintUISystem.MoveToWorldPosition(transform.position+offset);
 		}
 		
 		// OnMouseEnter is called when the mouse entered the GUIElement or Collider.
