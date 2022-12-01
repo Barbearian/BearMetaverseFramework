@@ -6,7 +6,7 @@ namespace Bear{
 	using UnityEngine.Events;
 	public class SitNodeView : NodeView
 	{
-		
+		static SitNodeView targetSit;
 		public NodeView Anchor;
 		public UnityEvent<bool> DOnSetFree;
 		
@@ -40,7 +40,7 @@ namespace Bear{
 		}
 		
 		public void GoToSit(){
-
+			targetSit = this;
 			if(playerCount > 0){
 				GlobalPlayerControllerSystem.EnterState(SitterNodeDataKeyword.GoToSeat);
 				CheckThenSit();
@@ -78,7 +78,11 @@ namespace Bear{
 		}
 		
 		private bool CanSit(){
-			if(GlobalPlayerControllerSystem.GetState().Equals(SitterNodeDataKeyword.GoToSeat)){
+			if(
+				GlobalPlayerControllerSystem.GetState().Equals(SitterNodeDataKeyword.GoToSeat)
+				&&
+				targetSit == this
+			){
 				return true;
 			}
 			
