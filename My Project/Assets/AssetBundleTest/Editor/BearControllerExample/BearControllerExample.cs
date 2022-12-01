@@ -4,7 +4,6 @@ using UnityEngine;
 
 namespace Bear{
 	using UnityEngine.AI;
-	using Cysharp.Threading.Tasks;
 	public class BearControllerExample : MonoBehaviour
 	{
 		public NavMeshAgent agent;
