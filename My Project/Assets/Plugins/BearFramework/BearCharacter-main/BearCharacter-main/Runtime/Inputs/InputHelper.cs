@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -17,7 +17,8 @@ namespace Bear
             pInput = new PlayerInput();
             pInput.Player.Enable();
             pInput.ShortCut.Enable();
-            pInput.UI.Enable();
+	        pInput.UI.Enable();
+	        pInput.Misc.Enable();
         }
 
         public static Vector2 GetMoveDir()

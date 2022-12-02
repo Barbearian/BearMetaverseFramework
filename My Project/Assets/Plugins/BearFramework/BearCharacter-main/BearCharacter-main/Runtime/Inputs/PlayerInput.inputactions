@@ -473,6 +473,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Misc",
+            "id": "d7f13bd2-4bf7-4412-8b89-e0a99b95946a",
+            "actions": [
+                {
+                    "name": "SpeedUp",
+                    "type": "PassThrough",
+                    "id": "424873e9-5431-46c3-82a3-aae72a70f787",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a71c0e3c-8919-4631-aabd-5eedebabbb0e",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpeedUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

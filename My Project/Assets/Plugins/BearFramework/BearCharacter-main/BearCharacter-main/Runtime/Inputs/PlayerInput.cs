@@ -495,6 +495,34 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Misc"",
+            ""id"": ""d7f13bd2-4bf7-4412-8b89-e0a99b95946a"",
+            ""actions"": [
+                {
+                    ""name"": ""SpeedUp"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""424873e9-5431-46c3-82a3-aae72a70f787"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Hold"",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""a71c0e3c-8919-4631-aabd-5eedebabbb0e"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SpeedUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -523,6 +551,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_CameraXY = m_Camera.FindAction("CameraXY", throwIfNotFound: true);
         m_Camera_CameraZoom = m_Camera.FindAction("CameraZoom", throwIfNotFound: true);
+        // Misc
+        m_Misc = asset.FindActionMap("Misc", throwIfNotFound: true);
+        m_Misc_SpeedUp = m_Misc.FindAction("SpeedUp", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -806,6 +837,39 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         }
     }
     public CameraActions @Camera => new CameraActions(this);
+
+    // Misc
+    private readonly InputActionMap m_Misc;
+    private IMiscActions m_MiscActionsCallbackInterface;
+    private readonly InputAction m_Misc_SpeedUp;
+    public struct MiscActions
+    {
+        private @PlayerInput m_Wrapper;
+        public MiscActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @SpeedUp => m_Wrapper.m_Misc_SpeedUp;
+        public InputActionMap Get() { return m_Wrapper.m_Misc; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MiscActions set) { return set.Get(); }
+        public void SetCallbacks(IMiscActions instance)
+        {
+            if (m_Wrapper.m_MiscActionsCallbackInterface != null)
+            {
+                @SpeedUp.started -= m_Wrapper.m_MiscActionsCallbackInterface.OnSpeedUp;
+                @SpeedUp.performed -= m_Wrapper.m_MiscActionsCallbackInterface.OnSpeedUp;
+                @SpeedUp.canceled -= m_Wrapper.m_MiscActionsCallbackInterface.OnSpeedUp;
+            }
+            m_Wrapper.m_MiscActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @SpeedUp.started += instance.OnSpeedUp;
+                @SpeedUp.performed += instance.OnSpeedUp;
+                @SpeedUp.canceled += instance.OnSpeedUp;
+            }
+        }
+    }
+    public MiscActions @Misc => new MiscActions(this);
     public interface IPlayerActions
     {
         void OnMoveDir(InputAction.CallbackContext context);
@@ -833,5 +897,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     {
         void OnCameraXY(InputAction.CallbackContext context);
         void OnCameraZoom(InputAction.CallbackContext context);
+    }
+    public interface IMiscActions
+    {
+        void OnSpeedUp(InputAction.CallbackContext context);
     }
 }

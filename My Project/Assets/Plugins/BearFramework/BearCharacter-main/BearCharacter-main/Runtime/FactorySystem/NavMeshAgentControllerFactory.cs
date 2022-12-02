@@ -24,7 +24,7 @@ namespace Bear
 		        naivesm.EnterState("Moving"); 
 	        };
 
-
+			
 	        
             return view;
 

@@ -50,6 +50,14 @@ namespace Bear{
 			return "";
 		}
 		
+		public static void PlayAnimation(int index){
+			if(player != null){
+				if(player.TryGetNodeData<AnimatorNodeData>(out var anim)){
+					anim.Play(index);
+				}
+			}
+		}
+		
 
 	}
 }

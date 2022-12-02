@@ -13,7 +13,8 @@ namespace Bear{
 		// Awake is called when the script instance is being loaded.
 		protected void Awake()
 		{
-			var nanvView = NavMeshAgentControllerFactory.AddNavMeshAgentCharacterNodeData(Instantiate(agent));
+			var agentInstance = Instantiate(agent);
+			var nanvView = NavMeshAgentControllerFactory.AddNavMeshAgentCharacterNodeData(agentInstance);
 			var animView = NavMeshAgentControllerFactory.AddAnimatorNodeData(Instantiate(anim),6,"Speed","MotionSpeed");
 			var camView = CinemachineCameraFactory.AddCinemachineView(Instantiate(cam));
 			if(animView.TryGetNodeData<AnimatorNodeData>(out var aData)){aData.clipData.EntryClip = new PlayAnimationClipInfo(){clipName = "Default"};}
@@ -21,13 +22,19 @@ namespace Bear{
 			
 			nanvView.AddGlobalPlayerControllerNodeData();
 			nanvView.AddNavMeshAgentMovementInput();
-			if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti = 6;
+			if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti = 3;
 			
 			nanvView.LinkNavMeshAgentToAnimator(animView);
 			nanvView.LinkInputToAnimator(animView);
 			camView.Link(animView);
 			
 			SitterNodeDataSystem.AddSitterNodeData(nanvView,animView);
+			
+			nanvView.AddNodeData<SpeedUpNodeData>(new SpeedUpNodeData(){
+				DOnSpeedUp = (x)=>{
+					agentInstance.speed = x;
+				}
+			});
 		}
 	}
 }
