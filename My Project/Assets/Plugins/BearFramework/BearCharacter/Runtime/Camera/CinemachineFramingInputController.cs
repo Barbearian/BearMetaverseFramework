@@ -1,4 +1,4 @@
-using Cinemachine;
+﻿using Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -31,7 +31,9 @@ namespace Bear{
             CameraZoom.action.Enable();
 
             cft.m_MinimumDistance = minCamDistance;
-            cft.m_MaximumDistance = maxCamDistance;
+	        cft.m_MaximumDistance = maxCamDistance;
+            
+	        cft.m_CameraDistance = minCamDistance;
         }
         
 
