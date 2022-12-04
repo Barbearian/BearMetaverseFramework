@@ -32,11 +32,11 @@ namespace Bear
 
         public void Detached(INode node)
         {
-            if (node is IOnFixedUpdateUpdater uNode)
+            if (node is IOnUpdateUpdater uNode)
             {
                 Agent = null;
 
-                uNode.DOnFixedUpdate.Unsubscribe(MyUpdate);
+	            uNode.DOnUpdate.Unsubscribe(MyUpdate);
 
             }
         }

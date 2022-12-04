@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace Bear
 {
+	using Cinemachine;
     public static class CinemachineCameraFactory 
     {
         //public static async UniTask<CinemachineVirtualCameraNodeView> MakeLocalLookatCamera()
@@ -24,11 +25,13 @@ namespace Bear
         //    return null;
         //}
         
-	    public static CinemachineVirtualCameraNodeView AddCinemachineView(Cinemachine.CinemachineVirtualCamera camera){
+	    public static CinemachineVirtualCameraNodeView AddCinemachineView(Cinemachine.CinemachineVirtualCamera camera, CinemachineBrain.UpdateMethod method = CinemachineBrain.UpdateMethod.SmartUpdate){
 		    //Make Camera 
 		    var cam = Camera.main;
 		    var camview = cam.gameObject.AddNodeView<CameraNodeView>();
-		    camview.AddNodeData(new CinemachineBrainNodeData());
+		    camview.AddNodeData(new CinemachineBrainNodeData(){
+		    	updateMethod = method
+		    });
 		    camview.Init();
 		    
 		    var camNode = camera.gameObject.AddNodeView<CinemachineVirtualCameraNodeView>();

@@ -42,11 +42,12 @@ namespace Bear{
 
 	public struct CinemachineBrainNodeData:INodeData,IOnAttachedToNode,IOnDetachedFromNode{
 	    public CinemachineBrain brain;
-        
+		public CinemachineBrain.UpdateMethod updateMethod;
 		public void Attached(INode node){
 			var cam = Camera.main;
 			if(!cam.TryGetComponent<CinemachineBrain>(out var brain)){
-				cam.gameObject.AddComponent<CinemachineBrain>();
+				var cbrain = cam.gameObject.AddComponent<CinemachineBrain>();
+				cbrain.m_UpdateMethod = updateMethod;
 			}
 		}
 		

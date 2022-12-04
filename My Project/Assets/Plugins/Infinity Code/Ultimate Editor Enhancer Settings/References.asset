@@ -184,4 +184,8 @@ MonoBehaviour:
     customWindowSize: {x: 400, y: 300}
     alignWindowToBar: 1
     windowMode: 0
-  _sceneHistory: []
+  _sceneHistory:
+  - name: CharacterController
+    path: Assets/Scene/CharacterController.unity
+  - name: NetworkController
+    path: Assets/Scene/NetworkController.unity
