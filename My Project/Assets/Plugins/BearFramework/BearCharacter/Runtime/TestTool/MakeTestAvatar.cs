@@ -14,7 +14,7 @@ namespace Bear{
 		protected void Awake()
 		{
 			var agentInstance = Instantiate(agent);
-			
+			agentInstance.TeleportTo(transform.position);
 			
 			
 			var nanvView = NavMeshAgentControllerFactory.AddNavMeshAgentCharacterNodeData(agentInstance);
