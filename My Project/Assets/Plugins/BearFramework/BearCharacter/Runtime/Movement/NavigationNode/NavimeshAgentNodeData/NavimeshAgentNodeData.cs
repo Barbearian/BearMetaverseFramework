@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 namespace Bear
 {
+	using UnityEngine;
     public class NavMeshAgentNodeData : INodeData, IOnAttachedToNode,IOnDetachedFromNode, INavMeshAgentController
     {
         public NavMeshAgent agent;
@@ -62,5 +63,9 @@ namespace Bear
             PointInputNode.DMoveTo += this.MoveTo;
 
         }
+        
+	    public void MoveTo(Vector3 moveTo){
+	    	this.MoveTo(moveTo,true);
+	    }
     }
 }

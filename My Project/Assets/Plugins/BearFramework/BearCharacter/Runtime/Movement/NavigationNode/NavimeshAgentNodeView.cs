@@ -54,6 +54,9 @@ namespace Bear
             this.Rotate(directionalInputNode.RotateDir);
         }
 
+	    private void MoveTo(Vector3 target){
+	    	this.MoveTo(target,true);
+	    }
 
     }
 

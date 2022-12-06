@@ -116,10 +116,10 @@ namespace Bear
 
         }
 
-        public static void MoveTo(this INavMeshAgentController view, Vector3 des)
+	    public static void MoveTo(this INavMeshAgentController view, Vector3 des,bool triggerStartMoving = true)
         {
 
-	        view.MovementObserver.DOnStartMove.Invoke();
+	        if(triggerStartMoving) view.MovementObserver.DOnStartMove.Invoke();
             var agent = view.Agent;
 	        agent.isStopped = false;
 	        agent.SetDestination(des);
