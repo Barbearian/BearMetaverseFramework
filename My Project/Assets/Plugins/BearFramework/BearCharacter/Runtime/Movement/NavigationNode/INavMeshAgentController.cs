@@ -63,7 +63,7 @@ namespace Bear
             var agent = view.Agent;
             agent.isStopped = true;
             agent.velocity = Vector3.zero;
-	        view.MovementData.dir = Vector3.zero;
+	        //view.MovementData.dir = Vector3.zero;
 	        view.MovementData.isMoving = false;
         }
 
@@ -75,12 +75,13 @@ namespace Bear
 
         public static void Move(this INavMeshAgentController view, Vector3 dir)
         {
-            bool hadInput = view.MovementData.dir.sqrMagnitude != 0;
+	        bool hadInput = view.MovementData.dir.sqrMagnitude > 0;
             bool hasInput = dir.sqrMagnitude > 0;
             var agent = view.Agent;
 
             if (!agent.isStopped && dir.sqrMagnitude > 0)
             {
+	            view.MovementObserver.DOnStartMove.Invoke();
                 view.Stop();
             }
 
