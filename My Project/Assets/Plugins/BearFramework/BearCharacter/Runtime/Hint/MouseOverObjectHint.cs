@@ -9,8 +9,10 @@ namespace Bear{
 	public class MouseOverObjectHint : MonoBehaviour
 	{
 		
+		public MouseOverObjectHintStyleConfig style;
+		
 		public Transform anchor;
-		public Vector3 offset;
+		
 		public UnityEvent DOnClick;
 		bool showUI = true;
 		bool overme;
@@ -19,6 +21,7 @@ namespace Bear{
 		{
 			if(anchor == null){
 				anchor = transform;
+				
 			}
 		}
 		
@@ -31,13 +34,14 @@ namespace Bear{
 			if(showUI){
 				HintUISystem.SetActive(true);
 				HintUISystem.Register(()=>{DOnClick.Invoke();});
+				HintUISystem.UpdateStyle(style);
 			}
 		}
 		
 		// OnMouseOver is called every frame while the mouse is over the GUIElement or Collider.
 		protected void OnMouseOver()
 		{
-			HintUISystem.MoveToWorldPosition(transform.position+offset);
+			HintUISystem.MoveToWorldPosition(transform.position+style.GetOffset());
 		}
 		
 		// OnMouseEnter is called when the mouse entered the GUIElement or Collider.
@@ -62,6 +66,7 @@ namespace Bear{
 		
 		
 	}
+
 	
 
 }

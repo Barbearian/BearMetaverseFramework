@@ -9,6 +9,7 @@ namespace Bear{
 	[RequireComponent(typeof(RectTransform))]
 	public class HintUI : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 	{
+		public Image image;
 		public Button button;
 		public InputActionReference reference;
 		public static Camera Cam{get{
@@ -82,5 +83,15 @@ namespace Bear{
 			if(Hint!=null) 
 				Hint.Register(action);
 		}
+
+		public static void UpdateStyle(MouseOverObjectHintStyleConfig style){
+			if(Hint!=null && Hint.image != null) {
+				Hint.image.sprite = style.GetSprite();
+				Hint.image.SetNativeSize();
+			}
+			
+		}
 	}
+	
+
 }
