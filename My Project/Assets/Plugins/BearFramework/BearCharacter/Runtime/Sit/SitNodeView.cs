@@ -47,7 +47,7 @@ namespace Bear{
 				return;
 			}
 			
-			GlobalPlayerControllerSystem.MoveTo(transform.position);
+			GlobalPlayerControllerSystem.MoveTo(Anchor.transform.position);
 			GlobalPlayerControllerSystem.EnterState(SitterNodeDataKeyword.GoToSeat);
 
 		}
