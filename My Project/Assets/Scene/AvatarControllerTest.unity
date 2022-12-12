@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae609e2ec536184f93dc26709c0c6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: {fileID: 0}
+  style: {fileID: 11400000, guid: e94a73945994a164696ea5b02ef2fa10, type: 2}
   anchor: {fileID: 0}
   DOnClick:
     m_PersistentCalls:
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae609e2ec536184f93dc26709c0c6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  style: {fileID: 0}
+  style: {fileID: 11400000, guid: e94a73945994a164696ea5b02ef2fa10, type: 2}
   anchor: {fileID: 0}
   DOnClick:
     m_PersistentCalls:

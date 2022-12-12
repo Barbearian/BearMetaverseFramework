@@ -12,6 +12,7 @@ namespace Bear{
 		public NavMeshAgent agent;
 		public CinemachineVirtualCamera cam;
 		public Animator anim;
+		public AnimationClipNodeData adata;
 		// Awake is called when the script instance is being loaded.
 		protected void Awake()
 		{
@@ -22,8 +23,13 @@ namespace Bear{
 		public void MakeClient(){
 			var nanvView = NavMeshAgentControllerFactory.AddNavMeshAgentCharacterNodeData(Instantiate(agent));
 			var animView = NavMeshAgentControllerFactory.AddAnimatorNodeData(Instantiate(anim),6,"Speed","MotionSpeed");
+			if(animView.TryGetNodeData<AnimatorNodeData>(out var aData)){
+				aData.clipData.EntryClip = adata.EntryClip;
+				aData.clipData.defaultClips = adata.defaultClips;
+			}
+
+
 			var camView = CinemachineCameraFactory.AddCinemachineView(Instantiate(cam));
-			if(animView.TryGetNodeData<AnimatorNodeData>(out var aData)){aData.clipData.EntryClip = new PlayAnimationClipInfo(){clipName = "Default"};}
 		
 		
 			nanvView.AddGlobalPlayerControllerNodeData();
@@ -33,18 +39,23 @@ namespace Bear{
 			nanvView.LinkNavMeshAgentToAnimator(animView);
 			nanvView.LinkInputToAnimator(animView);
 			camView.Link(animView);
-		
-			SitterNodeDataSystem.AddSitterNodeData(nanvView,animView);
+
+			SitterNodeDataSystem.AddSitterNodeData(nanvView,animView,1);
 			
 			nanvView.AddNodeData<NetworkedObjectNodeData>(new NetworkedObjectNodeData("Bear"));
-			nanvView.AddNodeData<NetworkedNavigatorNodeData>(new NetworkedNavigatorNodeData());
+			nanvView.AddNodeData<NetworkedNavigatorNodeData>(new NetworkedNavigatorNodeData(animView));
 				
 		}
 		
 		public void MakeNetworkedPlayer(){
 			var nanvView = NavMeshAgentControllerFactory.AddNavMeshAgentCharacterNodeData(Instantiate(agent));
 			var animView = NavMeshAgentControllerFactory.AddAnimatorNodeData(Instantiate(anim),6,"Speed","MotionSpeed");
-			if(animView.TryGetNodeData<AnimatorNodeData>(out var aData)){aData.clipData.EntryClip = new PlayAnimationClipInfo(){clipName = "Default"};}
+			if(animView.TryGetNodeData<AnimatorNodeData>(out var aData)){
+				aData.clipData.EntryClip = adata.EntryClip;
+				aData.clipData.defaultClips = adata.defaultClips;
+			}
+
+			//if(animView.TryGetNodeData<AnimatorNodeData>(out var aData)){aData.clipData.EntryClip = new PlayAnimationClipInfo(){clipName = "Default"};}
 		
 		
 			if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti = 6;
@@ -53,8 +64,11 @@ namespace Bear{
 			nanvView.LinkInputToAnimator(animView);
 			
 			nanvView.AddNodeData<NetworkedObjectNodeData>(new NetworkedObjectNodeData("Bear",NetworkedObjectType.networked));
-			nanvView.AddNodeData<NetworkedNavigatorNodeData>(new NetworkedNavigatorNodeData());
+			nanvView.AddNodeData<NetworkedNavigatorNodeData>(new NetworkedNavigatorNodeData(animView));
 
+
+
+			nanvView.tag = "Untagged";
 		
 		}
 	}

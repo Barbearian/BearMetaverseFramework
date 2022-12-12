@@ -22,8 +22,8 @@ namespace Bear{
 				DOnSetFree.Invoke(free);
 			}
 		}
-		int playerCount = 0;
-		int sitterCount = 0;
+		public int playerCount = 0;
+		public int sitterCount = 0;
 		// Awake is called when the script instance is being loaded.
 		public override void Awake()
 		{
@@ -59,8 +59,9 @@ namespace Bear{
 		}
 		
 		public void Sit(){
-			GlobalPlayerControllerSystem.EnterState(SitterNodeDataKeyword.Sitting);
 			GlobalPlayerControllerSystem.SnapTo(sitData.anchor);
+			GlobalPlayerControllerSystem.EnterState(SitterNodeDataKeyword.Sitting);
+
 		}
 		
 		public void OnTriggerEnter(Collider c){

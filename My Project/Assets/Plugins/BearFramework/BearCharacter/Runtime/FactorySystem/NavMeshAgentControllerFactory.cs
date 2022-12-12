@@ -91,7 +91,7 @@ namespace Bear
             state.DOnEnterState += () =>
             {
             	animatorView.transform.RestoreFromAnchor();
-                animator.EnterDefaultState();
+	            animator.Play(0);
             };
 
             //stop moving when play guesture

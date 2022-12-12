@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.AI;
 namespace Bear{
 	public class NetworkedNavigatorNodeData : INodeData,IOnAttachedToNode,IOnDetachedFromNode
 	{
@@ -9,16 +9,30 @@ namespace Bear{
 		public NavMeshAgentNodeData navi;
 		NetworkedObjectNodeData nobj;
 		MoveData data;
-		Transform transform;
+		NodeView transform;
+		NodeView body;
+		AnimatorNodeData anode;
 		NaiveStateMachineNodeData nm;
+		NavMeshAgent agent;
+		public NetworkedNavigatorNodeData(NodeView body){
+			this.body = body;
+			anode = body.GetOrCreateNodeData<AnimatorNodeData>();
+
+			
+			
+		}
+		
 		public void Attached(INode node){
 			
 			if(
 				node.TryGetNodeData<NavMeshAgentNodeData>(out navi) && 
 				node.TryGetNodeData<NetworkedObjectNodeData>(out nobj) &&
-				node is NodeView view
+				
+				node is NodeView view 
 			){
-				transform = view.transform;
+			
+				view.TryGetComponent<NavMeshAgent>(out agent); 
+				transform = view;
 				Init(node);
 				
 				
@@ -32,6 +46,7 @@ namespace Bear{
 		private void Init(INode node){
 			switch(nobj.type){
 				case NetworkedObjectType.local:
+					anode.DOnPlayedIndexed.Link<int>(SendAnimationData);
 
 					
 					if(node is UpdaterNodeView view){
@@ -39,6 +54,7 @@ namespace Bear{
 						view.DOnFixedUpdate.Subscribe(ticker.Tick);
 						
 						view.TryGetNodeData<NaiveStateMachineNodeData>(out nm);
+						
 					}
 					
 					break;
@@ -49,9 +65,14 @@ namespace Bear{
 						SetDestination(md);
 					});
 					
+					nobj.SubscribeData(NetworkedNavigatorNodeDataSystem.Animationkey,(data)=>{
+						var md = JsonUtility.FromJson<MoveData>(data);
+						PlayerAnimationClip(md);
+					});
+					
 					if(node.TryGetNodeData<MovementObserverNodeData>(out var obs)){
 						obs.DOnStop += ()=>{
-							transform.rotation = data.rotation;
+							transform.transform.rotation = data.rotation;
 						};
 					}	
 					break;
@@ -61,29 +82,67 @@ namespace Bear{
 		
 		private void Tick(){
 			Debug.Log("Ticked");
-			nobj.SendData(NetworkedNavigatorNodeDataSystem.key,JsonUtility.ToJson(new MoveData(){
-				position = transform.position,
-				rotation = transform.rotation,
-				moving = nm.GetCurrentStateName().Equals(MovementKeyword.MovingState)
-			}));
+			nobj.SendData(NetworkedNavigatorNodeDataSystem.key,JsonUtility.ToJson(GetData()));
 		}
+		
+		private void SendAnimationData(int index){
+			var data = GetData();
+			data.state = index;
+			nobj.SendData(NetworkedNavigatorNodeDataSystem.Animationkey,JsonUtility.ToJson(data));
+
+		}
+		
+		private MoveData GetData(){
+			return new MoveData(){
+				position = transform.transform.position,
+				rotation = transform.transform.rotation,
+				bodyPosition = body.transform.localPosition,
+				bodyRotation = body.transform.localRotation,
+				moving = nm.GetCurrentStateName().Equals(MovementKeyword.MovingState) || nm.GetCurrentStateName().Equals(SitterNodeDataKeyword.GoToSeat)
+			};
+		}
+	
 		
 		public void SetDestination(MoveData data){
 			this.data = data;
-			navi.MoveTo(data.position);
 
+			if(data.moving){
+				agent.updatePosition = true;
+				navi.MoveTo(data.position,false);
+			}else{
+				agent.Stop();
+				agent.Move(data.position - transform.transform.position);
+				agent.transform.rotation = data.rotation;
+
+			}
+			
+			body.transform.localRotation = data.bodyRotation;
+			body.transform.localPosition = data.bodyPosition;
+
+		}
+		
+		public void PlayerAnimationClip(MoveData data){
+			Debug.Log("哈");
+			SetDestination(data);
+			AnimatorNodeSystem.Play(anode,data.state);
 		}
 		
 	}
 	
 	public static class NetworkedNavigatorNodeDataSystem{
 		public const string key = "Move";
+		public const string Animationkey = "PlayAnimation";
 	}
 	
 	[System.Serializable]
 	public struct MoveData{
 		public Vector3 position;
 		public Quaternion rotation;
+		public Vector3 bodyPosition;
+		public Quaternion bodyRotation;
 		public bool moving;
+		public int state;
 	}
+	
+
 }
