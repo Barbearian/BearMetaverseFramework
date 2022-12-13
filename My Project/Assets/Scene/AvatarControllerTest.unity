@@ -283,8 +283,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 7048991660241445060, guid: 49a59436577444d4b9cdcbddf29e3700, type: 3}
-  cam: {fileID: 745649464068961719, guid: 29c90a192f15cdd4d9e09f8df95db553, type: 3}
+  cam: {fileID: 1816159700052020177, guid: 5ea19d2b04e64d64f9f28f7f7b404d97, type: 3}
   anim: {fileID: 6982812146204527121, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+  adata:
+    EntryClip:
+      clipName: Default
+      layer: 0
+      mixedTime: 0
+    defaultClips:
+    - clipName: Default
+      layer: 0
+      mixedTime: 0
 --- !u!1 &594161567
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +553,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  playerCount: 0
+  sitterCount: 0
 --- !u!23 &1030326397
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -890,6 +901,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  playerCount: 0
+  sitterCount: 0
 --- !u!23 &2057529717
 MeshRenderer:
   m_ObjectHideFlags: 0

@@ -8,16 +8,16 @@ namespace Bear{
 
     }
 
-    [RequireComponent(typeof(CinemachineVirtualCamera))]
+	[RequireComponent(typeof(CinemachineVirtualCameraBase))]
     public class CinemachineVirtualCameraNodeView : NodeView,ICinemachineBrainAccessor
     {
-        public CinemachineVirtualCamera cam;
+	    public CinemachineVirtualCameraBase cam;
         public CameraTargetNodeData dcland;
 
         
 	    public override void Awake() {
 	    	base.Awake();
-            cam = GetComponent<CinemachineVirtualCamera>();
+		    cam = gameObject.GetComponent<CinemachineVirtualCameraBase>();
 
             cam.LookAt = dcland.lookAt;
             cam.Follow = dcland.follow;

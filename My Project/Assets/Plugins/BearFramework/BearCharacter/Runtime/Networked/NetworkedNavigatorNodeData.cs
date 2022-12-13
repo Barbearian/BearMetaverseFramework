@@ -110,7 +110,7 @@ namespace Bear{
 				agent.updatePosition = true;
 				navi.MoveTo(data.position,false);
 			}else{
-				agent.Stop();
+				agent.isStopped = true;
 				agent.Move(data.position - transform.transform.position);
 				agent.transform.rotation = data.rotation;
 

@@ -25,7 +25,7 @@ namespace Bear
         //    return null;
         //}
         
-	    public static CinemachineVirtualCameraNodeView AddCinemachineView(Cinemachine.CinemachineVirtualCamera camera, CinemachineBrain.UpdateMethod method = CinemachineBrain.UpdateMethod.SmartUpdate){
+	    public static CinemachineVirtualCameraNodeView AddCinemachineView(Cinemachine.CinemachineVirtualCameraBase camera, CinemachineBrain.UpdateMethod method = CinemachineBrain.UpdateMethod.SmartUpdate){
 		    //Make Camera 
 		    var cam = Camera.main;
 		    var camview = cam.gameObject.AddNodeView<CameraNodeView>();

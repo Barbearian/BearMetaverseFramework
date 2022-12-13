@@ -3,15 +3,18 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Bear{
+using UnityEngine.Events;
     
     [RequireComponent(typeof(CinemachineVirtualCamera),typeof(CinemachineInputProvider))]
     public class CinemachineFramingInputController : MonoBehaviour
-    {
+	{
+    	
+    	
         [Min(0)]
         public float maxCamDistance = 10;
 
         [Min(0)]
-        public float RollMultiPlayer = 1;
+		public float RollMultiplier = 1;
 
         [Min(0)]
         public float minCamDistance = 0;
@@ -27,7 +30,9 @@ namespace Bear{
             provider = GetComponent<CinemachineInputProvider>();
 
             //CameraXY.action.Enable();
-            provider.XYAxis = CameraXY;
+	        provider.XYAxis = CameraXY;
+            
+            
             CameraZoom.action.Enable();
 
             cft.m_MinimumDistance = minCamDistance;
@@ -39,7 +44,7 @@ namespace Bear{
 
         private void UpdateDistance(InputAction.CallbackContext context){
             var speed = context.ReadValue<float>();
-            var target = cft.m_CameraDistance+speed*RollMultiPlayer*Time.deltaTime;
+            var target = cft.m_CameraDistance+speed*RollMultiplier*Time.deltaTime;
             target = Mathf.Clamp(target,minCamDistance,maxCamDistance);
             cft.m_CameraDistance = target;
             

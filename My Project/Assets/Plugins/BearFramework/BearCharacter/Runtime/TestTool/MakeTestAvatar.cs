@@ -8,8 +8,10 @@ namespace Bear{
 	public class MakeTestAvatar : MonoBehaviour
 	{
 		public NavMeshAgent agent;
-		public CinemachineVirtualCamera cam;
+		public CinemachineVirtualCameraBase cam;
 		public Animator anim;
+		public AnimationClipNodeData adata;
+
 		// Awake is called when the script instance is being loaded.
 		protected void Awake()
 		{
@@ -20,8 +22,11 @@ namespace Bear{
 			var nanvView = NavMeshAgentControllerFactory.AddNavMeshAgentCharacterNodeData(agentInstance);
 			var animView = NavMeshAgentControllerFactory.AddAnimatorNodeData(Instantiate(anim),6,"Speed","MotionSpeed");
 			var camView = CinemachineCameraFactory.AddCinemachineView(Instantiate(cam));
-			if(animView.TryGetNodeData<AnimatorNodeData>(out var aData)){aData.clipData.EntryClip = new PlayAnimationClipInfo(){clipName = "Default"};}
-			
+			if(animView.TryGetNodeData<AnimatorNodeData>(out var aData)){
+				aData.clipData.EntryClip = adata.EntryClip;
+				aData.clipData.defaultClips = adata.defaultClips;
+			}
+
 			
 			nanvView.AddGlobalPlayerControllerNodeData();
 			nanvView.AddNavMeshAgentMovementInput();
