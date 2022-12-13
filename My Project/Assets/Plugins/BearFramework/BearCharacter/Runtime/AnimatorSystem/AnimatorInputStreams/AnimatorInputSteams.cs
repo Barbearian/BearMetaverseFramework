@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Bear{
-    public class AnimatorMovementSpeedInputStreamReceiverNodeData:INodeData,IAnimatorMovementSpeedInputStreamReceiver,IOnAttachedToNode{
+	public class AnimatorMovementSpeedInputStreamReceiverNodeData:INodeData,IAnimatorMovementSpeedInputStreamReceiver,IOnAttachedToNode{
         
 
         public float maxSpeedBlend;
@@ -28,6 +28,7 @@ namespace Bear{
                 this.Link(animND);
             }
         }
+        
 
         public void UpdateSpeed(float speed)
         {
