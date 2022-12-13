@@ -12,7 +12,7 @@ namespace Bear{
 			}
 		}
 		
-		public void ChangeLayer<T>(LayerMask mask,bool IncludingChild = false) 	where T:MonoBehaviour
+		public void ChangeLayer<T>(LayerMask mask,bool IncludingChild = false) 	where T:Component
 
 		{
 			if(view.gameObject.TryGetComponent<T>(out var viewobj)){
@@ -28,15 +28,7 @@ namespace Bear{
 		}
 		
 		public void ChangeLayer(LayerMask mask,bool IncludingChild = false){
-			if(view.gameObject.TryGetComponent<Transform>(out var viewobj)){
-				viewobj.gameObject.layer = mask;
-			}
-			
-			if(IncludingChild){
-				foreach (var obj in view.gameObject.GetComponentsInChildren<Transform>())
-				{
-					obj.gameObject.layer = mask;
-				}
-			}		}
+			ChangeLayer<Transform>(mask,IncludingChild);
+		}
 	}
 }
