@@ -7,9 +7,13 @@ using System;
 	public static class NetworkedObjectSystem
 	{
 		public static Dictionary<string,NetworkedObjectNodeData> networkedObjects = new Dictionary<string, NetworkedObjectNodeData>();
-		
+		public static Action<NetworkedObjectNodeData,string,string> DDefaultSendData = DefaultSendData;
 		public static void SendData(this NetworkedObjectNodeData nobj,string key,string data){
-			
+			DDefaultSendData?.Invoke(nobj,key,data);
+
+		}
+		
+		private static void DefaultSendData(this NetworkedObjectNodeData nobj,string key,string data){
 			if(networkedObjects.TryGetValue(nobj.GetID(NetworkedObjectType.networked),out var value)){
 				
 				if(value.DOnReceiveMessages.TryGetValue(key,out var action)){
