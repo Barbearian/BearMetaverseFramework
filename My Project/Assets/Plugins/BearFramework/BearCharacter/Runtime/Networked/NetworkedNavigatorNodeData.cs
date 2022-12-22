@@ -14,6 +14,8 @@ namespace Bear{
 		AnimatorNodeData anode;
 		NaiveStateMachineNodeData nm;
 		NavMeshAgent agent;
+		bool Inited;
+		
 		public NetworkedNavigatorNodeData(NodeView body){
 			this.body = body;
 			anode = body.GetOrCreateNodeData<AnimatorNodeData>();
@@ -88,6 +90,7 @@ namespace Bear{
 		private void SendAnimationData(int index){
 			var data = GetData();
 			data.state = index;
+			data.moving = false;
 			nobj.SendData(NetworkedNavigatorNodeDataSystem.Animationkey,JsonUtility.ToJson(data));
 
 		}
@@ -104,6 +107,9 @@ namespace Bear{
 	
 		
 		public void SetDestination(MoveData data){
+			
+			
+
 			this.data = data;
 
 			if(data.moving){
