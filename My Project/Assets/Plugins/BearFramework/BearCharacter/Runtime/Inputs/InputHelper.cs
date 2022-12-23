@@ -29,5 +29,7 @@ namespace Bear
         public static InputAction GetAction(string code){
             return pInput.FindAction(code);
         }
+
+        
     }
 }

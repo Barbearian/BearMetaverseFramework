@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -47,5 +47,14 @@ namespace Bear
         private void Move() {
             inputtarget.invoker.Invoke(dir);
         }
+        
+	    public void SetEnable(bool isEnabled){
+		    if(isEnabled)
+			    InputHelper.pInput.Enable();
+		    else
+			    InputHelper.pInput.Disable();
+
+		    dir = Vector3.zero;
+	    }
     }
 }

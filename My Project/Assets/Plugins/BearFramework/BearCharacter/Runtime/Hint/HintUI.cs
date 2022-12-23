@@ -43,17 +43,19 @@ namespace Bear{
 		public void OnPointerEnter(PointerEventData pointerEventData)
 		{
 			InputHelper.GetAction(reference.action.name).Disable();
+			//GlobalPlayerControllerSystem.EnableMoving(false);
 		}
 
 		//Detect when Cursor leaves the GameObject
 		public void OnPointerExit(PointerEventData pointerEventData)
 		{
 			InputHelper.GetAction(reference.action.name).Enable();
-
+			//GlobalPlayerControllerSystem.EnableMoving(true);
 		}
 		
 		public void OnDisable(){
 			InputHelper.GetAction(reference.action.name).Enable();
+			//GlobalPlayerControllerSystem.EnableMoving(true);
 
 		}
 		

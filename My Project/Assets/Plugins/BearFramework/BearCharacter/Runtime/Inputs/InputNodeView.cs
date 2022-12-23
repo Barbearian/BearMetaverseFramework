@@ -11,11 +11,19 @@ namespace Bear
     {
         public SafeDelegate<Vector2> inputtarget = new SafeDelegate<Vector2>(); 
         public InputAssociateNodeData buttonInputData = new InputAssociateNodeData();
-
         public Vector2 dir;
         private void OnEnable() {
             InputHelper.pInput.Player.SetCallbacks(this);
         }
+
+	    public void SetEnable(bool isEnabled){
+		    if(isEnabled)
+			    InputHelper.pInput.Enable();
+		    else
+			    InputHelper.pInput.Disable();
+
+		    dir = Vector3.zero;
+	    }
 
         public void OnClickOnTarget(InputAction.CallbackContext context)
         {}

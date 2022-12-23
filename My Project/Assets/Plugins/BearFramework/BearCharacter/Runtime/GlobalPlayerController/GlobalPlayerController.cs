@@ -17,6 +17,24 @@ namespace Bear{
 	public static class GlobalPlayerControllerSystem
 	{
 		public static INode player;
+		private static InputNodeView input;
+		public static bool TryGetInputNodeView(out InputNodeView view){
+			
+			if(input == null){
+				if(player is NodeView nview){
+					if(nview is InputNodeView iView){
+						input = iView;
+					}else{
+						
+						input = nview.GetComponentInChildren<InputNodeView>();
+					}
+					
+				}
+			}
+			view = input;
+			return view == null;
+		}
+
 		public static void MoveTo(Vector3 location){
 			if(player!=null){
 				if(player.TryGetNodeData<NavMeshAgentNodeData>(out var data)){
@@ -54,6 +72,14 @@ namespace Bear{
 			if(player != null){
 				if(player.TryGetNodeData<AnimatorNodeData>(out var anim)){
 					anim.Play(index);
+				}
+			}
+		}
+
+		public static void EnableMoving(bool enable){
+			if(player != null){
+				if(player.TryGetNodeData<DirectionalInputNodeData>(out var ddata)){
+					ddata.SetEnable(enable);
 				}
 			}
 		}
