@@ -5,7 +5,7 @@ using UnityEngine.AI;
 namespace Bear{
 	public class NetworkedNavigatorNodeData : INodeData,IOnAttachedToNode,IOnDetachedFromNode
 	{
-		
+		public bool isUploadinig = false;
 		public NavMeshAgentNodeData navi;
 		NetworkedObjectNodeData nobj;
 		MoveData data;
@@ -84,14 +84,16 @@ namespace Bear{
 		
 		private void Tick(){
 			Debug.Log("Ticked");
-			nobj.SendData(NetworkedNavigatorNodeDataSystem.key,JsonUtility.ToJson(GetData()));
+			if(isUploadinig)
+				nobj.SendData(NetworkedNavigatorNodeDataSystem.key,JsonUtility.ToJson(GetData()));
 		}
 		
 		private void SendAnimationData(int index){
 			var data = GetData();
 			data.state = index;
 			data.moving = false;
-			nobj.SendData(NetworkedNavigatorNodeDataSystem.Animationkey,JsonUtility.ToJson(data));
+			if(isUploadinig)
+				nobj.SendData(NetworkedNavigatorNodeDataSystem.Animationkey,JsonUtility.ToJson(data));
 
 		}
 		
