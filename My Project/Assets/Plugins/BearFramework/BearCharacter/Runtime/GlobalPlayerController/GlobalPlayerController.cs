@@ -17,6 +17,7 @@ namespace Bear{
 	public static class GlobalPlayerControllerSystem
 	{
 		public static INode player;
+		public static AnimatorNodeData anode;
 		private static InputNodeView input;
 		public static bool TryGetInputNodeView(out InputNodeView view){
 			
@@ -69,10 +70,8 @@ namespace Bear{
 		}
 		
 		public static void PlayAnimation(int index){
-			if(player != null){
-				if(player.TryGetNodeData<AnimatorNodeData>(out var anim)){
-					anim.Play(index);
-				}
+			if(anode != null){
+				anode.Play(index);
 			}
 		}
 
