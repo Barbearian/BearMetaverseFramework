@@ -83,9 +83,11 @@ namespace Bear{
 		}
 		
 		private void Tick(){
-			Debug.Log("Ticked");
-			if(isUploadinig)
+			
+			if(isUploadinig){
+				Debug.Log("Ticked");
 				nobj.SendData(NetworkedNavigatorNodeDataSystem.key,JsonUtility.ToJson(GetData()));
+			}
 		}
 		
 		private void SendAnimationData(int index){
