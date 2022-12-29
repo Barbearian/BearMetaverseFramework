@@ -116,7 +116,7 @@ namespace Bear
             var data = animatorView.GetOrCreateNodeData(new AnimatorNodeData());
             var naivesm = controller.GetOrCreateNodeData(new NaiveStateMachineNodeData());
 
-		    for (int i = 1+shift; i <= count; i++)
+		    for (int i = 1+shift; i <= count+shift; i++)
             {
 			    var key = "UI/UIShortCut" +(i-shift);
                 var num = i - 1;
