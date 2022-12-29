@@ -111,12 +111,12 @@ namespace Bear
 	        }));
         }
 
-	    public static void LinkInputToAnimator(this NodeView controller, NodeView animatorView,int count = 0) {
+	    public static void LinkInputToAnimator(this NodeView controller, NodeView animatorView,int count = 0,int shift = 0) {
             var inputData = controller.GetOrCreateNodeData(new InputAssociateNodeData());
             var data = animatorView.GetOrCreateNodeData(new AnimatorNodeData());
             var naivesm = controller.GetOrCreateNodeData(new NaiveStateMachineNodeData());
 
-            for (int i = 1; i <= count; i++)
+		    for (int i = 1+shift; i <= count; i++)
             {
                 var key = "UI/UIShortCut" + i;
                 var num = i - 1;
