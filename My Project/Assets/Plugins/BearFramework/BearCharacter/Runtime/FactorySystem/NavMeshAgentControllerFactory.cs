@@ -118,7 +118,7 @@ namespace Bear
 
 		    for (int i = 1+shift; i <= count; i++)
             {
-                var key = "UI/UIShortCut" + i;
+			    var key = "UI/UIShortCut" +(i-shift);
                 var num = i - 1;
                 inputData.Register(key, (x) => {
                     data.Play(num);
