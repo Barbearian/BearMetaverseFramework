@@ -28,6 +28,7 @@ namespace Bear{
 			camView.Link(animView);
 
 			cView.AddNodeData<SpeedUpNodeData>(new SpeedUpNodeData());
+			cView.AddJumpAndRoll();
 		}
 	}
 }

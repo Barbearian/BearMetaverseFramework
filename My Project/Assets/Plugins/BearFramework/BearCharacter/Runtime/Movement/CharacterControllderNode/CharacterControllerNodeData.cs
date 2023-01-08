@@ -13,6 +13,9 @@ namespace Bear{
 		private CharacterController _cc;
 		public CharacterController CharacterController{get{return _cc;}}
 		
+		public Vector3 force;
+		public float decay = 0.9f;
+		public Vector3 gravity;
 		public void Attached(INode node)
 		{
 			if (node is IOnUpdateUpdater uNode && node is IOnFixedUpdateUpdater fuNode && node is NodeView view)
@@ -47,7 +50,17 @@ namespace Bear{
 		
 		public void MyFixedUpdate() {
 
-			this.Move(DirectionalMovementInputNode.MoveDir);
+			//this.Move(DirectionalMovementInputNode.MoveDir);
+			var moveDir = DirectionalMovementInputNode.MoveDir*MovementData.speedMulti;
+			moveDir += gravity+force;
+			
+			force*=decay;
+			if(force.sqrMagnitude<=0.1f){
+				force = Vector3.zero;
+			}
+			
+			CharacterController.Move(moveDir*Time.fixedDeltaTime);
+			
 		}
 		
 		private void Init(INode root){
@@ -58,6 +71,14 @@ namespace Bear{
 
 			DirectionalMovementInputNode.DMove += (dir) => { DirectionalMovementInputNode.RotateDir = dir; };
 			DirectionalMovementInputNode.DRotate += (dir) => { DirectionalMovementInputNode.MoveDir = dir; };
+			
+			//Initialize Gravity
+			gravity =-9.8f*Vector3.up;
+			
+			//Add signal handler
+			root.RegisterSignalReceiver<AddForceSignal>((x)=>{
+				force += x.force;
+			});
 		}
 	}
 }

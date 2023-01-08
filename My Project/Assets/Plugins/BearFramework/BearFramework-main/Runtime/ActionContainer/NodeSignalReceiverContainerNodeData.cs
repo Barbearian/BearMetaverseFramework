@@ -59,5 +59,16 @@ namespace Bear{
 			node.RegisterSignalReceiver(key,receiver);
 		}
 		
+		public static void RegisterSignalReceiver<T>(this INode node,System.Action<T> action) where T:INodeSignal
+		{
+			ActionNodeSignalReceiver receiver = new ActionNodeSignalReceiver((signal)=>{
+				if(signal is T tsignal){
+					action.Invoke(tsignal);
+				}
+			});
+			
+			node.RegisterSignalReceiver<T>(receiver);
+		}
+		
 	}
 }

@@ -29,7 +29,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
             ""actions"": [
                 {
                     ""name"": ""MoveDir"",
-                    ""type"": ""Value"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""18aed459-b1aa-4ecd-b643-17d1dce82339"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -523,6 +523,54 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""MoveAction"",
+            ""id"": ""f2d6094b-5abe-4a46-86f1-5b2225a0a705"",
+            ""actions"": [
+                {
+                    ""name"": ""Roll"",
+                    ""type"": ""Button"",
+                    ""id"": ""13c373dd-c8e9-429b-9afe-628bfd4ad095"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""5e8a56ad-74c7-48c7-b8b1-cff975bd9075"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Tap"",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""99466da6-b6c9-44c3-a000-7dd8da675b44"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Roll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e38cf42b-3c2f-406b-835b-196c660d09a2"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -554,6 +602,10 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         // Misc
         m_Misc = asset.FindActionMap("Misc", throwIfNotFound: true);
         m_Misc_SpeedUp = m_Misc.FindAction("SpeedUp", throwIfNotFound: true);
+        // MoveAction
+        m_MoveAction = asset.FindActionMap("MoveAction", throwIfNotFound: true);
+        m_MoveAction_Roll = m_MoveAction.FindAction("Roll", throwIfNotFound: true);
+        m_MoveAction_Jump = m_MoveAction.FindAction("Jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -870,6 +922,47 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         }
     }
     public MiscActions @Misc => new MiscActions(this);
+
+    // MoveAction
+    private readonly InputActionMap m_MoveAction;
+    private IMoveActionActions m_MoveActionActionsCallbackInterface;
+    private readonly InputAction m_MoveAction_Roll;
+    private readonly InputAction m_MoveAction_Jump;
+    public struct MoveActionActions
+    {
+        private @PlayerInput m_Wrapper;
+        public MoveActionActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Roll => m_Wrapper.m_MoveAction_Roll;
+        public InputAction @Jump => m_Wrapper.m_MoveAction_Jump;
+        public InputActionMap Get() { return m_Wrapper.m_MoveAction; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(MoveActionActions set) { return set.Get(); }
+        public void SetCallbacks(IMoveActionActions instance)
+        {
+            if (m_Wrapper.m_MoveActionActionsCallbackInterface != null)
+            {
+                @Roll.started -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnRoll;
+                @Roll.performed -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnRoll;
+                @Roll.canceled -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnRoll;
+                @Jump.started -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnJump;
+            }
+            m_Wrapper.m_MoveActionActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Roll.started += instance.OnRoll;
+                @Roll.performed += instance.OnRoll;
+                @Roll.canceled += instance.OnRoll;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+            }
+        }
+    }
+    public MoveActionActions @MoveAction => new MoveActionActions(this);
     public interface IPlayerActions
     {
         void OnMoveDir(InputAction.CallbackContext context);
@@ -901,5 +994,10 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     public interface IMiscActions
     {
         void OnSpeedUp(InputAction.CallbackContext context);
+    }
+    public interface IMoveActionActions
+    {
+        void OnRoll(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
 }

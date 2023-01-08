@@ -30,6 +30,28 @@ namespace Bear{
 
 		}
 		
+		public static void AddJumpAndRoll(this UpdaterNodeView view){
+			//Add nanvData
+			var nanvData = view.GetOrCreateNodeData(new CharacterControllerNodeData());
+			
+			var inputData = view.GetOrCreateNodeData(new InputAssociateNodeData());
+			
+			var roll = view.GetOrCreateNodeData<RollNodeData>();
+			var jump = view.GetOrCreateNodeData<JumpNodeData>();
+			roll.RollStrength = 20;
+			jump.JumpStrength = 50;
+			inputData.Register("MoveAction/Roll",(x)=>{
+				Debug.Log("I rolled");
+				roll.Roll();
+				
+			});
+			
+			inputData.Register("MoveAction/Jump",(x)=>{
+				Debug.Log("I jumped");
+				jump.Jump();
+			});
+		}
+		
 		public static void AddCharacterControllerInput(this UpdaterNodeView view) {
 			var dirInput = view.GetOrCreateNodeData(new DirectionalMovementInputNodeData());
 			var nanv = view.GetOrCreateNodeData(new CharacterControllerNodeData());
