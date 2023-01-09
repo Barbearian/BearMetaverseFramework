@@ -41,7 +41,7 @@ namespace Bear{
 		// OnMouseOver is called every frame while the mouse is over the GUIElement or Collider.
 		protected void OnMouseOver()
 		{
-			HintUISystem.MoveToWorldPosition(transform.position+style.GetOffset());
+			HintUISystem.MoveToWorldPosition(anchor.position+style.GetOffset());
 		}
 		
 		// OnMouseEnter is called when the mouse entered the GUIElement or Collider.

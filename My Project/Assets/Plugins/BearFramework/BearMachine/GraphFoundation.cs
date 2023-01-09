@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace BearMachine{
+	using System.Security.Cryptography;
 	public struct Node{
 		public int index;
 		public bool isFixed;
@@ -14,6 +15,8 @@ namespace BearMachine{
 			}
 			return false;
 		}
+		
+		
 	}
 	
 	public struct Edge{
