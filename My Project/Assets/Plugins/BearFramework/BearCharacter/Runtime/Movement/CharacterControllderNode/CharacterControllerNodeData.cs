@@ -16,6 +16,7 @@ namespace Bear{
 		public Vector3 force;
 		public float decay = 0.9f;
 		public Vector3 gravity;
+		public Vector3 rootPosition;
 		public void Attached(INode node)
 		{
 			if (node is IOnUpdateUpdater uNode && node is IOnFixedUpdateUpdater fuNode && node is NodeView view)
@@ -59,7 +60,10 @@ namespace Bear{
 				force = Vector3.zero;
 			}
 			
-			CharacterController.Move(moveDir*Time.fixedDeltaTime);
+			CharacterController.Move(moveDir*Time.fixedDeltaTime + rootPosition);
+
+			rootPosition = Vector3.zero;
+			
 			
 		}
 		
@@ -79,6 +83,21 @@ namespace Bear{
 			root.RegisterSignalReceiver<AddForceSignal>((x)=>{
 				force += x.force;
 			});
-		}
+			
+			//Add Stop handler
+			root.RegisterSignalReceiver<StopForceSignal>((x)=>{
+				force = Vector3.zero;
+			});
+
+			//Add Root Motion
+			root.RegisterSignalReceiver<ApplyRootMotionPositionSignal>((x) => {
+				rootPosition += x.position;
+			});
+
+            //Add Root Rotation
+            root.RegisterSignalReceiver<ApplyRootMotionRotaionSignal>((x) => {
+				CharacterController.transform.rotation = x.rotation;
+            });
+        }	
 	}
 }

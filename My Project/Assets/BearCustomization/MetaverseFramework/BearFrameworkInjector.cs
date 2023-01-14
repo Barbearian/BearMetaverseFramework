@@ -1,6 +1,5 @@
 ﻿
 using UnityEngine;
-using Bear.Asset;
 namespace Bear
 {
     public class BearFrameworkInjector : IFrameworkInjector

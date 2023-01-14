@@ -7,4 +7,8 @@ namespace Bear{
 	{
 		public Vector3 force;
 	}
+	
+	public class StopForceSignal: INodeSignal{
+		
+	}
 }

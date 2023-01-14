@@ -42,14 +42,31 @@ namespace Bear{
 			jump.JumpStrength = 50;
 			inputData.Register("MoveAction/Roll",(x)=>{
 				Debug.Log("I rolled");
-				roll.Roll();
-				
+				//roll.Roll();
+				view.ReceiveNodeSignal(new AnimatorClipsPlayerNodeSignal(){
+					info = new PlayAnimationClipInfo(){
+						clipName = "Roll",
+						
+					}
+				});
 			});
 			
 			inputData.Register("MoveAction/Jump",(x)=>{
 				Debug.Log("I jumped");
 				jump.Jump();
-			});
+                view.ReceiveNodeSignal(new AnimatorClipsPlayerNodeSignal()
+                {
+                    info = new PlayAnimationClipInfo()
+                    {
+                        clipName = "Jump",
+
+                    }
+                });
+            });
+
+			//add on air
+			view.AddNodeData(new OnAirNodeData("IsGround"));
+			view.AddNodeData(new CharacterControllerGroundObserverNodeData());
 		}
 		
 		public static void AddCharacterControllerInput(this UpdaterNodeView view) {
@@ -109,6 +126,18 @@ namespace Bear{
 					AnimatorNodeSystem.PlayInfo(animator,info);
 				}
 			}));
+			
+			
+			//add animation event listener
+			var listener = animatorView.gameObject.AddComponent<AnimationEventListener>();
+			listener.node = controller;
+
+			//add Root motion listener
+			var observer =  animatorView.gameObject.AddComponent<AnimationRootMotionObserver>();
+			observer.node = controller;
+
+			//add animator signal Prosessor
+			animatorView.AddNodeData(new AnimatorProcessorNodeData(controller));
 		}
 	}
 }

@@ -9,28 +9,58 @@ namespace Bear{
 	
 	}
 	
-	public interface INodeSignalReceiver{
+	public interface INodeSignalReceiver
+	{
 		public void Receive(INodeSignal signal);
 		public bool IsActive{get;}
 	}
-	
-	public class ActionNodeSignalReceiver:INodeSignalReceiver{
+
+	public class ActionNodeSignalReceiver : INodeSignalReceiver
+	{
 		public Action<INodeSignal> action;
-		public void Receive(INodeSignal signal){
-			try{
+		public void Receive(INodeSignal signal) {
+			try {
 				action?.Invoke(signal);
-			}catch(Exception e){
+			} catch (Exception e) {
 				Debug.LogWarning(e);
-				isActive = false;
+                _isActive = false;
 			}
 		}
-		
-		public ActionNodeSignalReceiver(Action<INodeSignal> action){
+
+		public ActionNodeSignalReceiver(Action<INodeSignal> action)
+		{
 			this.action = action;
-			isActive = true;
+            _isActive = true;
 		}
+
+		public void SetActive(bool isActive) { _isActive = isActive; }
 		
-		bool isActive;
-		public bool IsActive => isActive;
+		bool _isActive = true;
+		public bool IsActive => _isActive;
 	}
+
+    public class ArrayNodeSignalReceiver : INodeSignalReceiver
+    {
+        bool isActive = true;
+        public bool IsActive => isActive;
+
+		public List<INodeSignalReceiver> receivers = new();
+
+        void INodeSignalReceiver.Receive(INodeSignal signal)
+        {
+			for (int i = receivers.Count-1; i >=0; i--)
+			{
+				var receiver = receivers[i];
+				if (receiver.IsActive)
+				{
+					receiver.Receive(signal);
+				}
+				else {
+					receivers.RemoveAt(i);
+				}
+			}
+        }
+    }
+
+	
 }

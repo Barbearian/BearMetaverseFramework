@@ -33,12 +33,26 @@ namespace Bear{
 			data.nodeSignalReceivers[code] = action;
 		}
 		
-		public static void Deregister(this NodeSignalReceiverContainerNodeData data,string code){
-			data.nodeSignalReceivers.Remove(code);
-		}
+		public static void Deregister(this NodeSignalReceiverContainerNodeData data,string code,INodeSignalReceiver receiver = null){
+
+			if (receiver != null)
+			{
+				if (
+					data.nodeSignalReceivers.TryGetValue(code, out var oldReceiver) && 
+					oldReceiver is ArrayNodeSignalReceiver areceiver
+				)
+				{
+					areceiver.receivers.Remove(receiver);	
+				}
+
+            }
+			else {
+                data.nodeSignalReceivers.Remove(code);
+            }
+        }
 
 		
-		public static void ReceiveNodeSignal(this INode node,params INodeSignal[] signals){
+        public static void ReceiveNodeSignal(this INode node,params INodeSignal[] signals){
 			if(node.TryGetNodeData<NodeSignalReceiverContainerNodeData>(out var data)){
 				foreach (var signal in signals)
 				{
@@ -46,20 +60,55 @@ namespace Bear{
 				}
 			}
 		}
+
+        public static void ReceiveNodeSignal<T>(this INode node, params INodeSignal[] signals)
+			where T : INodeSignal
+        {
+            if (node.TryGetNodeData<NodeSignalReceiverContainerNodeData>(out var data))
+            {
+                foreach (var signal in signals)
+                {
+                    data.ReceiveNodeSignal(typeof(T).ToString(),signal);
+                }
+            }
+        }
+
+        #region Reigster
+        //Base Function
+        public static void RegisterSignalReceiver(this INode node,string key,INodeSignalReceiver receiver,bool isAdditive = false){
+            var actionPool = node.GetOrCreateNodeData<NodeSignalReceiverContainerNodeData>();
+            if (isAdditive)
+			{
+				if (actionPool.nodeSignalReceivers.TryGetValue(key, out var oldreceiver) && oldreceiver is ArrayNodeSignalReceiver areceiver)
+				{
+					areceiver.receivers.Add(receiver);
+				}
+				else {
+					actionPool.Register(key, new ArrayNodeSignalReceiver()
+					{
+						receivers = new List<INodeSignalReceiver>() {
+							receiver
+						}
+					});
+
+                }
+            }
+			else {
+                actionPool.Register(key, receiver);
+
+            }
+
+
+        }
 		
-		public static void RegisterSignalReceiver(this INode node,string key,INodeSignalReceiver receiver){
-			var actionPool = node.GetOrCreateNodeData<NodeSignalReceiverContainerNodeData>();
-			actionPool.Register(key,receiver);
-		}
-		
-		public static void RegisterSignalReceiver<T>(this INode node,INodeSignalReceiver receiver) where T:INodeSignal
+		public static void RegisterSignalReceiver<T>(this INode node,INodeSignalReceiver receiver, bool isAdditive = false) where T:INodeSignal
 		
 		{
 			var key = typeof(T).ToString();
-			node.RegisterSignalReceiver(key,receiver);
+			node.RegisterSignalReceiver(key,receiver,isAdditive);
 		}
 		
-		public static void RegisterSignalReceiver<T>(this INode node,System.Action<T> action) where T:INodeSignal
+		public static ActionNodeSignalReceiver RegisterSignalReceiver<T>(this INode node,System.Action<T> action, bool isAdditive = false) where T:INodeSignal
 		{
 			ActionNodeSignalReceiver receiver = new ActionNodeSignalReceiver((signal)=>{
 				if(signal is T tsignal){
@@ -67,8 +116,13 @@ namespace Bear{
 				}
 			});
 			
-			node.RegisterSignalReceiver<T>(receiver);
+			node.RegisterSignalReceiver<T>(receiver, isAdditive);
+
+			return receiver;
 		}
-		
-	}
+
+
+
+        #endregion
+    }
 }
