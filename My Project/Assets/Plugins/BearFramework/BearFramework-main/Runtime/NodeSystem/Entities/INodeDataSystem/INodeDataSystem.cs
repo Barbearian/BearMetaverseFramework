@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 namespace Bear{
     public static class INodeDataSystem 
@@ -104,7 +105,8 @@ namespace Bear{
             
             //Invoke Request
             INodeDataSystem.InvokeRequst(node,data);
-            
+
+
             return data;
         }
     }
@@ -182,6 +184,17 @@ namespace Bear{
 
             data = default;
             return false;
+
+        }
+
+        public static INodeData[] GetAllNodeData(this INode node) {
+            var rs = new INodeData[0];
+            if (INodeDataSystem.nodeInfo.ContainsKey(node))
+            {
+                var NodeData = node.GetOrCreateNodeDataCollection();
+                rs = NodeData.Values.ToArray();
+            }
+            return rs;
 
         }
 

@@ -39,7 +39,7 @@ namespace Bear{
 			var roll = view.GetOrCreateNodeData<RollNodeData>();
 			var jump = view.GetOrCreateNodeData<JumpNodeData>();
 			roll.RollStrength = 20;
-			jump.JumpStrength = 50;
+			jump.JumpStrength = 30;
 			inputData.Register("MoveAction/Roll",(x)=>{
 				Debug.Log("I rolled");
 				//roll.Roll();
@@ -54,14 +54,7 @@ namespace Bear{
 			inputData.Register("MoveAction/Jump",(x)=>{
 				Debug.Log("I jumped");
 				jump.Jump();
-                view.ReceiveNodeSignal(new AnimatorClipsPlayerNodeSignal()
-                {
-                    info = new PlayAnimationClipInfo()
-                    {
-                        clipName = "Jump",
-
-                    }
-                });
+                
             });
 
 			//add on air

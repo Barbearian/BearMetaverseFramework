@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 namespace Bear
 {
@@ -22,12 +20,18 @@ namespace Bear
 
             
             Parent[kid] = parent;
-            Children.Enqueue<INode,INode>(parent,kid);
+            Children.Enqueue(parent,kid);
+
+            NodeDataLifeCycleSystem.OnAddChildren(parent,kid);
+
         }
 
         public static void RemoveChildrenNode(this INode parent, INode kid){
             Parent.Remove(kid);
-            Children.Dequeue<INode,INode>(parent,kid);
+            Children.Dequeue(parent,kid);
+
+            NodeDataLifeCycleSystem.OnRemoveChildren(parent, kid);
+
         }
 
         public static bool TryGetKidNode<T>(this INode node, out T kid) where T:INode{

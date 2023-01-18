@@ -8,15 +8,17 @@ namespace Bear{
 	{
 	
 	}
+
+
 	
 	public interface INodeSignalReceiver
 	{
 		public void Receive(INodeSignal signal);
-		public bool IsActive{get;}
+		public bool IsActive{ get; set; }
 	}
 
 	public class ActionNodeSignalReceiver : INodeSignalReceiver
-	{
+    {
 		public Action<INodeSignal> action;
 		public void Receive(INodeSignal signal) {
 			try {
@@ -36,13 +38,13 @@ namespace Bear{
 		public void SetActive(bool isActive) { _isActive = isActive; }
 		
 		bool _isActive = true;
-		public bool IsActive => _isActive;
-	}
+        public bool IsActive { get => _isActive; set { _isActive = value; } }
+    }
 
     public class ArrayNodeSignalReceiver : INodeSignalReceiver
     {
-        bool isActive = true;
-        public bool IsActive => isActive;
+        bool _isActive = true;
+        public bool IsActive { get => _isActive; set { _isActive = value; } }
 
 		public List<INodeSignalReceiver> receivers = new();
 
@@ -58,6 +60,21 @@ namespace Bear{
 				else {
 					receivers.RemoveAt(i);
 				}
+			}
+        }
+
+    }
+
+	public static class ArrayNodeSignalReceiverSystem {
+		public static void AddTo(this INodeSignalReceiver receiver, ArrayNodeSignalReceiver receivers) { 
+			receivers.receivers.Add(receiver);
+		}
+
+        public static void InhibitAll(this ArrayNodeSignalReceiver receivers)
+        {
+			foreach (var item in receivers.receivers)
+			{
+				item.IsActive = false;
 			}
         }
     }

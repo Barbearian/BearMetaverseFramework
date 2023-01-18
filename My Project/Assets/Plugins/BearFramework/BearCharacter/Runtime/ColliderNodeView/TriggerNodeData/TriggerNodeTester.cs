@@ -6,7 +6,7 @@ namespace Bear{
 	public class TriggerNodeTester : MonoBehaviour
 	{
 		public void Start(){
-			gameObject.AddComponent<NodeView>().AddNodeData<DestoryTriggerNodeData>(new DestoryTriggerNodeData());
+			gameObject.AddComponent<NodeView>().AddNodeData(new DestoryTriggerNodeData());
 			
 		}
 	}

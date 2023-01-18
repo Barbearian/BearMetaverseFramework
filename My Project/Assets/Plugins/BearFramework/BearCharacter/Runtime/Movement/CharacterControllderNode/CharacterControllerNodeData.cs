@@ -12,11 +12,16 @@ namespace Bear{
 
 		private CharacterController _cc;
 		public CharacterController CharacterController{get{return _cc;}}
+
+		private ArrayNodeSignalReceiver receivers = new ArrayNodeSignalReceiver();
 		
 		public Vector3 force;
 		public float decay = 0.9f;
 		public Vector3 gravity;
 		public Vector3 rootPosition;
+
+		public bool IsMoving = true;
+		public bool IsRotating = true;
 		public void Attached(INode node)
 		{
 			if (node is IOnUpdateUpdater uNode && node is IOnFixedUpdateUpdater fuNode && node is NodeView view)
@@ -39,6 +44,8 @@ namespace Bear{
 			{
 				uNode.DOnUpdate.Unsubscribe(MyUpdate);
 				fuNode.DOnFixedUpdate.Unsubscribe(MyFixedUpdate);
+
+				receivers.InhibitAll();
 			}
 		}
 		
@@ -46,21 +53,27 @@ namespace Bear{
 
 			this.NotifySpeed();
 
-			this.Rotate(DirectionalMovementInputNode.RotateDir);
+			if(IsRotating) this.Rotate(DirectionalMovementInputNode.RotateDir);
 		}
 		
 		public void MyFixedUpdate() {
 
 			//this.Move(DirectionalMovementInputNode.MoveDir);
-			var moveDir = DirectionalMovementInputNode.MoveDir*MovementData.speedMulti;
-			moveDir += gravity+force;
-			
-			force*=decay;
-			if(force.sqrMagnitude<=0.1f){
+
+			var moveDir = Vector3.zero; 
+
+			if(IsMoving) moveDir +=	DirectionalMovementInputNode.MoveDir*MovementData.speedMulti;
+			moveDir +=  gravity+force;
+
+			moveDir *= Time.fixedDeltaTime;
+			moveDir += rootPosition;
+
+            force *=decay;
+			if(force.sqrMagnitude<=0.01f){
 				force = Vector3.zero;
 			}
 			
-			CharacterController.Move(moveDir*Time.fixedDeltaTime + rootPosition);
+			CharacterController.Move(moveDir);
 
 			rootPosition = Vector3.zero;
 			
@@ -82,22 +95,32 @@ namespace Bear{
 			//Add signal handler
 			root.RegisterSignalReceiver<AddForceSignal>((x)=>{
 				force += x.force;
-			});
+			}).AddTo(receivers);
 			
 			//Add Stop handler
 			root.RegisterSignalReceiver<StopForceSignal>((x)=>{
 				force = Vector3.zero;
-			});
+			}).AddTo(receivers);
 
-			//Add Root Motion
-			root.RegisterSignalReceiver<ApplyRootMotionPositionSignal>((x) => {
+            //Add Root Motion
+            root.RegisterSignalReceiver<ApplyRootMotionPositionSignal>((x) => {
 				rootPosition += x.position;
-			});
+			}).AddTo(receivers);
 
             //Add Root Rotation
             root.RegisterSignalReceiver<ApplyRootMotionRotaionSignal>((x) => {
 				CharacterController.transform.rotation = x.rotation;
-            });
+            }).AddTo(receivers);
+
+            //Add set moving active
+            root.RegisterSignalReceiver<UpdateMovingSignal>((x) => {
+				IsMoving = x.IsMoving;
+			},true).AddTo(receivers);
+
+            //Add set rotating active
+            root.RegisterSignalReceiver<UpdateRotatingSignal>((x) => {
+                IsRotating = x.IsRotating;
+            }, true).AddTo(receivers);
         }	
 	}
 }

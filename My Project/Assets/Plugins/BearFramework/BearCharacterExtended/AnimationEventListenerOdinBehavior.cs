@@ -5,8 +5,8 @@ using Sirenix.OdinInspector;
 namespace Bear{
 	public class AnimationEventListenerOdinBehavior : SerializedStateMachineBehaviour
 	{
-		public List<IAnimationEventSignal> DOnEnter = new List<Bear.IAnimationEventSignal>();
-		public List<IAnimationEventSignal> DOnExit = new List<Bear.IAnimationEventSignal>();
+		public List<INodeSignal> DOnEnter = new List<Bear.INodeSignal>();
+		public List<INodeSignal> DOnExit = new List<Bear.INodeSignal>();
 		AnimatorComponentFetcher fetcher = new AnimatorComponentFetcher(true);
 		public AnimationEventListener GetListener(Animator anim){
 			return fetcher.GetComponent<AnimationEventListener>(anim.gameObject);

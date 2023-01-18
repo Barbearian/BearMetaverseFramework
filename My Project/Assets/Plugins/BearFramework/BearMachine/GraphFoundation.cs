@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace BearMachine{
+	using System;
+	using System.Runtime.CompilerServices;
 	using System.Security.Cryptography;
 	public struct Node{
 		public int index;
@@ -15,9 +17,14 @@ namespace BearMachine{
 			}
 			return false;
 		}
-		
-		
-	}
+
+        public override int GetHashCode()
+        {
+			return HashCode.Combine(index,isFixed);
+        }
+
+
+    }
 	
 	public struct Edge{
 		public Node Source;
@@ -34,7 +41,12 @@ namespace BearMachine{
 			
 			return false;
 		}
-	}
+
+        public override int GetHashCode()
+		{
+            return HashCode.Combine(Source, Rel,End);
+        }
+    }
 	
 	public class Graph{
 		public List<Edge> Edges;

@@ -23,8 +23,8 @@ namespace Bear{
 				}
 			}
 		}
-		
-		public static void ReceiveNodeSignal(this NodeSignalReceiverContainerNodeData data,INodeSignal signal){
+
+        public static void ReceiveNodeSignal(this NodeSignalReceiverContainerNodeData data,INodeSignal signal){
 			var code = signal.GetType().ToString();
 			data.ReceiveNodeSignal(code,signal);
 		}
