@@ -238,7 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cc: {fileID: 1391724419894871608, guid: 126b2c9471e29244687594285165c7e2, type: 3}
   cam: {fileID: 745649464068961719, guid: 29c90a192f15cdd4d9e09f8df95db553, type: 3}
-  anim: {fileID: 6982812146204527121, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+  anim: {fileID: 95509902755735526, guid: d6d06c887a1aae94f8c6e8cc2c0c557b, type: 3}
 --- !u!4 &591549310
 Transform:
   m_ObjectHideFlags: 0

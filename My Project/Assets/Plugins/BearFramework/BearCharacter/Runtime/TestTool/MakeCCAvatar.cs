@@ -29,6 +29,9 @@ namespace Bear{
 
 			cView.AddNodeData(new SpeedUpNodeData());
 			cView.AddJumpAndRoll();
+
+			//add pick
+			cView.AddNodeData(new ItemPickerNodeData());
 		}
 	}
 }
