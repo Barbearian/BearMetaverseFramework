@@ -32,7 +32,8 @@ namespace Bear
                 foreach (Transform bone in bones)
                 {
                     if (bone.CompareTag(name))
-                    {   
+                    {
+                        view = bone;
                         Cache[name] = view;
                         return true;
                     }

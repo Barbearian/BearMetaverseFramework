@@ -18,10 +18,11 @@ namespace Bear{
 		public Vector3 force;
 		public float decay = 0.9f;
 		public Vector3 gravity;
+		private Vector3 gravityAccumulation;
 		public Vector3 rootPosition;
 
-		public bool IsMoving = true;
-		public bool IsRotating = true;
+		public bool CanMoving = true;
+		public bool CanRotating = true;
 		public void Attached(INode node)
 		{
 			if (node is IOnUpdateUpdater uNode && node is IOnFixedUpdateUpdater fuNode && node is NodeView view)
@@ -53,19 +54,26 @@ namespace Bear{
 
 			this.NotifySpeed();
 
-			if(IsRotating) this.Rotate(DirectionalMovementInputNode.RotateDir);
+			
 		}
 		
 		public void MyFixedUpdate() {
+			//rotate
+            if (CanRotating) this.Rotate(DirectionalMovementInputNode.RotateDir);
 
-			//this.Move(DirectionalMovementInputNode.MoveDir);
+			//calculate gravity
+			gravityAccumulation += gravity *Time.deltaTime;
+			if (CharacterController.isGrounded) {
+				gravityAccumulation = gravity;
+            }
 
-			var moveDir = Vector3.zero; 
+            var moveDir = Vector3.zero; 
 
-			if(IsMoving) moveDir +=	DirectionalMovementInputNode.MoveDir*MovementData.speedMulti;
-			moveDir +=  gravity+force;
+			if(CanMoving) moveDir +=	DirectionalMovementInputNode.MoveDir*MovementData.speedMulti;
+			moveDir += force;
+            moveDir += gravityAccumulation;
 
-			moveDir *= Time.fixedDeltaTime;
+            moveDir *= Time.fixedDeltaTime;
 			moveDir += rootPosition;
 
             force *=decay;
@@ -114,12 +122,12 @@ namespace Bear{
 
             //Add set moving active
             root.RegisterSignalReceiver<UpdateMovingSignal>((x) => {
-				IsMoving = x.IsMoving;
+				CanMoving = x.IsMoving;
 			},true).AddTo(receivers);
 
             //Add set rotating active
             root.RegisterSignalReceiver<UpdateRotatingSignal>((x) => {
-                IsRotating = x.IsRotating;
+                CanRotating = x.IsRotating;
             }, true).AddTo(receivers);
         }	
 	}

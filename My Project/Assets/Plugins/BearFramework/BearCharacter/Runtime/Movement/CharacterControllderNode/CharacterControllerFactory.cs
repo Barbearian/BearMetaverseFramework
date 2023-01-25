@@ -31,31 +31,13 @@ namespace Bear{
 		}
 		
 		public static void AddJumpAndRoll(this UpdaterNodeView view){
-			//Add nanvData
-			var nanvData = view.GetOrCreateNodeData(new CharacterControllerNodeData());
-			
-			var inputData = view.GetOrCreateNodeData(new InputAssociateNodeData());
 			
 			var roll = view.GetOrCreateNodeData<RollNodeData>();
 			var jump = view.GetOrCreateNodeData<JumpNodeData>();
 			roll.RollStrength = 20;
 			jump.JumpStrength = 30;
-			inputData.Register("MoveAction/Roll",(x)=>{
-				Debug.Log("I rolled");
-				//roll.Roll();
-				view.ReceiveNodeSignal(new AnimatorClipsPlayerNodeSignal(){
-					info = new PlayAnimationClipInfo(){
-						clipName = "Roll",
-						
-					}
-				});
-			});
 			
-			inputData.Register("MoveAction/Jump",(x)=>{
-				Debug.Log("I jumped");
-				jump.Jump();
-                
-            });
+			
 
 			//add on air
 			view.AddNodeData(new OnAirNodeData("IsGround"));

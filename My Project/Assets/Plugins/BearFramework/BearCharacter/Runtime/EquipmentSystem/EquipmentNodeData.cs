@@ -2,16 +2,16 @@ using UnityEngine;
 
 namespace Bear
 {
-    public class EquipmentNodeData : INodeData,IOnAttachedToNode
+    public class EquipmentNodeData : SignalHandlerNodeData,IOnAttachedToNode
     {
-        public NodeView Wielder { get; set; }
-        private OnEquipSignal _signal = new OnEquipSignal();
-        public OnEquipSignal Signal { get { 
-                _signal.eData = this;
-                return _signal; } }
+        public INode Wielder { get; set; }
+        public EquipmentData data;
+
         public void Attached(INode node)
         {
-            
+            node.RegisterSignalReceiver<OnEquippedSignal>((x) => {
+                Wielder = x.wielder;
+            },true).AddTo(receivers);
         }
 
 
@@ -19,15 +19,21 @@ namespace Bear
     }
 
     public static class EquipmentNodeDataSystem {
-        public static void Equip(this INode Wielder,EquipmentNodeData data) {
-            if (Wielder is NodeView view) { 
-                data.Wielder= view;
-                data.GetNodeDataRoot().ReceiveNodeSignal(data.Signal);
-            }
+        public static void Equip(this INode Wielder,INode weapon) {
+            Debug.Log(Wielder+" Equiped "+ weapon);
         }
     }
 
-    public class OnEquipSignal : INodeSignal {
-        public EquipmentNodeData eData;
+    public struct OnEquippedSignal : INodeSignal {
+        public string equipmentKey;
+        public INode wielder;
+        public EquipmentManagerNodeData manager;
+    }
+
+    public struct OnUnequippedSignal : INodeSignal
+    {
+        public string equipmentKey;
+        public INode wielder;
+        public EquipmentManagerNodeData manager;
     }
 }

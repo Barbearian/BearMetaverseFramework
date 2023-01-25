@@ -10,11 +10,12 @@ namespace Bear
         public static Dictionary<INode,INode> Parent = new Dictionary<INode, INode>();
 
         public static void AddChildrenNode(this INode parent, INode kid){
-            if(parent == null){
+            if(parent == null || 
+              (kid.TryGetParentNode(out var oldParent) && oldParent.Equals(parent))){
                 return;
             }
 
-            if(Parent.TryGetValue(kid,out var oldParent)){
+            if(oldParent != null){
                 oldParent.RemoveChildrenNode(kid);
             }
 

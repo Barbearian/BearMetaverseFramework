@@ -1,11 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+
 
 namespace Bear
 {
-    public class ItemPickerNodeData : INodeData
+    public class ItemPickerNodeData : SignalHandlerNodeData, IOnAttachedToNode
     {
+        public void Attached(INode node)
+        {
+            node.RegisterSignalReceiver<PickUpSignal>((x) => { 
+                
 
+            }).AddTo(receivers);
+        }
     }
 }

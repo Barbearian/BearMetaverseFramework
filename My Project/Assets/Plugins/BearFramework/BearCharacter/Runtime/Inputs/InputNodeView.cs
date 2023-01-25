@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mono.Cecil.Cil;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -70,7 +71,7 @@ namespace Bear
             var inputaction = InputHelper.GetAction(code);
             if(inputaction != null){
                 inputaction.performed += DOnPerformed;
-                nodedata.actions.Enqueue<string,System.Action<InputAction.CallbackContext>>(code,DOnPerformed);    
+                nodedata.actions.Enqueue(code,DOnPerformed);    
             }
         }
 
@@ -78,7 +79,7 @@ namespace Bear
             var inputaction = InputHelper.GetAction(code);
             if(inputaction != null){
                 inputaction.performed -= DOnPerformed;
-                nodedata.actions.Dequeue<string,System.Action<InputAction.CallbackContext>>(code,DOnPerformed);    
+                nodedata.actions.Dequeue(code,DOnPerformed);    
             }
         }
 
@@ -89,6 +90,26 @@ namespace Bear
                 foreach(var action in kv.Value)
                     nodedata.Deregister(kv.Key,action);
             }
+        }
+
+        public static void Register(this INode node, string code, System.Action<InputAction.CallbackContext> DOnPerformed) {
+            var nodedata = node.GetOrCreateNodeData(new InputAssociateNodeData());
+            nodedata.Register(code, DOnPerformed);
+            
+        }
+
+        public static void Deregister(this INode node, string code, System.Action<InputAction.CallbackContext> DOnPerformed)
+        {
+            var nodedata = node.GetOrCreateNodeData(new InputAssociateNodeData());
+            nodedata.Deregister(code, DOnPerformed);
+
+        }
+
+        public static void DisposeInputAssociator(this INode node)
+        {
+            var nodedata = node.GetOrCreateNodeData(new InputAssociateNodeData());
+            nodedata.Dispose();
+
         }
     }
 

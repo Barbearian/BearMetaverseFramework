@@ -15,7 +15,7 @@ namespace Bear{
 			
 		}
 		
-		public void Attached(INode node){
+		public virtual void Attached(INode node){
 			if(node is NodeView view && view.gameObject.TryGetComponent<Collider>(out var collier)){
 				this.view = view;
 				if(!view.TryGetComponent<TriggerObserver>(out var observer)){

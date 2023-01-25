@@ -6,17 +6,24 @@ namespace Bear
 {
     public class ItemPickUpNodeData : TriggerNodeData
     {
+        private PickUpSignal signal = new PickUpSignal();
+        private PickedUpSignal pickedUp = new PickedUpSignal();
+        public override void Attached(INode node)
+        {
+            base.Attached(node);
+            signal.item = view;
+            
+        }
 
-        private PickedUpSignal signal = new PickedUpSignal();
         public override void OnTriggerEnter(Collider collider)
         {
-            Debug.Log("Someone entered");
-            if (collider.TryGetComponent(out NodeView targetview) && 
-                view.TryGetNodeData(out ItemPickerNodeData data)
+            if (
+                collider.TryGetComponent(out NodeView targetview) &&
+                targetview.TryGetNodeData(out ItemPickerNodeData data)
                 )
             {
-                signal.node = targetview;
-                view.ReceiveNodeSignal(signal);
+                pickedUp.picker = targetview;
+                view.ReceiveNodeSignal(pickedUp);
             }
         }
 
@@ -24,8 +31,11 @@ namespace Bear
     }
 
     public class PickedUpSignal : INodeSignal {
-        public INode node;
+        public INode picker;
     }
 
+    public class PickUpSignal : INodeSignal {
+        public INode item;
+    }
     
 }
