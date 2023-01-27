@@ -21,7 +21,7 @@ namespace Bear{
             //Assign output
 			filter.Output = new ActionNodeSignalReceiver(RollActivated);
 
-            node.Register("MoveAction/Roll", (x) => {
+            node.Register("Move/Roll", (x) => {
                 filter.Receive(new RollActivateSignal());
             });
 

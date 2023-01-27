@@ -19,7 +19,7 @@ namespace Bear
             pInput.ShortCut.Enable();
 	        pInput.UI.Enable();
 	        pInput.Misc.Enable();
-	        pInput.MoveAction.Enable();
+	        pInput.Move.Enable();
         }
 
         public static Vector2 GetMoveDir()

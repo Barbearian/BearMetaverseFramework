@@ -30,7 +30,7 @@ namespace Bear{
                 root.ReceiveNodeSignal(GetForceSignal());
             });
 
-            node.Register("MoveAction/Jump", (x) => {
+            node.Register("Move/Jump", (x) => {
                 Debug.Log("I jumped");
 				this.JumpActivate();
 

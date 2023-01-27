@@ -503,7 +503,7 @@
             ]
         },
         {
-            "name": "MoveAction",
+            "name": "Move",
             "id": "f2d6094b-5abe-4a46-86f1-5b2225a0a705",
             "actions": [
                 {
@@ -545,6 +545,174 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Item",
+            "id": "6826a2dc-e4da-4668-b4fc-5a22030cecf3",
+            "actions": [
+                {
+                    "name": "RBT",
+                    "type": "Button",
+                    "id": "38283d75-4240-4af1-a420-01946e8402ef",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RBH",
+                    "type": "Button",
+                    "id": "66f4d8ab-29e1-4630-be1f-2ee54e758359",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RTT",
+                    "type": "Button",
+                    "id": "57cf295c-20bc-493b-ba7e-3d271129e5d0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RTH",
+                    "type": "Button",
+                    "id": "dfc6c440-c22d-42dc-a4ee-68cbf10d303c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LBT",
+                    "type": "Button",
+                    "id": "a73d680e-b191-4379-9576-2689ecad2939",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LBH",
+                    "type": "Button",
+                    "id": "e3dcf869-fa1e-4095-a805-32eb5fe8d765",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LTT",
+                    "type": "Button",
+                    "id": "da982a60-17d3-4cef-be8c-9d5902541b46",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LTH",
+                    "type": "Button",
+                    "id": "a81dbce5-5d47-42e4-91cd-249cabbefe00",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "364f1a28-b6ca-4b1e-b409-853443546cc1",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RBT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0e599ae1-3668-4303-bd6b-fc10cf942696",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RBH",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72485244-1956-42ee-a6c1-ccea04328940",
+                    "path": "<Keyboard>/e",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RTT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e509afdc-32d1-4123-aaa9-79ca070b920c",
+                    "path": "<Keyboard>/e",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RTH",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4c711ae9-e71a-4c3f-8568-85228448bf6c",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LBT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d01032d-3573-4bae-96e6-7955a0f7aeb7",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LBH",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4932e92a-474a-47e5-8db3-acc937b016df",
+                    "path": "<Keyboard>/q",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LTT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8357f955-dfcf-4a82-818d-774c7311d25a",
+                    "path": "<Keyboard>/q",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LTH",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

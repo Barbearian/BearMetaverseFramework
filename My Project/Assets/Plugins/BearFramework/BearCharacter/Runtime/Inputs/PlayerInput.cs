@@ -525,7 +525,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""MoveAction"",
+            ""name"": ""Move"",
             ""id"": ""f2d6094b-5abe-4a46-86f1-5b2225a0a705"",
             ""actions"": [
                 {
@@ -571,6 +571,174 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Item"",
+            ""id"": ""6826a2dc-e4da-4668-b4fc-5a22030cecf3"",
+            ""actions"": [
+                {
+                    ""name"": ""RBT"",
+                    ""type"": ""Button"",
+                    ""id"": ""38283d75-4240-4af1-a420-01946e8402ef"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RBH"",
+                    ""type"": ""Button"",
+                    ""id"": ""66f4d8ab-29e1-4630-be1f-2ee54e758359"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RTT"",
+                    ""type"": ""Button"",
+                    ""id"": ""57cf295c-20bc-493b-ba7e-3d271129e5d0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""RTH"",
+                    ""type"": ""Button"",
+                    ""id"": ""dfc6c440-c22d-42dc-a4ee-68cbf10d303c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LBT"",
+                    ""type"": ""Button"",
+                    ""id"": ""a73d680e-b191-4379-9576-2689ecad2939"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LBH"",
+                    ""type"": ""Button"",
+                    ""id"": ""e3dcf869-fa1e-4095-a805-32eb5fe8d765"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LTT"",
+                    ""type"": ""Button"",
+                    ""id"": ""da982a60-17d3-4cef-be8c-9d5902541b46"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LTH"",
+                    ""type"": ""Button"",
+                    ""id"": ""a81dbce5-5d47-42e4-91cd-249cabbefe00"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""364f1a28-b6ca-4b1e-b409-853443546cc1"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RBT"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0e599ae1-3668-4303-bd6b-fc10cf942696"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RBH"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""72485244-1956-42ee-a6c1-ccea04328940"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": ""Tap"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RTT"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e509afdc-32d1-4123-aaa9-79ca070b920c"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RTH"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4c711ae9-e71a-4c3f-8568-85228448bf6c"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Tap"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LBT"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5d01032d-3573-4bae-96e6-7955a0f7aeb7"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LBH"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4932e92a-474a-47e5-8db3-acc937b016df"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": ""Tap"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LTT"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8357f955-dfcf-4a82-818d-774c7311d25a"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LTH"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -602,10 +770,20 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         // Misc
         m_Misc = asset.FindActionMap("Misc", throwIfNotFound: true);
         m_Misc_SpeedUp = m_Misc.FindAction("SpeedUp", throwIfNotFound: true);
-        // MoveAction
-        m_MoveAction = asset.FindActionMap("MoveAction", throwIfNotFound: true);
-        m_MoveAction_Roll = m_MoveAction.FindAction("Roll", throwIfNotFound: true);
-        m_MoveAction_Jump = m_MoveAction.FindAction("Jump", throwIfNotFound: true);
+        // Move
+        m_Move = asset.FindActionMap("Move", throwIfNotFound: true);
+        m_Move_Roll = m_Move.FindAction("Roll", throwIfNotFound: true);
+        m_Move_Jump = m_Move.FindAction("Jump", throwIfNotFound: true);
+        // Item
+        m_Item = asset.FindActionMap("Item", throwIfNotFound: true);
+        m_Item_RBT = m_Item.FindAction("RBT", throwIfNotFound: true);
+        m_Item_RBH = m_Item.FindAction("RBH", throwIfNotFound: true);
+        m_Item_RTT = m_Item.FindAction("RTT", throwIfNotFound: true);
+        m_Item_RTH = m_Item.FindAction("RTH", throwIfNotFound: true);
+        m_Item_LBT = m_Item.FindAction("LBT", throwIfNotFound: true);
+        m_Item_LBH = m_Item.FindAction("LBH", throwIfNotFound: true);
+        m_Item_LTT = m_Item.FindAction("LTT", throwIfNotFound: true);
+        m_Item_LTH = m_Item.FindAction("LTH", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -923,34 +1101,34 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     }
     public MiscActions @Misc => new MiscActions(this);
 
-    // MoveAction
-    private readonly InputActionMap m_MoveAction;
-    private IMoveActionActions m_MoveActionActionsCallbackInterface;
-    private readonly InputAction m_MoveAction_Roll;
-    private readonly InputAction m_MoveAction_Jump;
-    public struct MoveActionActions
+    // Move
+    private readonly InputActionMap m_Move;
+    private IMoveActions m_MoveActionsCallbackInterface;
+    private readonly InputAction m_Move_Roll;
+    private readonly InputAction m_Move_Jump;
+    public struct MoveActions
     {
         private @PlayerInput m_Wrapper;
-        public MoveActionActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Roll => m_Wrapper.m_MoveAction_Roll;
-        public InputAction @Jump => m_Wrapper.m_MoveAction_Jump;
-        public InputActionMap Get() { return m_Wrapper.m_MoveAction; }
+        public MoveActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Roll => m_Wrapper.m_Move_Roll;
+        public InputAction @Jump => m_Wrapper.m_Move_Jump;
+        public InputActionMap Get() { return m_Wrapper.m_Move; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MoveActionActions set) { return set.Get(); }
-        public void SetCallbacks(IMoveActionActions instance)
+        public static implicit operator InputActionMap(MoveActions set) { return set.Get(); }
+        public void SetCallbacks(IMoveActions instance)
         {
-            if (m_Wrapper.m_MoveActionActionsCallbackInterface != null)
+            if (m_Wrapper.m_MoveActionsCallbackInterface != null)
             {
-                @Roll.started -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnRoll;
-                @Roll.performed -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnRoll;
-                @Roll.canceled -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnRoll;
-                @Jump.started -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_MoveActionActionsCallbackInterface.OnJump;
+                @Roll.started -= m_Wrapper.m_MoveActionsCallbackInterface.OnRoll;
+                @Roll.performed -= m_Wrapper.m_MoveActionsCallbackInterface.OnRoll;
+                @Roll.canceled -= m_Wrapper.m_MoveActionsCallbackInterface.OnRoll;
+                @Jump.started -= m_Wrapper.m_MoveActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_MoveActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_MoveActionsCallbackInterface.OnJump;
             }
-            m_Wrapper.m_MoveActionActionsCallbackInterface = instance;
+            m_Wrapper.m_MoveActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @Roll.started += instance.OnRoll;
@@ -962,7 +1140,96 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
             }
         }
     }
-    public MoveActionActions @MoveAction => new MoveActionActions(this);
+    public MoveActions @Move => new MoveActions(this);
+
+    // Item
+    private readonly InputActionMap m_Item;
+    private IItemActions m_ItemActionsCallbackInterface;
+    private readonly InputAction m_Item_RBT;
+    private readonly InputAction m_Item_RBH;
+    private readonly InputAction m_Item_RTT;
+    private readonly InputAction m_Item_RTH;
+    private readonly InputAction m_Item_LBT;
+    private readonly InputAction m_Item_LBH;
+    private readonly InputAction m_Item_LTT;
+    private readonly InputAction m_Item_LTH;
+    public struct ItemActions
+    {
+        private @PlayerInput m_Wrapper;
+        public ItemActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @RBT => m_Wrapper.m_Item_RBT;
+        public InputAction @RBH => m_Wrapper.m_Item_RBH;
+        public InputAction @RTT => m_Wrapper.m_Item_RTT;
+        public InputAction @RTH => m_Wrapper.m_Item_RTH;
+        public InputAction @LBT => m_Wrapper.m_Item_LBT;
+        public InputAction @LBH => m_Wrapper.m_Item_LBH;
+        public InputAction @LTT => m_Wrapper.m_Item_LTT;
+        public InputAction @LTH => m_Wrapper.m_Item_LTH;
+        public InputActionMap Get() { return m_Wrapper.m_Item; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(ItemActions set) { return set.Get(); }
+        public void SetCallbacks(IItemActions instance)
+        {
+            if (m_Wrapper.m_ItemActionsCallbackInterface != null)
+            {
+                @RBT.started -= m_Wrapper.m_ItemActionsCallbackInterface.OnRBT;
+                @RBT.performed -= m_Wrapper.m_ItemActionsCallbackInterface.OnRBT;
+                @RBT.canceled -= m_Wrapper.m_ItemActionsCallbackInterface.OnRBT;
+                @RBH.started -= m_Wrapper.m_ItemActionsCallbackInterface.OnRBH;
+                @RBH.performed -= m_Wrapper.m_ItemActionsCallbackInterface.OnRBH;
+                @RBH.canceled -= m_Wrapper.m_ItemActionsCallbackInterface.OnRBH;
+                @RTT.started -= m_Wrapper.m_ItemActionsCallbackInterface.OnRTT;
+                @RTT.performed -= m_Wrapper.m_ItemActionsCallbackInterface.OnRTT;
+                @RTT.canceled -= m_Wrapper.m_ItemActionsCallbackInterface.OnRTT;
+                @RTH.started -= m_Wrapper.m_ItemActionsCallbackInterface.OnRTH;
+                @RTH.performed -= m_Wrapper.m_ItemActionsCallbackInterface.OnRTH;
+                @RTH.canceled -= m_Wrapper.m_ItemActionsCallbackInterface.OnRTH;
+                @LBT.started -= m_Wrapper.m_ItemActionsCallbackInterface.OnLBT;
+                @LBT.performed -= m_Wrapper.m_ItemActionsCallbackInterface.OnLBT;
+                @LBT.canceled -= m_Wrapper.m_ItemActionsCallbackInterface.OnLBT;
+                @LBH.started -= m_Wrapper.m_ItemActionsCallbackInterface.OnLBH;
+                @LBH.performed -= m_Wrapper.m_ItemActionsCallbackInterface.OnLBH;
+                @LBH.canceled -= m_Wrapper.m_ItemActionsCallbackInterface.OnLBH;
+                @LTT.started -= m_Wrapper.m_ItemActionsCallbackInterface.OnLTT;
+                @LTT.performed -= m_Wrapper.m_ItemActionsCallbackInterface.OnLTT;
+                @LTT.canceled -= m_Wrapper.m_ItemActionsCallbackInterface.OnLTT;
+                @LTH.started -= m_Wrapper.m_ItemActionsCallbackInterface.OnLTH;
+                @LTH.performed -= m_Wrapper.m_ItemActionsCallbackInterface.OnLTH;
+                @LTH.canceled -= m_Wrapper.m_ItemActionsCallbackInterface.OnLTH;
+            }
+            m_Wrapper.m_ItemActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @RBT.started += instance.OnRBT;
+                @RBT.performed += instance.OnRBT;
+                @RBT.canceled += instance.OnRBT;
+                @RBH.started += instance.OnRBH;
+                @RBH.performed += instance.OnRBH;
+                @RBH.canceled += instance.OnRBH;
+                @RTT.started += instance.OnRTT;
+                @RTT.performed += instance.OnRTT;
+                @RTT.canceled += instance.OnRTT;
+                @RTH.started += instance.OnRTH;
+                @RTH.performed += instance.OnRTH;
+                @RTH.canceled += instance.OnRTH;
+                @LBT.started += instance.OnLBT;
+                @LBT.performed += instance.OnLBT;
+                @LBT.canceled += instance.OnLBT;
+                @LBH.started += instance.OnLBH;
+                @LBH.performed += instance.OnLBH;
+                @LBH.canceled += instance.OnLBH;
+                @LTT.started += instance.OnLTT;
+                @LTT.performed += instance.OnLTT;
+                @LTT.canceled += instance.OnLTT;
+                @LTH.started += instance.OnLTH;
+                @LTH.performed += instance.OnLTH;
+                @LTH.canceled += instance.OnLTH;
+            }
+        }
+    }
+    public ItemActions @Item => new ItemActions(this);
     public interface IPlayerActions
     {
         void OnMoveDir(InputAction.CallbackContext context);
@@ -995,9 +1262,20 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     {
         void OnSpeedUp(InputAction.CallbackContext context);
     }
-    public interface IMoveActionActions
+    public interface IMoveActions
     {
         void OnRoll(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+    }
+    public interface IItemActions
+    {
+        void OnRBT(InputAction.CallbackContext context);
+        void OnRBH(InputAction.CallbackContext context);
+        void OnRTT(InputAction.CallbackContext context);
+        void OnRTH(InputAction.CallbackContext context);
+        void OnLBT(InputAction.CallbackContext context);
+        void OnLBH(InputAction.CallbackContext context);
+        void OnLTT(InputAction.CallbackContext context);
+        void OnLTH(InputAction.CallbackContext context);
     }
 }
