@@ -10,6 +10,11 @@ namespace Bear
         public static Dictionary<INode,INode> Parent = new Dictionary<INode, INode>();
 
         public static void AddChildrenNode(this INode parent, INode kid){
+            if (parent is ICustomizedNode CNode) {
+                CNode.AddChildrenNode(kid);
+                return;
+            }
+
             if(parent == null || 
               (kid.TryGetParentNode(out var oldParent) && oldParent.Equals(parent))){
                 return;
@@ -28,6 +33,12 @@ namespace Bear
         }
 
         public static void RemoveChildrenNode(this INode parent, INode kid){
+            if (parent is ICustomizedNode CNode)
+            {
+                CNode.RemoveChildrenNode(kid);
+                return;
+            }
+
             Parent.Remove(kid);
             Children.Dequeue(parent,kid);
 
@@ -36,6 +47,11 @@ namespace Bear
         }
 
         public static bool TryGetKidNode<T>(this INode node, out T kid) where T:INode{
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.TryGetKidNode<T>(out kid);
+            }
+
             kid = default;
             if(Children.TryGetValue(node,out var list)){
                 foreach(var item in list){
@@ -49,6 +65,11 @@ namespace Bear
         }
 
         public static bool TryGetKidNode<T>(this INode node, int index,out T kid) where T:INode{
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.TryGetKidNode<T>(index, out kid);
+            }
+
             kid = default;
             if(Children.TryGetValue(node,out var list)){
                 if(index>=0 && index<list.Count){
@@ -63,6 +84,11 @@ namespace Bear
         }
 
         public static bool TryGetKidNode(this INode node, int index,out INode kid){
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.TryGetKidNode(index, out kid);
+            }
+
             kid = default;
             if(Children.TryGetValue(node,out var list)){
                 if(index>=0 && index<list.Count){
@@ -74,6 +100,11 @@ namespace Bear
         }
 
         public static INode[] GetAllKids(this INode node) {
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.GetAllKids();
+            }
+
             if (Children.TryGetValue(node, out var value))
             {
                 return value.ToArray();
@@ -88,10 +119,20 @@ namespace Bear
         }
 
         public static bool TryGetParentNode(this INode node,out INode parent){
+            if (node is ICustomizedNode CNode) { 
+                return CNode.TryGetParentNode(out parent);
+            }
+
             return Parent.TryGetValue(node,out parent);
         }
 
         public static void Dispose(this INode node){
+            if (node is ICustomizedNode CNode) {
+                CNode.Dispose();
+                return;
+            
+            }
+
             node.RemoveAllNodeData();
 
             if(Parent.TryGetValue(node,out var parent)){

@@ -19,6 +19,8 @@ namespace Bear
                 fetcher = new InstanceFetcher(Equipment)
             });
 
+            
+
             pickView.AddNodeData(new EquipmentTestorNodeData() { 
                 signal = new EquipSignal() { 
                     equipment= equipmentView,

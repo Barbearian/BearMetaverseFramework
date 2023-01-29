@@ -7,8 +7,10 @@ namespace Bear{
     public static class INodeDataSystem 
     {
         public static Dictionary<INode,NodeInfo> nodeInfo = new Dictionary<INode, NodeInfo>();
-        public static Dictionary<INodeData,NodeDataInfo> nodeDataInfo = new Dictionary<INodeData,NodeDataInfo>();
+//        public static Dictionary<INodeData,NodeDataInfo> nodeDataInfo = new Dictionary<INodeData,NodeDataInfo>();
         internal static Dictionary<Type,INodeData> GetOrCreateNodeDataCollection(this INode node){
+
+
 
             if (nodeInfo.TryGetValue(node,out NodeInfo info)){
                 return info.nodeData;
@@ -36,33 +38,40 @@ namespace Bear{
                 return ninfo.requests;
             }
         }
-        public static INode GetNodeDataRoot(this INodeData nodeData){
-            if(INodeDataSystem.nodeDataInfo.TryGetValue(nodeData,out var info)){
-                return info.Root;
-            }else{
-                return null;
-            }
-        }
-        public static void SetNodeDataRoot(this INodeData nodeData, INode root){
+        //public static INode GetNodeDataRoot(this INodeData nodeData){
+        //    if(INodeDataSystem.nodeDataInfo.TryGetValue(nodeData,out var info)){
+        //        return info.Root;
+        //    }else{
+        //        return null;
+        //    }
+        //}
+        //public static void SetNodeDataRoot(this INodeData nodeData, INode root){
 
-            if(root == null){
-                nodeData.Dispose();
+        //    if(root == null){
+        //        nodeData.Dispose();
+        //        return;
+        //    }
+
+        //    if(nodeDataInfo.TryGetValue(nodeData,out var info)){
+        //        info.Root.RemoveNodeData(nodeData);
+        //        info.Root = root;
+        //        nodeDataInfo[nodeData] = info;
+        //    }else{
+        //        var nnodeDataInfo = NodeDataInfo.Create();
+        //        nnodeDataInfo.Root = root;
+        //        nodeDataInfo[nodeData] = nnodeDataInfo;
+        //    }
+
+        //    nodeData.OnAttched(root);
+        //}
+        public static void InvokeRequst(INode node,INodeData data){
+
+            if (node is ICustomizedNode CNode)
+            {
+                CNode.InvokeRequst(data);
                 return;
             }
 
-            if(nodeDataInfo.TryGetValue(nodeData,out var info)){
-                info.Root.RemoveNodeData(nodeData);
-                info.Root = root;
-                nodeDataInfo[nodeData] = info;
-            }else{
-                var nnodeDataInfo = NodeDataInfo.Create();
-                nnodeDataInfo.Root = root;
-                nodeDataInfo[nodeData] = nnodeDataInfo;
-            }
-
-            nodeData.OnAttched(root);
-        }
-        public static void InvokeRequst(INode node,INodeData data){
             var key = data.GetType();
             var NodeDataRequests = node.GetNodeDataRequestCollection();
             if (NodeDataRequests.TryGetValue(key, out var requests))
@@ -78,22 +87,24 @@ namespace Bear{
     }
 
     public static class INodeDataFactorySystem{
-        public static void Dispose(this INodeData data){
-            var root = data.GetNodeDataRoot();
-            if(root!=null){
-                root.RemoveNodeData(data);
-            }
+        //public static void Dispose(this INodeData data){
+        //    var root = data.GetNodeDataRoot();
+        //    if(root!=null){
+        //        root.RemoveNodeData(data);
+        //    }
 
-            INodeDataSystem.nodeDataInfo.Remove(data);
+        //    INodeDataSystem.nodeDataInfo.Remove(data);
 
-        }
+        //}
 
         
     }
     public static class INodeDataAttachSystem{
         public static T AddNodeData<T>(this INode node, T data) where T : INodeData
         {
-
+            if (node is ICustomizedNode CNode) {
+                return CNode.AddNodeData(data);
+            }
 
             var key = data.GetType();
             var NodeData = node.GetOrCreateNodeDataCollection();
@@ -101,8 +112,11 @@ namespace Bear{
 
             
             NodeData[key] = data;
-            data.SetNodeDataRoot(node);
-            
+        //    data.SetNodeDataRoot(node);
+
+            data.OnAttched(node);
+
+
             //Invoke Request
             INodeDataSystem.InvokeRequst(node,data);
 
@@ -116,13 +130,24 @@ namespace Bear{
 
         public static T RemoveNodeData<T>(this INode node) where T:INodeData
         {
-           if(node.TryGetNodeData<T>(out var nodedata)){
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.RemoveNodeData<T>();
+            }
+
+            if (node.TryGetNodeData<T>(out var nodedata)){
                 node.RemoveNodeData(nodedata);
            }
            return nodedata;
         }
 
         public static void RemoveNodeData(this INode node, INodeData data){
+            if (node is ICustomizedNode CNode)
+            {
+                CNode.RemoveNodeData(data);
+                return;
+            }
+
             var key = data.GetType();
             if(INodeDataSystem.nodeInfo.TryGetValue(node,out var info)){
                 info.nodeData.Remove(key);      
@@ -132,7 +157,13 @@ namespace Bear{
         }
 
         public static void RemoveAllNodeData(this INode node){
-            if(INodeDataSystem.nodeInfo.TryGetValue(node,out var info)){
+            if (node is ICustomizedNode CNode)
+            {
+                CNode.RemoveAllNodeData();
+                return;
+            }
+
+            if (INodeDataSystem.nodeInfo.TryGetValue(node,out var info)){
                 var allData = info.nodeData;
                 INodeDataSystem.nodeInfo.Remove(node);
 
@@ -145,6 +176,13 @@ namespace Bear{
 
     public static class INodeDataFetchSystem{
         public static bool RequestNodeData<T>(this INode node,System.Action<T> DOnDataRequested) where T:INodeData{
+
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.RequestNodeData<T>(DOnDataRequested);
+                
+            }
+
             var key = typeof(T);
             var NodeData = node.GetOrCreateNodeDataCollection();
             var NodeDataRequests = node.GetNodeDataRequestCollection();
@@ -171,6 +209,11 @@ namespace Bear{
         }
 
         public static bool TryGetNodeData<T>(this INode node,out T data) where T:INodeData{
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.TryGetNodeData<T>(out data);
+
+            }
 
             if (INodeDataSystem.nodeInfo.ContainsKey(node))
             {
@@ -187,7 +230,14 @@ namespace Bear{
 
         }
 
-        public static INodeData[] GetAllNodeData(this INode node) {
+        public static INodeData[] GetAllNodeData(this INode node)
+        {
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.GetAllNodeData();
+
+            }
+
             var rs = new INodeData[0];
             if (INodeDataSystem.nodeInfo.ContainsKey(node))
             {
@@ -199,6 +249,12 @@ namespace Bear{
         }
 
         public static bool TryGetFirstNodeDataInChildren<T>(this INode node, out T data) where T : INodeData {
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.TryGetFirstNodeDataInChildren<T>(out data);
+
+            }
+
             var kids = node.GetAllKids();
             foreach (var kid in kids) {
                 if (kid.TryGetNodeData(out data)) {
@@ -212,6 +268,11 @@ namespace Bear{
 
         public static bool TryGetFirstNodeDataInParent<T>(this INode node, out T data) where T : INodeData
         {
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.TryGetFirstNodeDataInParent(out data);
+            }
+
             if (node.TryGetParentNode(out var parent))
             {
                 if (parent.TryGetNodeData(out data))
@@ -230,7 +291,12 @@ namespace Bear{
 
 
         public static T GetOrCreateNodeData<T>(this INode node, T defaultNode) where T:INodeData{
-            if (node.TryGetNodeData<T>(out T data))
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.GetOrCreateNodeData<T>(defaultNode);
+            }
+
+            if (node.TryGetNodeData(out T data))
             {
                 return data;
             }
@@ -242,7 +308,12 @@ namespace Bear{
         }
         
 	    public static T GetOrCreateNodeData<T>(this INode node) where T:INodeData{
-		    if (node.TryGetNodeData<T>(out T data))
+            if (node is ICustomizedNode CNode)
+            {
+                return CNode.GetOrCreateNodeData<T>();
+            }
+
+            if (node.TryGetNodeData<T>(out T data))
 		    {
 			    return data;
 		    }
