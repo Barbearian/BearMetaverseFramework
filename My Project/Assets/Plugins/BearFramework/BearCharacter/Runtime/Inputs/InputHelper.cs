@@ -20,6 +20,7 @@ namespace Bear
 	        pInput.UI.Enable();
 	        pInput.Misc.Enable();
 	        pInput.Move.Enable();
+            pInput.Item.Enable();
         }
 
         public static Vector2 GetMoveDir()

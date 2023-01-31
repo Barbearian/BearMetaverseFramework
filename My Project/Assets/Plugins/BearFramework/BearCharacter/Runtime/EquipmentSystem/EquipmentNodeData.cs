@@ -13,9 +13,6 @@ namespace Bear
                 Wielder = x.wielder;
             },true).AddTo(receivers);
         }
-
-
-        
     }
 
     public static class EquipmentNodeDataSystem {
@@ -24,16 +21,19 @@ namespace Bear
         }
     }
 
-    public struct OnEquippedSignal : INodeSignal {
-        public string equipmentKey;
+    public struct OnEquippedSignal : INodeSignal, ILinkSignal {
         public INode wielder;
-        public EquipmentManagerNodeData manager;
+        public ItemManagerNodeData manager;
+
+        public INode Target { get => wielder; set => wielder = value; }
     }
 
-    public struct OnUnequippedSignal : INodeSignal
+    public struct OnUnequippedSignal : INodeSignal, IDelinkSignal
     {
-        public string equipmentKey;
         public INode wielder;
-        public EquipmentManagerNodeData manager;
+        public ItemManagerNodeData manager;
+
+        public INode Target { get => wielder; set => wielder = value; }
+
     }
 }

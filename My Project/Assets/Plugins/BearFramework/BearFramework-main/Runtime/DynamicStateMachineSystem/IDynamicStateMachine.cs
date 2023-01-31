@@ -3,11 +3,18 @@ using System.Collections.Generic;
 namespace Bear
 {
     public interface IDynamicTransition{
-        public bool CanTransit(INodeSignal signal);
-        public void Transit(DynamicStateMachine machine, INodeSignal signal);
+        bool CanTransit(INodeSignal signal);
+        void Transit(DynamicStateMachine machine, INodeSignal signal);
+        int TargetIndex { get; set; }
+        
+    }
+
+    public interface IDynamicState { 
+        
     }
 
     public class DynamicStateMachine:INodeSignalReceiver {
+        public List<IDynamicState> states { get; set; } = new List<IDynamicState>();
         public List<IDynamicTransition> Transitions { get; set; } = new List<IDynamicTransition>();
         private bool _isActive = true;
         public bool IsActive { get => _isActive; set => _isActive = value; }

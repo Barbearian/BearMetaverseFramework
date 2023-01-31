@@ -62,7 +62,6 @@ namespace Bear{
 		}
 
         public static void ReceiveNodeSignal<T>(this INode node, params INodeSignal[] signals)
-			where T : INodeSignal
         {
             if (node.TryGetNodeData<NodeSignalReceiverContainerNodeData>(out var data))
             {
@@ -101,14 +100,14 @@ namespace Bear{
 
         }
 		
-		public static void RegisterSignalReceiver<T>(this INode node,INodeSignalReceiver receiver, bool isAdditive = false) where T:INodeSignal
+		public static void RegisterSignalReceiver<T>(this INode node,INodeSignalReceiver receiver, bool isAdditive = false)
 		
 		{
 			var key = typeof(T).ToString();
 			node.RegisterSignalReceiver(key,receiver,isAdditive);
 		}
 		
-		public static ActionNodeSignalReceiver RegisterSignalReceiver<T>(this INode node,System.Action<T> action, bool isAdditive = false) where T:INodeSignal
+		public static ActionNodeSignalReceiver RegisterSignalReceiver<T>(this INode node,System.Action<T> action, bool isAdditive = false)
 		{
 			ActionNodeSignalReceiver receiver = new ActionNodeSignalReceiver((signal)=>{
 				if(signal is T tsignal){

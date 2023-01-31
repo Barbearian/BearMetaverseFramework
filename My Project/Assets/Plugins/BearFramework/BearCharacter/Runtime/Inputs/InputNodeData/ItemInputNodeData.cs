@@ -1,5 +1,7 @@
 using static PlayerInput;
 using UnityEngine.InputSystem;
+using System.Diagnostics;
+using UnityEngine;
 namespace Bear
 {
     public class ItemInputNodeData : INodeData, IItemActions, IOnAttachedToNode
@@ -8,77 +10,79 @@ namespace Bear
         public void Attached(INode node)
         {
             this.node = node;
+            InputHelper.pInput.Item.SetCallbacks(this);
         }
 
         public void OnLBH(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                node.ReceiveNodeSignal(new LBHPerformedSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new LBHPerformedSignal());
             else if(context.phase == InputActionPhase.Canceled)
-                node.ReceiveNodeSignal(new LBHCancelSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new LBHCancelSignal());
         }
 
         public void OnLBT(InputAction.CallbackContext context)
         {
+    //        UnityEngine.Debug.Log("Hello");
             if (context.phase == InputActionPhase.Performed)
-                node.ReceiveNodeSignal(new LBTPerformedSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new LBTPerformedSignal());
         }
 
         public void OnLTH(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                node.ReceiveNodeSignal(new LTHPerformedSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new LTHPerformedSignal());
             else if (context.phase == InputActionPhase.Canceled)
-                node.ReceiveNodeSignal(new LTHCancelSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new LTHCancelSignal());
         }
 
         public void OnLTT(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                node.ReceiveNodeSignal(new LTTPerformedSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new LTTPerformedSignal());
         }
 
         public void OnRBH(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                node.ReceiveNodeSignal(new RBHPerformedSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new RBHPerformedSignal());
             else if (context.phase == InputActionPhase.Canceled)
-                node.ReceiveNodeSignal(new RBHCancelSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new RBHCancelSignal());
         }
 
         public void OnRBT(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                node.ReceiveNodeSignal(new RBTPerformedSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new RBTPerformedSignal());
         }
 
         public void OnRTH(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                node.ReceiveNodeSignal(new RTHPerformedSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new RTHPerformedSignal());
             else if (context.phase == InputActionPhase.Canceled)
-                node.ReceiveNodeSignal(new RTHCancelSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new RTHCancelSignal());
         }
 
         public void OnRTT(InputAction.CallbackContext context)
         {
             if (context.phase == InputActionPhase.Performed)
-                node.ReceiveNodeSignal(new RTTPerformedSignal());
+                node.ReceiveNodeSignal<IPlayerToItemNodeSignal>(new RTTPerformedSignal());
         }
     }
 
-    public struct LBHCancelSignal:INodeSignal { }
-    public struct LBHPerformedSignal:INodeSignal { }
-    public struct LBTPerformedSignal : INodeSignal { }
-    public struct LTHCancelSignal:INodeSignal { }
-    public struct LTHPerformedSignal:INodeSignal { }
-    public struct LTTPerformedSignal:INodeSignal { }
+    public struct LBHCancelSignal:IPlayerToItemNodeSignal { }
+    public struct LBHPerformedSignal: IPlayerToItemNodeSignal { }
+    public struct LBTPerformedSignal : IPlayerToItemNodeSignal { }
+    public struct LTHCancelSignal: IPlayerToItemNodeSignal { }
+    public struct LTHPerformedSignal: IPlayerToItemNodeSignal { }
+    public struct LTTPerformedSignal: IPlayerToItemNodeSignal { }
 
-    public struct RBHCancelSignal : INodeSignal { }
-    public struct RBHPerformedSignal : INodeSignal { }
-    public struct RBTPerformedSignal : INodeSignal { }
-    public struct RTHCancelSignal : INodeSignal { }
-    public struct RTHPerformedSignal : INodeSignal { }
-    public struct RTTPerformedSignal : INodeSignal { }
+    public struct RBHCancelSignal : IPlayerToItemNodeSignal { }
+    public struct RBHPerformedSignal : IPlayerToItemNodeSignal { }
+    public struct RBTPerformedSignal : IPlayerToItemNodeSignal { }
+    public struct RTHCancelSignal : IPlayerToItemNodeSignal { }
+    public struct RTHPerformedSignal : IPlayerToItemNodeSignal { }
+    public struct RTTPerformedSignal : IPlayerToItemNodeSignal { }
 
 }

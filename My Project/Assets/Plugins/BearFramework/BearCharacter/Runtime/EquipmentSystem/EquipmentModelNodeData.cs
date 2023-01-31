@@ -4,11 +4,12 @@ namespace Bear
 {
     public class EquipmentModelNodeData : SignalHandlerNodeData,IOnAttachedToNode
     {
-        public IFetcher<GameObject> fetcher;    
+        public IFetcher<GameObject> fetcher;
+        public string key;
         public void Attached(INode node)
         {
             node.RegisterSignalReceiver<OnEquippedSignal>((x) => {
-                this.ShowEquipment(x.equipmentKey,x.wielder);
+                this.ShowEquipment(key, x.wielder);
             },true).AddTo(receivers);
 
             node.RegisterSignalReceiver<OnUnequippedSignal>((x) => {

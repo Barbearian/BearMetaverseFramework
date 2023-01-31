@@ -7,7 +7,6 @@ namespace Bear{
     public static class INodeDataSystem 
     {
         public static Dictionary<INode,NodeInfo> nodeInfo = new Dictionary<INode, NodeInfo>();
-//        public static Dictionary<INodeData,NodeDataInfo> nodeDataInfo = new Dictionary<INodeData,NodeDataInfo>();
         internal static Dictionary<Type,INodeData> GetOrCreateNodeDataCollection(this INode node){
 
 
@@ -38,32 +37,7 @@ namespace Bear{
                 return ninfo.requests;
             }
         }
-        //public static INode GetNodeDataRoot(this INodeData nodeData){
-        //    if(INodeDataSystem.nodeDataInfo.TryGetValue(nodeData,out var info)){
-        //        return info.Root;
-        //    }else{
-        //        return null;
-        //    }
-        //}
-        //public static void SetNodeDataRoot(this INodeData nodeData, INode root){
 
-        //    if(root == null){
-        //        nodeData.Dispose();
-        //        return;
-        //    }
-
-        //    if(nodeDataInfo.TryGetValue(nodeData,out var info)){
-        //        info.Root.RemoveNodeData(nodeData);
-        //        info.Root = root;
-        //        nodeDataInfo[nodeData] = info;
-        //    }else{
-        //        var nnodeDataInfo = NodeDataInfo.Create();
-        //        nnodeDataInfo.Root = root;
-        //        nodeDataInfo[nodeData] = nnodeDataInfo;
-        //    }
-
-        //    nodeData.OnAttched(root);
-        //}
         public static void InvokeRequst(INode node,INodeData data){
 
             if (node is ICustomizedNode CNode)
@@ -86,19 +60,6 @@ namespace Bear{
         }
     }
 
-    public static class INodeDataFactorySystem{
-        //public static void Dispose(this INodeData data){
-        //    var root = data.GetNodeDataRoot();
-        //    if(root!=null){
-        //        root.RemoveNodeData(data);
-        //    }
-
-        //    INodeDataSystem.nodeDataInfo.Remove(data);
-
-        //}
-
-        
-    }
     public static class INodeDataAttachSystem{
         public static T AddNodeData<T>(this INode node, T data) where T : INodeData
         {
@@ -112,7 +73,6 @@ namespace Bear{
 
             
             NodeData[key] = data;
-        //    data.SetNodeDataRoot(node);
 
             data.OnAttched(node);
 
@@ -320,7 +280,7 @@ namespace Bear{
 		    else {
 
 			    var defaultNode = (T)Activator.CreateInstance(typeof(T));
-			    return (T)node.AddNodeData(defaultNode);
+			    return node.AddNodeData(defaultNode);
 		    }
 
 	    }

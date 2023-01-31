@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Bear {
-    public class AnimatorNodeData : INodeData, IOnAttachedToNode, IOnDetachedFromNode,IAnimatorClipsPlayer, IAnimatorNode
+    public class AnimatorNodeData : SignalHandlerNodeData, IOnAttachedToNode,IAnimatorClipsPlayer, IAnimatorNode
     {
         public Animator anim;
         public SafeDelegate<PlayAnimationClipInfo> dOnPlayedAnimation = new SafeDelegate<PlayAnimationClipInfo>();
@@ -22,11 +22,20 @@ namespace Bear {
 	            anim = view.GetComponent<Animator>();
                 
 	            clipData = view.GetOrCreateNodeData(new AnimationClipNodeData());
+
+                node.RegisterSignalReceiver<PlayAnimationNodeSignal>((x) => {
+                    this.PlayInfo(x.info);
+                },true).AddTo(receivers);
+
+                node.RegisterSignalReceiver<PlayIndexedAnimationNodeSignal>((x) => {
+                    this.Play(x.index);
+                }, true).AddTo(receivers);
             }
         }
 
-        public void Detached(INode node)
+        public override void Detached(INode node)
         {
+            base.Detached(node);
             anim = null;
         }
 
@@ -34,6 +43,19 @@ namespace Bear {
         {
             AnimatorNodeSystem.Play(this,index);
         }
+
+
     }
+    public struct PlayAnimationNodeSignal : IAnimationSignal
+    {
+        public PlayAnimationClipInfo info;
+    }
+
+    public struct PlayIndexedAnimationNodeSignal : IAnimationSignal
+    {
+        public int index;
+    }
+
+    public interface IAnimationSignal:INodeSignal { }
     
 }

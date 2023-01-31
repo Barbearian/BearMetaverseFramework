@@ -36,13 +36,22 @@ namespace Bear{
 			cView.AddNodeData(new ItemPickerNodeData());
 
 			//add equipmentmanager
-			cView.AddNodeData(new EquipmentManagerNodeData());
+			cView.AddNodeData(new ItemManagerNodeData());
+            cView.AddNodeData(new ItemInputNodeData());
 
-			//add finder
-			cView.AddNodeData(new FinderNodeData());
+            //add finder
+            cView.AddNodeData(new FinderNodeData());
 
 			//add execution filter
 			cView.AddNodeData(new ExecutionFilterNodeData());
-		}
+
+			//add animator signal edge
+			var AnimatorLinkNodeData = new AnimatorLinkNodeData();
+
+			cView.AddNodeData(AnimatorLinkNodeData);
+			AnimatorLinkNodeData.Link(animView);
+
+
+        }
 	}
 }
