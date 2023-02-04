@@ -14,20 +14,33 @@ namespace Bear
             pickView.AddNodeData(new PickUpViewNodeData(new InstanceFetcher(Equipment)));
             pickView.AddNodeData(new ItemPickUpNodeData());
 
-            var equipmentView = new GameObject(Equipment.name).AddComponent<NodeView>();
-            equipmentView.AddNodeData(new EquipmentNodeData());
+            var equipmentView = new CNode();
+            equipmentView.AddNodeData(new ItemNodeData());
             equipmentView.AddNodeData(new EquipmentModelNodeData() { 
                 fetcher = new InstanceFetcher(Equipment),
                 key = key
             });
+            equipmentView.AddNodeData(new ItemStateMachineNodeData());
+
             var map = new TypeSignalTranslator();
-            map.signalMap[typeof(LBTPerformedSignal).ToString()] = new PlayAnimationNodeSignal() {
-                info = new PlayAnimationClipInfo() { 
-                    clipName= "RightHand@Attack01",
+
+            var playAnimSignal = new PlayAnimationNodeSignal()
+            {
+                info = new PlayAnimationClipInfo()
+                {
+                    clipName = "RightHand@Attack01",
                     layer = 1,
-                    
+
                 }
             };
+            var ItemActExSignal = new ItemActExSignal()
+            {
+                signal = playAnimSignal,
+            };
+            var ItemStatemachineSignal = new ItemStateMachineSignal() { 
+                signal = ItemActExSignal,
+            };
+            map.signalMap[typeof(LBTPerformedSignal).ToString()] = ItemStatemachineSignal;
             equipmentView.AddNodeData(new ItemInputSignalTranslatorNodeData() { 
                 translator = map
             });

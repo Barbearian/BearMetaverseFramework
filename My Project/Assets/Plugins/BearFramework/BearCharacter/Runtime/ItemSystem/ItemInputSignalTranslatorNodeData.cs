@@ -4,8 +4,11 @@ namespace Bear
     {
         public ISignalTranslator translator { get; set; } = new TypeSignalTranslator();
         private ArrayNodeSignalReceiver inputReceiver { get; set; } = new ArrayNodeSignalReceiver();
+        private INode Root;
         public void Attached(INode node)
         {
+
+            Root= node;
             node.RegisterSignalReceiver<OnEquippedSignal>((x) => {
                 Link(x.Target);
             }, true).AddTo(receivers);
@@ -20,7 +23,7 @@ namespace Bear
         public void Link(INode node) {
             node.RegisterSignalReceiver<IPlayerToItemNodeSignal>((x) => {
                 if (translator.TryTranslate(x,out var rs)) {
-                    node.ReceiveNodeSignal(rs);
+                   Root.ReceiveNodeSignal(rs);
                 }
             }, true).AddTo(inputReceiver);
         }

@@ -2,10 +2,9 @@ using UnityEngine;
 
 namespace Bear
 {
-    public class EquipmentNodeData : SignalHandlerNodeData,IOnAttachedToNode
+    public class ItemNodeData : SignalHandlerNodeData,IOnAttachedToNode
     {
         public INode Wielder { get; set; }
-        public EquipmentData data;
 
         public void Attached(INode node)
         {

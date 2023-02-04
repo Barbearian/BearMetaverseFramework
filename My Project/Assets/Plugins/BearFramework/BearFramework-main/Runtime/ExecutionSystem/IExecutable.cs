@@ -7,4 +7,14 @@ namespace Bear
     {
         public void Execute();
     }
+
+    public class SignalSenderExSignal : IExecutableNodeSignal
+    {
+        public INodeSignal signal;
+        public INode receiver;
+        public void Execute()
+        {
+            receiver.ReceiveNodeSignal(signal);
+        }
+    }
 }
