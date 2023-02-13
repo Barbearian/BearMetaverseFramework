@@ -6,6 +6,7 @@ namespace Bear
 {
     public class MovementDefaultAnimationBehavior : AnimationEventListenerBehavior
     {
+
         AddFilterSignal movment = new AddFilterSignal()
         {
             filter = new MovementSignalFilter()

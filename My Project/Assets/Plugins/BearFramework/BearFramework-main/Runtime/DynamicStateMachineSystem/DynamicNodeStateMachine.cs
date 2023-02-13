@@ -1,5 +1,6 @@
 using Mono.Cecil.Cil;
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace Bear
 {
@@ -48,14 +49,27 @@ namespace Bear
 
     }
 
-    public class DynamicStateMachineNodeData : INodeData { 
+    public class DynamicStateMachineNodeData : INodeData,IOnAttachedToNode { 
         public INode Entry { get; set; }
         public INode Current { get; set; }
         public INode Predicted { get; set; }
+        private INode Root { get; set; }
+
+        public DynamicGraph StateMachine;
 
         public void Executed() {
             Current = Predicted;
             Predicted = null;
+        }
+
+        public void Init(DynamicGraph states)
+        {
+            this.StateMachine = states;
+            if (states.nodes.TryGetValue(states.enterNode,out var current)) {
+                this.Entry = current;
+                this.Current = current;
+            }
+            
         }
 
         public bool TryGetPredictedSignal(out INodeSignal signal) {
@@ -80,6 +94,32 @@ namespace Bear
             }
 
             return false;
+        }
+
+        public void EnterDefault() {
+            Current = Entry;
+        }
+
+        public void EnterState(int index) {
+            if (StateMachine.nodes.TryGetValue(index, out var node)) {
+                Debug.Log("Entering state "+index);
+                EnterState(node);
+            }
+        }
+
+        public void EnterState(INode node) {
+            //if (node.TryGetNodeData<DynamicStateExecutionNodeData>(out var data)) {
+            //    Root.ReceiveNodeSignal(data.executionSignal);
+            //}
+
+            Current = node;
+        }
+
+        public void Attached(INode node)
+        {
+            Root = node;
+
+            
         }
     }
 

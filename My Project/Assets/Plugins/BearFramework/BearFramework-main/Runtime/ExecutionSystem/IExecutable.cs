@@ -8,13 +8,8 @@ namespace Bear
         public void Execute();
     }
 
-    public class SignalSenderExSignal : IExecutableNodeSignal
+    public interface ISignalSenderExSignal : IExecutableNodeSignal
     {
-        public INodeSignal signal;
-        public INode receiver;
-        public void Execute()
-        {
-            receiver.ReceiveNodeSignal(signal);
-        }
+        public INode Receiver { get; set; }
     }
 }

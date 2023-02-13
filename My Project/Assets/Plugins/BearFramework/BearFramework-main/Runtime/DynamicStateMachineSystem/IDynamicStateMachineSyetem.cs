@@ -1,6 +1,9 @@
 using JetBrains.Annotations;
 using System.Collections.Generic;
 using System;
+using Codice.Client.BaseCommands;
+using System.Xml;
+
 namespace Bear
 {
     public static class DynamicStateMachineFactory {
@@ -12,12 +15,30 @@ namespace Bear
             var transitions = graphData.edges;
             var root = graphData.source;
 
+            //add nodeData
+            foreach (var data in graphData.nodeKeys)
+            {
+                var signal = new SignalContainerTransferSignal()
+                {
+                    key = data.Data
+                };
+
+                var node = states.GetOrCreateNode(data.Index);
+
+                node.AddNodeData(new DynamicStateExecutionNodeData() { 
+                    executionSignal = signal,
+                });
+            }
+
             //add edges
             foreach (var transition in transitions)
             {
                 //Create Node
                 var source = states.GetOrCreateNode(transition.source);
+                var target = states.GetOrCreateNode(transition.target);
                 var edge = TransitionMaker(transition);
+
+
                 if (!source.TryGetNodeData<DynamicStateTranstionNodeData>(out var transitionsData))
                 {
                     transitionsData = source.AddNodeData(new DynamicStateTranstionNodeData());
@@ -27,9 +48,27 @@ namespace Bear
                 transitionsData.nextState.Add(edge);
             }
 
+            
+
             graph.nodes = states;
             graph.enterNode = graphData.source;
             return graph;
+        }
+
+        public static DynamicStateMachineNodeData ToNodeData(this DynamicGraph graph)
+        {
+
+            DynamicStateMachineNodeData data = new DynamicStateMachineNodeData();
+            data.Init(graph);
+            return data;
+
+        }
+
+        public static DynamicStateMachineNodeData ToNodeData(this DynamicGraphData graph)
+        {
+            var DynamicGraph = MakeStateMachine(graph, BuildIntTransition);
+            return DynamicGraph.ToNodeData();
+
         }
 
         private static INode GetOrCreateNode(this Dictionary<int, INode> states, int index)
@@ -66,8 +105,14 @@ namespace Bear
     {
         public int source;
         public TransitionData[] edges;
-        public string[] nodeKeys;
+        public DynamicNodeData[] nodeKeys;
         
+    }
+    [System.Serializable]
+    public struct DynamicNodeData
+    {
+        public int Index;
+        public string Data;
     }
 
     public class DynamicGraph

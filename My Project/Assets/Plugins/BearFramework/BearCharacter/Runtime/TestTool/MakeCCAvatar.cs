@@ -38,6 +38,7 @@ namespace Bear{
 			//add equipmentmanager
 			cView.AddNodeData(new ItemManagerNodeData());
             cView.AddNodeData(new ItemInputNodeData());
+			cView.AddNodeData(new WielderToItemNodeData());
 
             //add finder
             cView.AddNodeData(new FinderNodeData());

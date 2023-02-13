@@ -30,6 +30,8 @@ namespace Bear {
 
             Source.RegisterSignalReceiver(linkKey,LinkAction, true);
             Source.RegisterSignalReceiver(delinkKey,DelinkAction, true);
+
+            OnInit(node);
         }
 
         public virtual (string, string) GetKeys() {
@@ -47,7 +49,11 @@ namespace Bear {
             }
 
             OutEdges.InhibitAll();
+
+            OnDelink(node);
         }
+
+
 
         public virtual void Link(INode node)
         {
@@ -61,8 +67,10 @@ namespace Bear {
             translate.AddTo(OutEdges);
 
             Source.RegisterSignalReceiver(this.GetType().ToString(), translate);
-
+            OnLink(node);
         }
+
+
 
         public override void Detached(INode node)
         {
@@ -74,6 +82,18 @@ namespace Bear {
         protected static (string, string) GetKeys<T, K>() {
             return (typeof(T).ToString(),typeof(K).ToString());
         }
+
+        public virtual void OnLink(INode node)
+        {
+
+        }
+
+        public virtual void OnDelink(INode node)
+        {
+
+        }
+
+        public virtual void OnInit(INode node) { }
     }
 
 

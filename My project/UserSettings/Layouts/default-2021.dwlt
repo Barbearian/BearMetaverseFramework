@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43.2
-    width: 3072
-    height: 1636.8
+    x: 7.2000003
+    y: 50.4
+    width: 3057.6
+    height: 1622.4
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
+  m_Maximized: 0
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -44,8 +44,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 3072
-    height: 1636.8
+    width: 3057.6
+    height: 1622.4
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 3072
+    width: 3057.6
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1616.8
-    width: 3072
+    y: 1602.4
+    width: 3057.6
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -114,12 +114,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 3072
-    height: 1586.8
+    width: 3057.6
+    height: 1572.4
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 106
+  controlID: 166
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2085.6
-    height: 1586.8
+    width: 2076
+    height: 1572.4
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 116
+  controlID: 124
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2085.6
-    height: 900.8
+    width: 2076
+    height: 892.8
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 117
+  controlID: 44
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,10 +187,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 429.6
-    height: 900.8
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 428
+    height: 892.8
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -211,19 +211,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 429.6
+    x: 428
     y: 0
-    width: 1656.0001
-    height: 900.8
+    width: 1648
+    height: 892.8
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 18}
-  - {fileID: 19}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,13 +241,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 900.8
-    width: 2085.6
-    height: 686.00006
+    y: 892.8
+    width: 2076
+    height: 679.60004
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 89
+  controlID: 125
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,13 +265,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1162.4
-    height: 686.00006
+    width: 654.4
+    height: 679.60004
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &12
@@ -290,23 +289,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1162.4
+    x: 654.4
     y: 0
-    width: 923.2001
-    height: 686.00006
+    width: 1421.6
+    height: 679.60004
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_ActualView: {fileID: 20}
   m_Panes:
+  - {fileID: 20}
   - {fileID: 21}
   - {fileID: 22}
-  - {fileID: 23}
-  - {fileID: 24}
-  - {fileID: 25}
   - {fileID: 15}
   - {fileID: 14}
   m_Selected: 0
-  m_LastSelected: 6
+  m_LastSelected: 1
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -322,16 +319,16 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2085.6
+    x: 2076
     y: 0
-    width: 986.3999
-    height: 1586.8
+    width: 981.6001
+    height: 1572.4
   m_MinSize: {x: 276, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 26}
+  m_ActualView: {fileID: 23}
   m_Panes:
-  - {fileID: 26}
-  - {fileID: 27}
+  - {fileID: 23}
+  - {fileID: 24}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &14
@@ -343,35 +340,1019 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f817a38900380be47942905e17e7d39b, type: 3}
+  m_Script: {fileID: 12070, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
+  m_MinSize: {x: 880, y: 216}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Timeline
-    m_Image: {fileID: -5401195905404635996, guid: 0000000000000000d000000000000000,
+    m_Text: Profiler
+    m_Image: {fileID: 2169972056302973491, guid: 0000000000000000d000000000000000,
       type: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1316.8
-    y: 974.4
-    width: 766.80005
-    height: 665.00006
+    x: 661.60004
+    y: 973.60004
+    width: 1419.6
+    height: 658.60004
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_Preferences:
-    editType: 0
-    timeReferenceMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_SequenceHierarchy: {fileID: 0}
-  m_SequencePath:
-    m_SelectionRoot: 0
-    m_SubElements: []
+  m_Recording: 1
+  m_ActiveNativePlatformSupportModuleName: 
+  m_AllModules:
+  - rid: 930489479228293120
+  - rid: 930489479228293121
+  - rid: 930489479228293122
+  - rid: 930489479228293123
+  - rid: 930489479228293124
+  - rid: 930489479228293125
+  - rid: 930489479228293126
+  - rid: 930489479228293127
+  - rid: 930489479228293128
+  - rid: 930489479228293129
+  - rid: 930489479228293130
+  - rid: 930489479228293131
+  - rid: 930489479228293132
+  - rid: 930489479228293133
+  - rid: 930489479228293134
+  - rid: 930489479228293135
+  m_CallstackRecordMode: 1
+  m_ClearOnPlay: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: 930489479228293120
+      type: {class: CPUProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.CPUProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+        m_ViewType: 0
+        updateViewLive: 0
+        m_CurrentFrameIndex: -1
+        m_HierarchyOverruledThreadFromSelection: 0
+        m_ProfilerViewFilteringOptions: 1
+        m_FrameDataHierarchyView:
+          m_Serialized: 1
+          m_TreeViewState:
+            scrollPos: {x: 0, y: 0}
+            m_SelectedIDs: 
+            m_LastClickedID: 0
+            m_ExpandedIDs: 0400000065000000b2000000450100004a0100004b010000d6010000
+            m_RenameOverlay:
+              m_UserAcceptedRename: 0
+              m_Name: 
+              m_OriginalName: 
+              m_EditFieldRect:
+                serializedVersion: 2
+                x: 0
+                y: 0
+                width: 0
+                height: 0
+              m_UserData: 0
+              m_IsWaitingForDelay: 0
+              m_IsRenaming: 0
+              m_OriginalEventType: 11
+              m_IsRenamingFilename: 0
+              m_ClientGUIView: {fileID: 0}
+            m_SearchString: 
+          m_MultiColumnHeaderState:
+            m_Columns:
+            - width: 902
+              sortedAscending: 1
+              headerContent:
+                m_Text: Overview
+                m_Image: {fileID: 0}
+                m_Tooltip: 
+              contextMenuText: 
+              headerTextAlignment: 0
+              sortingArrowAlignment: 2
+              minWidth: 200
+              maxWidth: 1000000
+              autoResize: 1
+              allowToggleVisibility: 0
+              canSort: 1
+              userData: 0
+            - width: 80
+              sortedAscending: 0
+              headerContent:
+                m_Text: Total
+                m_Image: {fileID: 0}
+                m_Tooltip: 
+              contextMenuText: 
+              headerTextAlignment: 0
+              sortingArrowAlignment: 2
+              minWidth: 50
+              maxWidth: 1000000
+              autoResize: 0
+              allowToggleVisibility: 1
+              canSort: 1
+              userData: 0
+            - width: 80
+              sortedAscending: 0
+              headerContent:
+                m_Text: Self
+                m_Image: {fileID: 0}
+                m_Tooltip: 
+              contextMenuText: 
+              headerTextAlignment: 0
+              sortingArrowAlignment: 2
+              minWidth: 50
+              maxWidth: 1000000
+              autoResize: 0
+              allowToggleVisibility: 1
+              canSort: 1
+              userData: 0
+            - width: 80
+              sortedAscending: 0
+              headerContent:
+                m_Text: Calls
+                m_Image: {fileID: 0}
+                m_Tooltip: 
+              contextMenuText: 
+              headerTextAlignment: 0
+              sortingArrowAlignment: 2
+              minWidth: 50
+              maxWidth: 1000000
+              autoResize: 0
+              allowToggleVisibility: 1
+              canSort: 1
+              userData: 0
+            - width: 80
+              sortedAscending: 0
+              headerContent:
+                m_Text: GC Alloc
+                m_Image: {fileID: 0}
+                m_Tooltip: 
+              contextMenuText: 
+              headerTextAlignment: 0
+              sortingArrowAlignment: 2
+              minWidth: 50
+              maxWidth: 1000000
+              autoResize: 0
+              allowToggleVisibility: 1
+              canSort: 1
+              userData: 0
+            - width: 80
+              sortedAscending: 0
+              headerContent:
+                m_Text: Time ms
+                m_Image: {fileID: 0}
+                m_Tooltip: 
+              contextMenuText: 
+              headerTextAlignment: 0
+              sortingArrowAlignment: 2
+              minWidth: 50
+              maxWidth: 1000000
+              autoResize: 0
+              allowToggleVisibility: 1
+              canSort: 1
+              userData: 0
+            - width: 80
+              sortedAscending: 0
+              headerContent:
+                m_Text: Self ms
+                m_Image: {fileID: 0}
+                m_Tooltip: 
+              contextMenuText: 
+              headerTextAlignment: 0
+              sortingArrowAlignment: 2
+              minWidth: 50
+              maxWidth: 1000000
+              autoResize: 0
+              allowToggleVisibility: 1
+              canSort: 1
+              userData: 0
+            - width: 25
+              sortedAscending: 0
+              headerContent:
+                m_Text: 
+                m_Image: {fileID: -5161429177145976760, guid: 0000000000000000d000000000000000,
+                  type: 0}
+                m_Tooltip: Warnings
+              contextMenuText: 
+              headerTextAlignment: 0
+              sortingArrowAlignment: 2
+              minWidth: 25
+              maxWidth: 25
+              autoResize: 0
+              allowToggleVisibility: 1
+              canSort: 1
+              userData: 0
+            m_VisibleColumns: 0000000001000000020000000300000004000000050000000600000007000000
+            m_SortedColumns: 0400000005000000
+          m_ThreadIndexInThreadNames: 0
+          m_DetailedViewType: 0
+          m_DetailedViewSpliterState:
+            ID: 0
+            splitterInitialOffset: 0
+            currentActiveSplitter: -1
+            realSizes:
+            - 0
+            - 0
+            relativeSizes:
+            - 0.7
+            - 0.3
+            minSizes:
+            - 450
+            - 50
+            maxSizes:
+            - 0
+            - 0
+            lastTotalSize: 0
+            splitSize: 6
+            xOffset: 0
+            m_Version: 1
+            oldRealSizes: 
+            oldMinSizes: 
+            oldMaxSizes: 
+            oldSplitSize: 0
+          m_DetailedObjectsView:
+            m_SelectedID: -1
+            m_TreeViewState:
+              scrollPos: {x: 0, y: 0}
+              m_SelectedIDs: 
+              m_LastClickedID: 0
+              m_ExpandedIDs: 
+              m_RenameOverlay:
+                m_UserAcceptedRename: 0
+                m_Name: 
+                m_OriginalName: 
+                m_EditFieldRect:
+                  serializedVersion: 2
+                  x: 0
+                  y: 0
+                  width: 0
+                  height: 0
+                m_UserData: 0
+                m_IsWaitingForDelay: 0
+                m_IsRenaming: 0
+                m_OriginalEventType: 11
+                m_IsRenamingFilename: 0
+                m_ClientGUIView: {fileID: 0}
+              m_SearchString: 
+            m_MultiColumnHeaderState:
+              m_Columns: []
+              m_VisibleColumns: 
+              m_SortedColumns: 
+            m_VertSplit:
+              ID: 0
+              splitterInitialOffset: 0
+              currentActiveSplitter: 0
+              realSizes: []
+              relativeSizes: []
+              minSizes: []
+              maxSizes: []
+              lastTotalSize: 0
+              splitSize: 0
+              xOffset: 0
+              m_Version: 1
+              oldRealSizes: 
+              oldMinSizes: 
+              oldMaxSizes: 
+              oldSplitSize: 0
+          m_DetailedCallsView:
+            m_SelectedID: -1
+            m_VertSplit:
+              ID: 0
+              splitterInitialOffset: 0
+              currentActiveSplitter: 0
+              realSizes: []
+              relativeSizes: []
+              minSizes: []
+              maxSizes: []
+              lastTotalSize: 0
+              splitSize: 0
+              xOffset: 0
+              m_Version: 1
+              oldRealSizes: 
+              oldMinSizes: 
+              oldMaxSizes: 
+              oldSplitSize: 0
+            m_CalleesTreeView:
+              m_ViewState:
+                scrollPos: {x: 0, y: 0}
+                m_SelectedIDs: 
+                m_LastClickedID: 0
+                m_ExpandedIDs: 
+                m_RenameOverlay:
+                  m_UserAcceptedRename: 0
+                  m_Name: 
+                  m_OriginalName: 
+                  m_EditFieldRect:
+                    serializedVersion: 2
+                    x: 0
+                    y: 0
+                    width: 0
+                    height: 0
+                  m_UserData: 0
+                  m_IsWaitingForDelay: 0
+                  m_IsRenaming: 0
+                  m_OriginalEventType: 11
+                  m_IsRenamingFilename: 0
+                  m_ClientGUIView: {fileID: 0}
+                m_SearchString: 
+              m_ViewHeaderState:
+                m_Columns:
+                - width: 150
+                  sortedAscending: 1
+                  headerContent:
+                    m_Text: Called From
+                    m_Image: {fileID: 0}
+                    m_Tooltip: 'Parents the selected function is called from
+
+
+                      (Press
+                      ''F'' for frame selection)'
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 150
+                  maxWidth: 1000000
+                  autoResize: 1
+                  allowToggleVisibility: 0
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Calls
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Total number of calls in a selected frame
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: GC Alloc
+                    m_Image: {fileID: 0}
+                    m_Tooltip: 
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Time ms
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Total time the selected function spends within a parent
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Time %
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Shows how often the selected function was called from
+                      the parent call
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                m_VisibleColumns: 0000000001000000020000000300000004000000
+                m_SortedColumns: 03000000
+            m_CallersTreeView:
+              m_ViewState:
+                scrollPos: {x: 0, y: 0}
+                m_SelectedIDs: 
+                m_LastClickedID: 0
+                m_ExpandedIDs: 
+                m_RenameOverlay:
+                  m_UserAcceptedRename: 0
+                  m_Name: 
+                  m_OriginalName: 
+                  m_EditFieldRect:
+                    serializedVersion: 2
+                    x: 0
+                    y: 0
+                    width: 0
+                    height: 0
+                  m_UserData: 0
+                  m_IsWaitingForDelay: 0
+                  m_IsRenaming: 0
+                  m_OriginalEventType: 11
+                  m_IsRenamingFilename: 0
+                  m_ClientGUIView: {fileID: 0}
+                m_SearchString: 
+              m_ViewHeaderState:
+                m_Columns:
+                - width: 150
+                  sortedAscending: 1
+                  headerContent:
+                    m_Text: Called From
+                    m_Image: {fileID: 0}
+                    m_Tooltip: 'Parents the selected function is called from
+
+
+                      (Press
+                      ''F'' for frame selection)'
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 150
+                  maxWidth: 1000000
+                  autoResize: 1
+                  allowToggleVisibility: 0
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Calls
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Total number of calls in a selected frame
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: GC Alloc
+                    m_Image: {fileID: 0}
+                    m_Tooltip: 
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Time ms
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Total time the selected function spends within a parent
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Time %
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Shows how often the selected function was called from
+                      the parent call
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                m_VisibleColumns: 0000000001000000020000000300000004000000
+                m_SortedColumns: 03000000
+          m_FullThreadName: Main Thread
+          m_ThreadName: Main Thread
+          <threadId>k__BackingField: 13584
+          <threadIndex>k__BackingField: 0
+          m_GroupName: 
+    - rid: 930489479228293121
+      type: {class: GPUProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.GPUProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+        m_ViewType: 0
+        updateViewLive: 0
+        m_CurrentFrameIndex: -1
+        m_HierarchyOverruledThreadFromSelection: 0
+        m_ProfilerViewFilteringOptions: 1
+        m_FrameDataHierarchyView:
+          m_Serialized: 0
+          m_TreeViewState:
+            scrollPos: {x: 0, y: 0}
+            m_SelectedIDs: 
+            m_LastClickedID: 0
+            m_ExpandedIDs: 
+            m_RenameOverlay:
+              m_UserAcceptedRename: 0
+              m_Name: 
+              m_OriginalName: 
+              m_EditFieldRect:
+                serializedVersion: 2
+                x: 0
+                y: 0
+                width: 0
+                height: 0
+              m_UserData: 0
+              m_IsWaitingForDelay: 0
+              m_IsRenaming: 0
+              m_OriginalEventType: 11
+              m_IsRenamingFilename: 0
+              m_ClientGUIView: {fileID: 0}
+            m_SearchString: 
+          m_MultiColumnHeaderState:
+            m_Columns: []
+            m_VisibleColumns: 
+            m_SortedColumns: 
+          m_ThreadIndexInThreadNames: 0
+          m_DetailedViewType: 0
+          m_DetailedViewSpliterState:
+            ID: 0
+            splitterInitialOffset: 0
+            currentActiveSplitter: 0
+            realSizes: []
+            relativeSizes: []
+            minSizes: []
+            maxSizes: []
+            lastTotalSize: 0
+            splitSize: 0
+            xOffset: 0
+            m_Version: 1
+            oldRealSizes: 
+            oldMinSizes: 
+            oldMaxSizes: 
+            oldSplitSize: 0
+          m_DetailedObjectsView:
+            m_SelectedID: 0
+            m_TreeViewState:
+              scrollPos: {x: 0, y: 0}
+              m_SelectedIDs: 
+              m_LastClickedID: 0
+              m_ExpandedIDs: 
+              m_RenameOverlay:
+                m_UserAcceptedRename: 0
+                m_Name: 
+                m_OriginalName: 
+                m_EditFieldRect:
+                  serializedVersion: 2
+                  x: 0
+                  y: 0
+                  width: 0
+                  height: 0
+                m_UserData: 0
+                m_IsWaitingForDelay: 0
+                m_IsRenaming: 0
+                m_OriginalEventType: 11
+                m_IsRenamingFilename: 0
+                m_ClientGUIView: {fileID: 0}
+              m_SearchString: 
+            m_MultiColumnHeaderState:
+              m_Columns: []
+              m_VisibleColumns: 
+              m_SortedColumns: 
+            m_VertSplit:
+              ID: 0
+              splitterInitialOffset: 0
+              currentActiveSplitter: 0
+              realSizes: []
+              relativeSizes: []
+              minSizes: []
+              maxSizes: []
+              lastTotalSize: 0
+              splitSize: 0
+              xOffset: 0
+              m_Version: 1
+              oldRealSizes: 
+              oldMinSizes: 
+              oldMaxSizes: 
+              oldSplitSize: 0
+          m_DetailedCallsView:
+            m_SelectedID: -1
+            m_VertSplit:
+              ID: 0
+              splitterInitialOffset: 0
+              currentActiveSplitter: 0
+              realSizes: []
+              relativeSizes: []
+              minSizes: []
+              maxSizes: []
+              lastTotalSize: 0
+              splitSize: 0
+              xOffset: 0
+              m_Version: 1
+              oldRealSizes: 
+              oldMinSizes: 
+              oldMaxSizes: 
+              oldSplitSize: 0
+            m_CalleesTreeView:
+              m_ViewState:
+                scrollPos: {x: 0, y: 0}
+                m_SelectedIDs: 
+                m_LastClickedID: 0
+                m_ExpandedIDs: 
+                m_RenameOverlay:
+                  m_UserAcceptedRename: 0
+                  m_Name: 
+                  m_OriginalName: 
+                  m_EditFieldRect:
+                    serializedVersion: 2
+                    x: 0
+                    y: 0
+                    width: 0
+                    height: 0
+                  m_UserData: 0
+                  m_IsWaitingForDelay: 0
+                  m_IsRenaming: 0
+                  m_OriginalEventType: 11
+                  m_IsRenamingFilename: 0
+                  m_ClientGUIView: {fileID: 0}
+                m_SearchString: 
+              m_ViewHeaderState:
+                m_Columns:
+                - width: 150
+                  sortedAscending: 1
+                  headerContent:
+                    m_Text: Called From
+                    m_Image: {fileID: 0}
+                    m_Tooltip: 'Parents the selected function is called from
+
+
+                      (Press
+                      ''F'' for frame selection)'
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 150
+                  maxWidth: 1000000
+                  autoResize: 1
+                  allowToggleVisibility: 0
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Calls
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Total number of calls in a selected frame
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: GC Alloc
+                    m_Image: {fileID: 0}
+                    m_Tooltip: 
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Time ms
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Total time the selected function spends within a parent
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Time %
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Shows how often the selected function was called from
+                      the parent call
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                m_VisibleColumns: 0000000001000000020000000300000004000000
+                m_SortedColumns: 03000000
+            m_CallersTreeView:
+              m_ViewState:
+                scrollPos: {x: 0, y: 0}
+                m_SelectedIDs: 
+                m_LastClickedID: 0
+                m_ExpandedIDs: 
+                m_RenameOverlay:
+                  m_UserAcceptedRename: 0
+                  m_Name: 
+                  m_OriginalName: 
+                  m_EditFieldRect:
+                    serializedVersion: 2
+                    x: 0
+                    y: 0
+                    width: 0
+                    height: 0
+                  m_UserData: 0
+                  m_IsWaitingForDelay: 0
+                  m_IsRenaming: 0
+                  m_OriginalEventType: 11
+                  m_IsRenamingFilename: 0
+                  m_ClientGUIView: {fileID: 0}
+                m_SearchString: 
+              m_ViewHeaderState:
+                m_Columns:
+                - width: 150
+                  sortedAscending: 1
+                  headerContent:
+                    m_Text: Called From
+                    m_Image: {fileID: 0}
+                    m_Tooltip: 'Parents the selected function is called from
+
+
+                      (Press
+                      ''F'' for frame selection)'
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 150
+                  maxWidth: 1000000
+                  autoResize: 1
+                  allowToggleVisibility: 0
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Calls
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Total number of calls in a selected frame
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: GC Alloc
+                    m_Image: {fileID: 0}
+                    m_Tooltip: 
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Time ms
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Total time the selected function spends within a parent
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                - width: 60
+                  sortedAscending: 0
+                  headerContent:
+                    m_Text: Time %
+                    m_Image: {fileID: 0}
+                    m_Tooltip: Shows how often the selected function was called from
+                      the parent call
+                  contextMenuText: 
+                  headerTextAlignment: 0
+                  sortingArrowAlignment: 2
+                  minWidth: 60
+                  maxWidth: 1000000
+                  autoResize: 0
+                  allowToggleVisibility: 1
+                  canSort: 1
+                  userData: 0
+                m_VisibleColumns: 0000000001000000020000000300000004000000
+                m_SortedColumns: 03000000
+          m_FullThreadName: Main Thread
+          m_ThreadName: Main Thread
+          <threadId>k__BackingField: 0
+          <threadIndex>k__BackingField: -1
+          m_GroupName: 
+    - rid: 930489479228293122
+      type: {class: RenderingProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.RenderingProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+    - rid: 930489479228293123
+      type: {class: MemoryProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.MemoryProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+        m_ViewSplit:
+          ID: 0
+          splitterInitialOffset: 0
+          currentActiveSplitter: -1
+          realSizes:
+          - 0
+          - 0
+          relativeSizes:
+          - 0.7
+          - 0.3
+          minSizes:
+          - 450
+          - 50
+          maxSizes:
+          - 0
+          - 0
+          lastTotalSize: 0
+          splitSize: 6
+          xOffset: 0
+          m_Version: 1
+          oldRealSizes: 
+          oldMinSizes: 
+          oldMaxSizes: 
+          oldSplitSize: 0
+    - rid: 930489479228293124
+      type: {class: AudioProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.AudioProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+        m_ShowInactiveDSPChains: 0
+        m_HighlightAudibleDSPChains: 1
+        m_DSPGraphZoomFactor: 1
+    - rid: 930489479228293125
+      type: {class: VideoProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.VideoProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+    - rid: 930489479228293126
+      type: {class: PhysicsProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.PhysicsProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+    - rid: 930489479228293127
+      type: {class: Physics2DProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.Physics2DProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+    - rid: 930489479228293128
+      type: {class: NetworkingMessagesProfilerModule, ns: UnityEditorInternal.Profiling,
+        asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.NetworkingMessagesProfilerModule,
+          UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+    - rid: 930489479228293129
+      type: {class: NetworkingOperationsProfilerModule, ns: UnityEditorInternal.Profiling,
+        asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.NetworkingOperationsProfilerModule,
+          UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+        m_NetworkSplit:
+          ID: 0
+          splitterInitialOffset: 0
+          currentActiveSplitter: -1
+          realSizes:
+          - 0
+          - 0
+          relativeSizes:
+          - 0.2
+          - 0.8
+          minSizes:
+          - 100
+          - 100
+          maxSizes:
+          - 0
+          - 0
+          lastTotalSize: 0
+          splitSize: 6
+          xOffset: 0
+          m_Version: 1
+          oldRealSizes: 
+          oldMinSizes: 
+          oldMaxSizes: 
+          oldSplitSize: 0
+        msgNames:
+        - UserMessage
+        - ObjectDestroy
+        - ClientRpc
+        - ObjectSpawn
+        - Owner
+        - Command
+        - LocalPlayerTransform
+        - SyncEvent
+        - SyncVars
+        - SyncList
+        - ObjectSpawnScene
+        - NetworkInfo
+        - SpawnFinished
+        - ObjectHide
+        - CRC
+        - ClientAuthority
+    - rid: 930489479228293130
+      type: {class: UIProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.UIProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+    - rid: 930489479228293131
+      type: {class: UIDetailsProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.UIDetailsProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+    - rid: 930489479228293132
+      type: {class: GlobalIlluminationProfilerModule, ns: UnityEditorInternal.Profiling,
+        asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.GlobalIlluminationProfilerModule,
+          UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+    - rid: 930489479228293133
+      type: {class: VirtualTexturingProfilerModule, ns: UnityEditorInternal.Profiling,
+        asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.VirtualTexturingProfilerModule,
+          UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+        m_VTProfilerView:
+          rid: 930489479228293136
+    - rid: 930489479228293134
+      type: {class: FileIOProfilerModule, ns: UnityEditorInternal.Profiling, asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.FileIOProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+    - rid: 930489479228293135
+      type: {class: AssetLoadingProfilerModule, ns: UnityEditorInternal.Profiling,
+        asm: UnityEditor.CoreModule}
+      data:
+        m_Identifier: UnityEditorInternal.Profiling.AssetLoadingProfilerModule, UnityEditor.CoreModule,
+          Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        m_PaneScroll: {x: 0, y: 0}
+    - rid: 930489479228293136
+      type: {class: VirtualTexturingProfilerView, ns: UnityEditor, asm: UnityEditor.CoreModule}
+      data:
+        m_SortAscending: 0
+        m_SortedColumn: -1
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -381,308 +1362,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eac9da40998f5d45ab352e56bb2480f, type: 3}
+  m_Script: {fileID: 11500000, guid: 45294caac1977dd4c92766360eb688c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Find Results
+    m_Text: SI Console
     m_Image: {fileID: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1094.4
+    x: 1164
     y: 973.60004
-    width: 989.2001
-    height: 665.80005
+    width: 917.19995
+    height: 658.60004
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  infoText: Find results for 'RegisterSignalReceiver'
-  resultsCountText: Found 15 results in 6 files.
-  assetGuids: []
-  skippedGuids: []
-  searchOptions:
-    text: RegisterSignalReceiver
-    altText1: 
-    altText2: 
-    matchCase: 0
-    matchWord: 0
-  filteringOptions:
-    writes: 1
-    reads: 1
-    overloads: 1
-    overridingMethods: 1
-    overriddenMethods: 1
-    vars: 1
-    typeArgumentsInVars: 1
-    unresolved: 1
-    messages: 0
-    inactiveCode: 1
-    strings: 0
-    comments: 0
-    jsScripts: 1
-    booScripts: 1
-    shaders: 1
-    textFiles: 1
-  foundSomeResults: 1
-  scrollPosition: {x: 0, y: 0}
-  currentItem: 0
-  flatResults:
-  - description: Register<RegisterSignalReceiverSignal>(new ActionSignalReceiver((signal)=>
-      {
-    assetGuid: db5976bb25ec6d14fba5bf13a9cc0563
-    assetPath: Assets/BearCustomization/MetaverseFramework/SignalDistributor/ISignalDistributor.cs
-    fileName: ISignalDistributor.cs
-    line: 15
-    characterIndex: 21
-    length: 22
-    trimOffset: 12
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (signal is RegisterSignalReceiverSignal rsignal) {
-    assetGuid: db5976bb25ec6d14fba5bf13a9cc0563
-    assetPath: Assets/BearCustomization/MetaverseFramework/SignalDistributor/ISignalDistributor.cs
-    fileName: ISignalDistributor.cs
-    line: 16
-    characterIndex: 30
-    length: 22
-    trimOffset: 16
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: Register<DeregisterSignalReceiverSignal>(new ActionSignalReceiver((signal)
-      => {
-    assetGuid: db5976bb25ec6d14fba5bf13a9cc0563
-    assetPath: Assets/BearCustomization/MetaverseFramework/SignalDistributor/ISignalDistributor.cs
-    fileName: ISignalDistributor.cs
-    line: 21
-    characterIndex: 23
-    length: 22
-    trimOffset: 12
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (signal is DeregisterSignalReceiverSignal rsignal)
-    assetGuid: db5976bb25ec6d14fba5bf13a9cc0563
-    assetPath: Assets/BearCustomization/MetaverseFramework/SignalDistributor/ISignalDistributor.cs
-    fileName: ISignalDistributor.cs
-    line: 22
-    characterIndex: 32
-    length: 22
-    trimOffset: 16
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public class RegisterSignalReceiverSignal {
-    assetGuid: db5976bb25ec6d14fba5bf13a9cc0563
-    assetPath: Assets/BearCustomization/MetaverseFramework/SignalDistributor/ISignalDistributor.cs
-    fileName: ISignalDistributor.cs
-    line: 55
-    characterIndex: 21
-    length: 22
-    trimOffset: 8
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public RegisterSignalReceiverSignal(ISignalReceiver receiver, Type
-      type) {
-    assetGuid: db5976bb25ec6d14fba5bf13a9cc0563
-    assetPath: Assets/BearCustomization/MetaverseFramework/SignalDistributor/ISignalDistributor.cs
-    fileName: ISignalDistributor.cs
-    line: 59
-    characterIndex: 19
-    length: 22
-    trimOffset: 12
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public class DeregisterSignalReceiverSignal
-    assetGuid: db5976bb25ec6d14fba5bf13a9cc0563
-    assetPath: Assets/BearCustomization/MetaverseFramework/SignalDistributor/ISignalDistributor.cs
-    fileName: ISignalDistributor.cs
-    line: 65
-    characterIndex: 23
-    length: 22
-    trimOffset: 8
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public DeregisterSignalReceiverSignal(ISignalReceiver receiver,
-      Type type)
-    assetGuid: db5976bb25ec6d14fba5bf13a9cc0563
-    assetPath: Assets/BearCustomization/MetaverseFramework/SignalDistributor/ISignalDistributor.cs
-    fileName: ISignalDistributor.cs
-    line: 69
-    characterIndex: 21
-    length: 22
-    trimOffset: 12
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: controller.RegisterSignalReceiver<AnimatorClipsPlayerNodeSignal>(new
-      ActionNodeSignalReceiver((signal)=>{
-    assetGuid: ecebdb99cc164ac42b07e81a3a3406f7
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/FactorySystem/NavMeshAgentControllerFactory.cs
-    fileName: NavMeshAgentControllerFactory.cs
-    line: 105
-    characterIndex: 20
-    length: 22
-    trimOffset: 9
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: controller.RegisterSignalReceiver<AnimatorClipsPlayerNodeSignal>(new
-      ActionNodeSignalReceiver((signal)=>{
-    assetGuid: c936fb3c327500240b19c6fc461e48de
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/CharacterControllderNode/CharacterControllerFactory.cs
-    fileName: CharacterControllerFactory.cs
-    line: 105
-    characterIndex: 14
-    length: 22
-    trimOffset: 3
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: root.RegisterSignalReceiver();
-    assetGuid: 2350733d4d25fac44abecfe094f6fcb6
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/CharacterControllderNode/CharacterControllerNodeData.cs
-    fileName: CharacterControllerNodeData.cs
-    line: 78
-    characterIndex: 8
-    length: 22
-    trimOffset: 3
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: controller.RegisterSignalReceiver<AnchorNodeSignal>(new ActionNodeSignalReceiver((signal)=>{
-    assetGuid: 37b75ab7a29e0924aa668030ed34f467
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Sit/SitterNodeData.cs
-    fileName: SitterNodeData.cs
-    line: 56
-    characterIndex: 14
-    length: 22
-    trimOffset: 3
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public static void RegisterSignalReceiver(this INode node,string
-      key,INodeSignalReceiver receiver){
-    assetGuid: 7ef3d20efc4a70c4a93dc4e9979bf231
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/ActionContainer/NodeSignalReceiverContainerNodeData.cs
-    fileName: NodeSignalReceiverContainerNodeData.cs
-    line: 49
-    characterIndex: 21
-    length: 22
-    trimOffset: 2
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public static void RegisterSignalReceiver<T>(this INode node,INodeSignalReceiver
-      receiver) where T:INodeSignal
-    assetGuid: 7ef3d20efc4a70c4a93dc4e9979bf231
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/ActionContainer/NodeSignalReceiverContainerNodeData.cs
-    fileName: NodeSignalReceiverContainerNodeData.cs
-    line: 54
-    characterIndex: 21
-    length: 22
-    trimOffset: 2
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: node.RegisterSignalReceiver(key,receiver);
-    assetGuid: 7ef3d20efc4a70c4a93dc4e9979bf231
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/ActionContainer/NodeSignalReceiverContainerNodeData.cs
-    fileName: NodeSignalReceiverContainerNodeData.cs
-    line: 58
-    characterIndex: 8
-    length: 22
-    trimOffset: 3
-    selected: 1
-    resultType: 0
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  resultsCount: 15
-  filesCount: 6
-  keepResults: 0
-  groupByFile: 0
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -704,10 +1402,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 429.6
-    y: 73.6
-    width: 1654.0001
-    height: 879.8
+    x: 435.2
+    y: 80.8
+    width: 1646
+    height: 871.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -909,9 +1607,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -8.570153, y: -5.537317, z: 2.4575806}
+    m_Target: {x: 0.5114131, y: -1.5994983, z: 0.78969955}
     speed: 2
-    m_Value: {x: -8.570153, y: -5.537317, z: 2.4575806}
+    m_Value: {x: 0.5114131, y: -1.5994983, z: 0.78969955}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -958,13 +1656,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.19927555, y: 0.26941392, z: -0.057072554, w: -0.9404653}
+    m_Target: {x: 0.24817434, y: -0.011934405, z: 0.0030454134, w: 0.9686565}
     speed: 2
-    m_Value: {x: -0.19927289, y: 0.2694103, z: -0.05707179, w: -0.9404527}
+    m_Value: {x: 0.24816969, y: -0.011934182, z: 0.0030453564, w: 0.96863836}
   m_Size:
-    m_Target: 11.192068
+    m_Target: 8.117022
     speed: 2
-    m_Value: 11.192068
+    m_Value: 8.117022
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1010,10 +1708,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 73.6
-    width: 428.6
-    height: 879.8
+    x: 7.2000003
+    y: 80.8
+    width: 427
+    height: 871.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1023,64 +1721,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: a400ffff10fbffff
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: Plane
-        m_OriginalName: Plane
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 30792
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 0
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
-      m_SearchString: 
-    m_ExpandedScenes: []
-    m_CurrenRootInstanceID: 0
-    m_LockTracker:
-      m_IsLocked: 0
-    m_CurrentSortingName: TransformSorting
-  m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e98b4a8982e76bc4d86c10db25cd7193, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 430, y: 250}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Addressables Groups
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 473.6
-    y: 73.6
-    width: 1823.6
-    height: 879
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_GroupEditor:
-    m_TreeState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 341d6ad2fffffffff0d4065923ee3464
+      m_ExpandedIDs: a4f7ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1096,76 +1737,15 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
-    m_Mchs:
-      m_Columns:
-      - width: 334.3509
-        sortedAscending: 0
-        headerContent:
-          m_Text: Group Name \ Addressable Name
-          m_Image: {fileID: 0}
-          m_Tooltip: Address used to load asset at runtime
-        contextMenuText: 
-        headerTextAlignment: 0
-        sortingArrowAlignment: 1
-        minWidth: 100
-        maxWidth: 10000
-        autoResize: 1
-        allowToggleVisibility: 1
-        canSort: 1
-        userData: 0
-      - width: 20
-        sortedAscending: 0
-        headerContent:
-          m_Text: 
-          m_Image: {fileID: 3147778976006948682, guid: 0000000000000000d000000000000000,
-            type: 0}
-          m_Tooltip: Asset type
-        contextMenuText: 
-        headerTextAlignment: 0
-        sortingArrowAlignment: 1
-        minWidth: 20
-        maxWidth: 20
-        autoResize: 1
-        allowToggleVisibility: 1
-        canSort: 0
-        userData: 0
-      - width: 192.89473
-        sortedAscending: 0
-        headerContent:
-          m_Text: Path
-          m_Image: {fileID: 0}
-          m_Tooltip: Current Path of asset
-        contextMenuText: 
-        headerTextAlignment: 0
-        sortingArrowAlignment: 1
-        minWidth: 100
-        maxWidth: 10000
-        autoResize: 1
-        allowToggleVisibility: 1
-        canSort: 1
-        userData: 0
-      - width: 205.75438
-        sortedAscending: 0
-        headerContent:
-          m_Text: Labels
-          m_Image: {fileID: 0}
-          m_Tooltip: Assets can have multiple labels
-        contextMenuText: 
-        headerTextAlignment: 0
-        sortingArrowAlignment: 1
-        minWidth: 20
-        maxWidth: 1000
-        autoResize: 1
-        allowToggleVisibility: 1
-        canSort: 1
-        userData: 0
-      m_VisibleColumns: 00000000010000000200000003000000
-      m_SortedColumns: 
-    window: {fileID: 18}
-    m_VerticalSplitterPercent: 0.8
---- !u!114 &19
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: 4c969a2b90040154d917609493e03593
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1186,10 +1766,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 429.6
-    y: 73.6
-    width: 1654.0001
-    height: 879.8
+    x: 435.2
+    y: 80.8
+    width: 1646
+    height: 871.8
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1236,29 +1816,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1654.0001
-      height: 858.8
-    m_Scale: {x: 0.9939815, y: 0.9939815}
-    m_Translation: {x: 827.00006, y: 429.4}
+      width: 1646
+      height: 850.8
+    m_Scale: {x: 0.9847222, y: 0.9847222}
+    m_Translation: {x: 823, y: 425.4}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -832.0075
+      x: -835.76874
       y: -432
-      width: 1664.015
+      width: 1671.5375
       height: 864
     m_MinimalGUI: 1
-  m_defaultScale: 0.9939815
-  m_LastWindowPixelSize: {x: 2067.5002, y: 1099.75}
+  m_defaultScale: 0.9847222
+  m_LastWindowPixelSize: {x: 2057.5, y: 1089.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &20
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1279,10 +1859,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 974.4
-    width: 1161.4
-    height: 665.00006
+    x: 7.2000003
+    y: 973.60004
+    width: 653.4
+    height: 658.60004
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1300,22 +1880,22 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Plugins/BearFramework/BearFramework-main/Runtime/NodeSystem/Entities
+    - Assets/Scene/LubanTest
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Plugins/BearFramework/BearFramework-main/Runtime/NodeSystem/Entities
+  - Assets/Scene/LubanTest
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity\UnityProject\BearMetaverseFramework\My Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 314.99994}
-    m_SelectedIDs: 787a0000
-    m_LastClickedID: 31352
-    m_ExpandedIDs: 00000000567a0000587a00005a7a00005c7a00005e7a0000607a0000627a0000647a0000667a0000687a00006a7a00006c7a00006e7a0000707a0000727a0000747a0000767a0000787a00007a7a00007c7a00007e7a0000807a0000827a0000847a00009e7a000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 49.399902}
+    m_SelectedIDs: fe9c0000
+    m_LastClickedID: 40190
+    m_ExpandedIDs: 00000000e67f0000e87f0000ea7f0000ec7f0000ee7f0000f07f0000f27f0000f47f0000f87f0000fa7f0000fc7f00000080000002800000088000000a8000000c8000000e800000108000001280000014800000168000002c8000003280000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1343,7 +1923,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000567a0000587a00005a7a00005c7a00005e7a0000607a0000627a0000647a0000667a0000687a00006a7a00006c7a00006e7a0000707a0000727a0000747a0000767a0000787a00007a7a00007c7a00007e7a0000807a0000827a0000847a0000
+    m_ExpandedIDs: 00000000e67f0000e87f0000ea7f0000ec7f0000ee7f0000f07f0000f27f0000f47f0000f67f0000f87f0000fa7f0000fc7f0000fe7f000000800000028000000480000006800000088000000a8000000c8000000e80000010800000128000001480000016800000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1370,8 +1950,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000ec8400009ab00000d8810000e4810000a08600003e910000
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000ec8400009ab00000d8810000e4810000a08600003e9100003484000030840000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1399,7 +1979,7 @@ MonoBehaviour:
     m_GridSize: 16
   m_SkipHiddenPackages: 1
   m_DirectoriesAreaWidth: 347
---- !u!114 &21
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1420,1464 +2000,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1162.4
-    y: 974.4
-    width: 921.2001
-    height: 665.00006
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
---- !u!114 &22
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eac9da40998f5d45ab352e56bb2480f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: References
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1094.4
+    x: 661.60004
     y: 973.60004
-    width: 989.2001
-    height: 665.80005
+    width: 1419.6
+    height: 658.60004
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  infoText: References to Bear.MovementNodeData
-  resultsCountText: Found 84 results in 37 files.
-  assetGuids: []
-  skippedGuids: []
-  searchOptions:
-    text: MovementNodeData
-    altText1: var
-    altText2: 
-    matchCase: 1
-    matchWord: 1
-  filteringOptions:
-    writes: 1
-    reads: 1
-    overloads: 1
-    overridingMethods: 1
-    overriddenMethods: 1
-    vars: 1
-    typeArgumentsInVars: 1
-    unresolved: 1
-    messages: 0
-    inactiveCode: 1
-    strings: 0
-    comments: 0
-    jsScripts: 1
-    booScripts: 1
-    shaders: 1
-    textFiles: 1
-  foundSomeResults: 1
-  scrollPosition: {x: 0, y: 0}
-  currentItem: 0
-  flatResults:
-  - description: public MovementNodeData MovementData { get; private set; } = new
-      MovementNodeData(){speedMulti = 1};
-    assetGuid: 2350733d4d25fac44abecfe094f6fcb6
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/CharacterControllderNode/CharacterControllerNodeData.cs
-    fileName: CharacterControllerNodeData.cs
-    line: 9
-    characterIndex: 9
-    length: 16
-    trimOffset: 2
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public MovementNodeData MovementData { get; private set; } = new
-      MovementNodeData(){speedMulti = 1};
-    assetGuid: 2350733d4d25fac44abecfe094f6fcb6
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/CharacterControllderNode/CharacterControllerNodeData.cs
-    fileName: CharacterControllerNodeData.cs
-    line: 9
-    characterIndex: 67
-    length: 16
-    trimOffset: 2
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: MovementData = root.GetOrCreateNodeData<MovementNodeData>(MovementData);
-    assetGuid: 2350733d4d25fac44abecfe094f6fcb6
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/CharacterControllderNode/CharacterControllerNodeData.cs
-    fileName: CharacterControllerNodeData.cs
-    line: 68
-    characterIndex: 43
-    length: 16
-    trimOffset: 3
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: var paths = Array.ConvertAll(builds, AssetDatabase.GetAssetPath);
-    assetGuid: d34e3cfd90064fa28ccbc0b938da494f
-    assetPath: Assets/xasset/Editor/Build/Builder.cs
-    fileName: Builder.cs
-    line: 39
-    characterIndex: 12
-    length: 3
-    trimOffset: 12
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: private MovementNodeData movement;
-    assetGuid: ca7600ed5cab65f4a94df859774f7878
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/SpeedUpNodeData.cs
-    fileName: SpeedUpNodeData.cs
-    line: 13
-    characterIndex: 10
-    length: 16
-    trimOffset: 2
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: movement = node.GetOrCreateNodeData<MovementNodeData>();
-    assetGuid: ca7600ed5cab65f4a94df859774f7878
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/SpeedUpNodeData.cs
-    fileName: SpeedUpNodeData.cs
-    line: 16
-    characterIndex: 39
-    length: 16
-    trimOffset: 3
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public MovementNodeData movementData;
-    assetGuid: 181070b1dfc882b42884d6cdf7b4c779
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/NavigationNode/NavimeshAgentNodeView.cs
-    fileName: NavimeshAgentNodeView.cs
-    line: 14
-    characterIndex: 15
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public MovementNodeData MovementData => movementData;
-    assetGuid: 181070b1dfc882b42884d6cdf7b4c779
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/NavigationNode/NavimeshAgentNodeView.cs
-    fileName: NavimeshAgentNodeView.cs
-    line: 26
-    characterIndex: 15
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public MovementNodeData MovementData { get; private set; } = new
-      MovementNodeData(){speedMulti = 1};
-    assetGuid: a74293ebd12b9cd45a63a296c81f4aa5
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/NavigationNode/NavimeshAgentNodeData/NavimeshAgentNodeData.cs
-    fileName: NavimeshAgentNodeData.cs
-    line: 14
-    characterIndex: 12
-    length: 16
-    trimOffset: 5
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public MovementNodeData MovementData { get; private set; } = new
-      MovementNodeData(){speedMulti = 1};
-    assetGuid: a74293ebd12b9cd45a63a296c81f4aa5
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/NavigationNode/NavimeshAgentNodeData/NavimeshAgentNodeData.cs
-    fileName: NavimeshAgentNodeData.cs
-    line: 14
-    characterIndex: 70
-    length: 16
-    trimOffset: 5
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: MovementData = root.GetOrCreateNodeData<MovementNodeData>(MovementData);
-    assetGuid: a74293ebd12b9cd45a63a296c81f4aa5
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/NavigationNode/NavimeshAgentNodeData/NavimeshAgentNodeData.cs
-    fileName: NavimeshAgentNodeData.cs
-    line: 57
-    characterIndex: 52
-    length: 16
-    trimOffset: 12
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public MovementNodeData MovementData { get; }
-    assetGuid: 3069409063d3ca442af87c2300b39393
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/CharacterControllderNode/ICharacterController.cs
-    fileName: ICharacterController.cs
-    line: 9
-    characterIndex: 9
-    length: 16
-    trimOffset: 2
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: 'public class MovementNodeData : INodeData'
-    assetGuid: cb8d53633d2e6e14e97a57a46173361d
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/MovementNodeData.cs
-    fileName: MovementNodeData.cs
-    line: 7
-    characterIndex: 17
-    length: 16
-    trimOffset: 4
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public MovementNodeData data;
-    assetGuid: 494e2c01b40908f41b6f16a13c0b3d5f
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/MovementNodeDataConfig.cs
-    fileName: MovementNodeDataConfig.cs
-    line: 8
-    characterIndex: 15
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public MovementNodeData GetMovementNodeData(){
-    assetGuid: 494e2c01b40908f41b6f16a13c0b3d5f
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/MovementNodeDataConfig.cs
-    fileName: MovementNodeDataConfig.cs
-    line: 9
-    characterIndex: 15
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: return new MovementNodeData(){
-    assetGuid: 494e2c01b40908f41b6f16a13c0b3d5f
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/MovementNodeDataConfig.cs
-    fileName: MovementNodeDataConfig.cs
-    line: 10
-    characterIndex: 23
-    length: 16
-    trimOffset: 12
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public MovementNodeData MovementData { get; }
-    assetGuid: 7a80d13f52f720b44a6585c85b44f02f
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/Movement/NavigationNode/INavMeshAgentController.cs
-    fileName: INavMeshAgentController.cs
-    line: 10
-    characterIndex: 15
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if(cView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti
-      = 3;
-    assetGuid: 54c3c74da2342a544b267b407783112d
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/TestTool/MakeCCAvatar.cs
-    fileName: MakeCCAvatar.cs
-    line: 23
-    characterIndex: 27
-    length: 16
-    trimOffset: 3
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if(cView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti
-      = 3;
-    assetGuid: 54c3c74da2342a544b267b407783112d
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/TestTool/MakeCCAvatar.cs
-    fileName: MakeCCAvatar.cs
-    line: 23
-    characterIndex: 49
-    length: 3
-    trimOffset: 3
-    selected: 1
-    resultType: 8
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti
-      = 3;
-    assetGuid: d873c8da2a10f66419bc8d4a5652f656
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/TestTool/MakeTestAvatar.cs
-    fileName: MakeTestAvatar.cs
-    line: 32
-    characterIndex: 30
-    length: 16
-    trimOffset: 3
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti
-      = 3;
-    assetGuid: d873c8da2a10f66419bc8d4a5652f656
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/TestTool/MakeTestAvatar.cs
-    fileName: MakeTestAvatar.cs
-    line: 32
-    characterIndex: 52
-    length: 3
-    trimOffset: 3
-    selected: 1
-    resultType: 8
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: var rs = await resource.LoadResourceAsync<T>(key);
-    assetGuid: b0e216a1b5ee8254ead922ea59d1a944
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/ResourceLoaderNode/ResourceLoaderNodeData.cs
-    fileName: ResourceLoaderNodeData.cs
-    line: 44
-    characterIndex: 16
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: var task = f();
-    assetGuid: 01d1404ca421466419a7db7340ff5e77
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/AsyncLazy.cs
-    fileName: AsyncLazy.cs
-    line: 76
-    characterIndex: 24
-    length: 3
-    trimOffset: 24
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: var task = f();
-    assetGuid: 01d1404ca421466419a7db7340ff5e77
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/AsyncLazy.cs
-    fileName: AsyncLazy.cs
-    line: 195
-    characterIndex: 24
-    length: 3
-    trimOffset: 24
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if(view.TryGetNodeData<MovementNodeData>(out var data)){data.speedMulti
-      = 4;}
-    assetGuid: fd844fd267521ad4eb4c867f24acbdd3
-    assetPath: Assets/AssetBundleTest/Editor/BearControllerExample/BearControllerExample.cs
-    fileName: BearControllerExample.cs
-    line: 15
-    characterIndex: 26
-    length: 16
-    trimOffset: 3
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if(view.TryGetNodeData<MovementNodeData>(out var data)){data.speedMulti
-      = 4;}
-    assetGuid: fd844fd267521ad4eb4c867f24acbdd3
-    assetPath: Assets/AssetBundleTest/Editor/BearControllerExample/BearControllerExample.cs
-    fileName: BearControllerExample.cs
-    line: 15
-    characterIndex: 48
-    length: 3
-    trimOffset: 3
-    selected: 1
-    resultType: 8
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: foreach (var item in ChoiceGroup.choiceByGroup.Values)
-    assetGuid: dccd06d0253f78e48bd7a638523964f3
-    assetPath: Assets/BearCustomization/AvatarSystem/AvatarCustomizationService.cs
-    fileName: AvatarCustomizationService.cs
-    line: 36
-    characterIndex: 25
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: var choice = item.ToArray().RandomValue();
-    assetGuid: dccd06d0253f78e48bd7a638523964f3
-    assetPath: Assets/BearCustomization/AvatarSystem/AvatarCustomizationService.cs
-    fileName: AvatarCustomizationService.cs
-    line: 38
-    characterIndex: 20
-    length: 3
-    trimOffset: 20
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if(nanv.TryGetKidNode<InputNodeView>(out var inputgameobj)){
-    assetGuid: 27864e32f58dc174a890badba1dda417
-    assetPath: Assets/Plugins/BearFramework/BearCharacter/Runtime/FactorySystem/LocalPlayerControllerFactory.cs
-    fileName: LocalPlayerControllerFactory.cs
-    line: 23
-    characterIndex: 57
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti
-      = 6;
-    assetGuid: c245ab05606ee0d46ba5f2d0faef76e9
-    assetPath: Assets/BearMachineControllerExample/MakeNetworkedAvatar.cs
-    fileName: MakeNetworkedAvatar.cs
-    line: 36
-    characterIndex: 30
-    length: 16
-    trimOffset: 3
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti
-      = 6;
-    assetGuid: c245ab05606ee0d46ba5f2d0faef76e9
-    assetPath: Assets/BearMachineControllerExample/MakeNetworkedAvatar.cs
-    fileName: MakeNetworkedAvatar.cs
-    line: 36
-    characterIndex: 52
-    length: 3
-    trimOffset: 3
-    selected: 1
-    resultType: 8
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti
-      = 6;
-    assetGuid: c245ab05606ee0d46ba5f2d0faef76e9
-    assetPath: Assets/BearMachineControllerExample/MakeNetworkedAvatar.cs
-    fileName: MakeNetworkedAvatar.cs
-    line: 60
-    characterIndex: 30
-    length: 16
-    trimOffset: 3
-    selected: 1
-    resultType: 3
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti
-      = 6;
-    assetGuid: c245ab05606ee0d46ba5f2d0faef76e9
-    assetPath: Assets/BearMachineControllerExample/MakeNetworkedAvatar.cs
-    fileName: MakeNetworkedAvatar.cs
-    line: 60
-    characterIndex: 52
-    length: 3
-    trimOffset: 3
-    selected: 1
-    resultType: 8
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.firstAwaiter, out var result))
-    assetGuid: acc1acff153e347418f0f30b1c535994
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Zip.cs
-    fileName: Zip.cs
-    line: 119
-    characterIndex: 61
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.secondAwaiter, out var result))
-    assetGuid: acc1acff153e347418f0f30b1c535994
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Zip.cs
-    fileName: Zip.cs
-    line: 153
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.firstAwaiter, out var result))
-    assetGuid: acc1acff153e347418f0f30b1c535994
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Zip.cs
-    fileName: Zip.cs
-    line: 273
-    characterIndex: 61
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.secondAwaiter, out var result))
-    assetGuid: acc1acff153e347418f0f30b1c535994
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Zip.cs
-    fileName: Zip.cs
-    line: 307
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
-    assetGuid: acc1acff153e347418f0f30b1c535994
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Zip.cs
-    fileName: Zip.cs
-    line: 339
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.firstAwaiter, out var result))
-    assetGuid: acc1acff153e347418f0f30b1c535994
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Zip.cs
-    fileName: Zip.cs
-    line: 445
-    characterIndex: 61
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.secondAwaiter, out var result))
-    assetGuid: acc1acff153e347418f0f30b1c535994
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Zip.cs
-    fileName: Zip.cs
-    line: 479
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
-    assetGuid: acc1acff153e347418f0f30b1c535994
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Zip.cs
-    fileName: Zip.cs
-    line: 511
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: e82f498cf3a1df04cbf646773fc11319
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/TakeUntilCanceled.cs
-    fileName: TakeUntilCanceled.cs
-    line: 109
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: foreach (var (c, state) in secondaryContinuationList)
-    assetGuid: ed03524d09e7eb24a9fb9137198feb84
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/UniTaskCompletionSource.cs
-    fileName: UniTaskCompletionSource.cs
-    line: 727
-    characterIndex: 33
-    length: 3
-    trimOffset: 24
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: foreach (var (c, state) in secondaryContinuationList)
-    assetGuid: ed03524d09e7eb24a9fb9137198feb84
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/UniTaskCompletionSource.cs
-    fileName: UniTaskCompletionSource.cs
-    line: 918
-    characterIndex: 33
-    length: 3
-    trimOffset: 24
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 12bda324162f15349afefc2c152ac07f
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/TakeUntil.cs
-    fileName: TakeUntil.cs
-    line: 131
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 510aa9fd35b45fc40bcdb7e59f01fd1b
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/TakeLast.cs
-    fileName: TakeLast.cs
-    line: 126
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 42f02cb84e5875b488304755d0e1383d
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Take.cs
-    fileName: Take.cs
-    line: 97
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 3268ec424b8055f45aa2a26d17c80468
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/AppendPrepend.cs
-    fileName: AppendPrepend.cs
-    line: 114
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 951310243334a3148a7872977cb31c5c
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Buffer.cs
-    fileName: Buffer.cs
-    line: 134
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 951310243334a3148a7872977cb31c5c
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Buffer.cs
-    fileName: Buffer.cs
-    line: 290
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 7cb9e19c449127a459851a135ce7d527
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Concat.cs
-    fileName: Concat.cs
-    line: 113
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 19e437c039ad7e1478dbce1779ef8660
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/DefaultIfEmpty.cs
-    fileName: DefaultIfEmpty.cs
-    line: 104
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.sourceAwaiter, out var result))
-    assetGuid: d81862f0eb12680479ccaaf2ac319d24
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SelectMany.cs
-    fileName: SelectMany.cs
-    line: 237
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.selectedAwaiter, out var result))
-    assetGuid: d81862f0eb12680479ccaaf2ac319d24
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SelectMany.cs
-    fileName: SelectMany.cs
-    line: 272
-    characterIndex: 64
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.sourceAwaiter, out var result))
-    assetGuid: d81862f0eb12680479ccaaf2ac319d24
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SelectMany.cs
-    fileName: SelectMany.cs
-    line: 477
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.selectedAwaiter, out var result))
-    assetGuid: d81862f0eb12680479ccaaf2ac319d24
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SelectMany.cs
-    fileName: SelectMany.cs
-    line: 520
-    characterIndex: 64
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.collectionSelectorAwaiter, out var result))
-    assetGuid: d81862f0eb12680479ccaaf2ac319d24
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SelectMany.cs
-    fileName: SelectMany.cs
-    line: 583
-    characterIndex: 74
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.resultSelectorAwaiter, out var result))
-    assetGuid: d81862f0eb12680479ccaaf2ac319d24
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SelectMany.cs
-    fileName: SelectMany.cs
-    line: 594
-    characterIndex: 70
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.sourceAwaiter, out var result))
-    assetGuid: d81862f0eb12680479ccaaf2ac319d24
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SelectMany.cs
-    fileName: SelectMany.cs
-    line: 753
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.selectedAwaiter, out var result))
-    assetGuid: d81862f0eb12680479ccaaf2ac319d24
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SelectMany.cs
-    fileName: SelectMany.cs
-    line: 796
-    characterIndex: 64
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.collectionSelectorAwaiter, out var result))
-    assetGuid: d81862f0eb12680479ccaaf2ac319d24
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SelectMany.cs
-    fileName: SelectMany.cs
-    line: 859
-    characterIndex: 74
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.resultSelectorAwaiter, out var result))
-    assetGuid: d81862f0eb12680479ccaaf2ac319d24
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SelectMany.cs
-    fileName: SelectMany.cs
-    line: 870
-    characterIndex: 70
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: df1d7f44d4fe7754f972c9e0b6fa72d5
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SkipLast.cs
-    fileName: SkipLast.cs
-    line: 111
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: de932d79c8d9f3841a066d05ff29edc9
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SkipUntil.cs
-    fileName: SkipUntil.cs
-    line: 135
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 4b1a778aef7150d47b93a49aa1bc34ae
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/SkipUntilCanceled.cs
-    fileName: SkipUntilCanceled.cs
-    line: 115
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: cddbf051d2a88f549986c468b23214af
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Pairwise.cs
-    fileName: Pairwise.cs
-    line: 91
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 38c1c4129f59dcb49a5b864eaf4ec63c
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Except.cs
-    fileName: Except.cs
-    line: 85
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: a2de80df1cc8a1240ab0ee7badd334d0
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/GroupBy.cs
-    fileName: GroupBy.cs
-    line: 661
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: a2de80df1cc8a1240ab0ee7badd334d0
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/GroupBy.cs
-    fileName: GroupBy.cs
-    line: 903
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/GroupJoin.cs
-    fileName: GroupJoin.cs
-    line: 191
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/GroupJoin.cs
-    fileName: GroupJoin.cs
-    line: 337
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.outerKeyAwaiter, out var result))
-    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/GroupJoin.cs
-    fileName: GroupJoin.cs
-    line: 371
-    characterIndex: 64
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
-    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/GroupJoin.cs
-    fileName: GroupJoin.cs
-    line: 397
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/GroupJoin.cs
-    fileName: GroupJoin.cs
-    line: 532
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.outerKeyAwaiter, out var result))
-    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/GroupJoin.cs
-    fileName: GroupJoin.cs
-    line: 566
-    characterIndex: 64
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
-    assetGuid: 7bf7759d03bf3f64190d3ae83b182c2c
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/GroupJoin.cs
-    fileName: GroupJoin.cs
-    line: 592
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Join.cs
-    fileName: Join.cs
-    line: 220
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Join.cs
-    fileName: Join.cs
-    line: 415
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.outerKeyAwaiter, out var key))
-    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Join.cs
-    fileName: Join.cs
-    line: 449
-    characterIndex: 64
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
-    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Join.cs
-    fileName: Join.cs
-    line: 472
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Join.cs
-    fileName: Join.cs
-    line: 645
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.outerKeyAwaiter, out var key))
-    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Join.cs
-    fileName: Join.cs
-    line: 679
-    characterIndex: 64
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.resultAwaiter, out var result))
-    assetGuid: dc4ff8cb6d7c9a64896f2f082124d6b3
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Join.cs
-    fileName: Join.cs
-    line: 702
-    characterIndex: 62
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: if (self.TryGetResult(self.awaiter, out var result))
-    assetGuid: 93999a70f5d57134bbe971f3e988c4f2
-    assetPath: Assets/Plugins/BearFramework/BearFramework-main/Runtime/UniTask/Linq/Intersect.cs
-    fileName: Intersect.cs
-    line: 85
-    characterIndex: 56
-    length: 3
-    trimOffset: 16
-    selected: 1
-    resultType: 11
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  resultsCount: 84
-  filesCount: 37
-  keepResults: 0
-  groupByFile: 0
---- !u!114 &23
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45294caac1977dd4c92766360eb688c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: SI Console
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1094.4
-    y: 973.60004
-    width: 989.2001
-    height: 665.80005
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
---- !u!114 &24
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2898,10 +2029,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1094.4
+    x: 661.60004
     y: 973.60004
-    width: 989.2001
-    height: 665.80005
+    width: 1419.6
+    height: 658.60004
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2913,6 +2044,7 @@ MonoBehaviour:
     - {fileID: 3104341895389786078, guid: e5cd44d162b9c644da07075a473fe0ee, type: 2}
     - {fileID: -6714157527291479565, guid: e5cd44d162b9c644da07075a473fe0ee, type: 2}
     - {fileID: -5602963042399094863, guid: b16739cd63a20a4479de52118c3ff6e5, type: 2}
+    - {fileID: -3612166251485185991, guid: b16739cd63a20a4479de52118c3ff6e5, type: 2}
     m_ValueSerializationHelper:
     - e00: 1
       e01: 0
@@ -2994,11 +2126,27 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 0.85
+      e01: 0
+      e02: 0
+      e03: 203.26999
+      e10: 0
+      e11: 0.85
+      e12: 0
+      e13: 98.79999
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
   m_AnimatorController: {fileID: 9100000, guid: b16739cd63a20a4479de52118c3ff6e5,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -5602963042399094863, guid: b16739cd63a20a4479de52118c3ff6e5,
+  - m_Target: {fileID: -3612166251485185991, guid: b16739cd63a20a4479de52118c3ff6e5,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -3011,8 +2159,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_CurrentEditor: 0
   m_LayerEditor:
-    m_SelectedLayerIndex: 0
---- !u!114 &25
+    m_SelectedLayerIndex: 1
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3040,7 +2188,7 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &26
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3061,10 +2209,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2085.6
-    y: 73.6
-    width: 985.3999
-    height: 1565.8
+    x: 2083.2
+    y: 80.8
+    width: 980.6001
+    height: 1551.4
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3072,7 +2220,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: -373
+    m_CachedPref: 486
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -3082,7 +2230,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &27
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}

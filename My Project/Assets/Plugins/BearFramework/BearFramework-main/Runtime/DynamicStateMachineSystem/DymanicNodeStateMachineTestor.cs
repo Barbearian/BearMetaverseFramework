@@ -9,12 +9,10 @@ namespace Bear
         [ContextMenu("Show Graph")]
         public void ShowGraph() {
             Debug.Log(JsonUtility.ToJson(graph));
+
         }
 
-        public DynamicGraph MakeGraph(DynamicGraphData data)
-        {
-            return DynamicStateMachineFactory.MakeStateMachine(data, DynamicStateMachineFactory.BuildIntTransition);
-        }
+        
 
 
         
