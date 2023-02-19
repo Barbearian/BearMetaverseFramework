@@ -11,40 +11,40 @@ using SimpleJSON;
 
 
 
-namespace cfg.item
+namespace cfg.Graph
 { 
 
-public sealed partial class ItemExchange :  Bright.Config.BeanBase 
+public sealed partial class Edge :  Bright.Config.BeanBase 
 {
-    public ItemExchange(JSONNode _json) 
+    public Edge(JSONNode _json) 
     {
-        { if(!_json["id"].IsNumber) { throw new SerializationException(); }  Id = _json["id"]; }
-        { if(!_json["num"].IsNumber) { throw new SerializationException(); }  Num = _json["num"]; }
+        { if(!_json["LinkType"].IsNumber) { throw new SerializationException(); }  LinkType = _json["LinkType"]; }
+        { if(!_json["Target"].IsNumber) { throw new SerializationException(); }  Target = _json["Target"]; }
         PostInit();
     }
 
-    public ItemExchange(int id, int num ) 
+    public Edge(int LinkType, int Target ) 
     {
-        this.Id = id;
-        this.Num = num;
+        this.LinkType = LinkType;
+        this.Target = Target;
         PostInit();
     }
 
-    public static ItemExchange DeserializeItemExchange(JSONNode _json)
+    public static Edge DeserializeEdge(JSONNode _json)
     {
-        return new item.ItemExchange(_json);
+        return new Graph.Edge(_json);
     }
 
     /// <summary>
-    /// 道具id
+    /// The type of link
     /// </summary>
-    public int Id { get; private set; }
+    public int LinkType { get; private set; }
     /// <summary>
-    /// 道具数量
+    /// The target of the edge
     /// </summary>
-    public int Num { get; private set; }
+    public int Target { get; private set; }
 
-    public const int __ID__ = 1814660465;
+    public const int __ID__ = -66791779;
     public override int GetTypeId() => __ID__;
 
     public  void Resolve(Dictionary<string, object> _tables)
@@ -59,8 +59,8 @@ public sealed partial class ItemExchange :  Bright.Config.BeanBase
     public override string ToString()
     {
         return "{ "
-        + "Id:" + Id + ","
-        + "Num:" + Num + ","
+        + "LinkType:" + LinkType + ","
+        + "Target:" + Target + ","
         + "}";
     }
     

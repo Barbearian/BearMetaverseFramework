@@ -1,0 +1,11 @@
+[
+  {
+    "nodeIndex": 0,
+    "links": [
+      {
+        "LinkType": 0,
+        "Target": 1
+      }
+    ]
+  }
+]

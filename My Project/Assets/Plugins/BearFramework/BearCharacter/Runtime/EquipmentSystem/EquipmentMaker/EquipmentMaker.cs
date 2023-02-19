@@ -53,7 +53,10 @@ namespace Bear
                         signal = new ItemStateEnterSignal(){
                             index = 1
                         }
-                    }
+                    },
+                    new FaceInputDirSignal(){ 
+                        moveAmount = 1
+                    },
 
                 }.ToArray(),
             };
@@ -82,7 +85,8 @@ namespace Bear
                         signal = new ItemStateEnterSignal(){ 
                             index = 2
                         }
-                    }
+                    },
+                   
 
                 }.ToArray(),
             };

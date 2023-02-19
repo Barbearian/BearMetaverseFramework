@@ -52,7 +52,9 @@ namespace Bear{
 			var directionalND = new DirectionalInputNodeData();
 			directionalND = view.GetOrCreateNodeData(directionalND);
 
-			MovementInputNode min = new MovementInputNode();
+			MovementInputNodeData min = view.GetOrCreateNodeData<MovementInputNodeData>();
+
+			view.AddNodeData(min);
 			directionalND.inputtarget.Link(min.Move);
 
 			//associate movement

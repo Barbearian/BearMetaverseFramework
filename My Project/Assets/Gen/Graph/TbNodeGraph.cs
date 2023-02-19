@@ -11,34 +11,34 @@ using SimpleJSON;
 
 
 
-namespace cfg.item
+namespace cfg.Graph
 { 
 
-public sealed partial class TbItem
+public sealed partial class TbNodeGraph
 {
-    private readonly Dictionary<int, item.Item> _dataMap;
-    private readonly List<item.Item> _dataList;
+    private readonly Dictionary<int, Graph.Node> _dataMap;
+    private readonly List<Graph.Node> _dataList;
     
-    public TbItem(JSONNode _json)
+    public TbNodeGraph(JSONNode _json)
     {
-        _dataMap = new Dictionary<int, item.Item>();
-        _dataList = new List<item.Item>();
+        _dataMap = new Dictionary<int, Graph.Node>();
+        _dataList = new List<Graph.Node>();
         
         foreach(JSONNode _row in _json.Children)
         {
-            var _v = item.Item.DeserializeItem(_row);
+            var _v = Graph.Node.DeserializeNode(_row);
             _dataList.Add(_v);
-            _dataMap.Add(_v.Id, _v);
+            _dataMap.Add(_v.NodeIndex, _v);
         }
         PostInit();
     }
 
-    public Dictionary<int, item.Item> DataMap => _dataMap;
-    public List<item.Item> DataList => _dataList;
+    public Dictionary<int, Graph.Node> DataMap => _dataMap;
+    public List<Graph.Node> DataList => _dataList;
 
-    public item.Item GetOrDefault(int key) => _dataMap.TryGetValue(key, out var v) ? v : null;
-    public item.Item Get(int key) => _dataMap[key];
-    public item.Item this[int key] => _dataMap[key];
+    public Graph.Node GetOrDefault(int key) => _dataMap.TryGetValue(key, out var v) ? v : null;
+    public Graph.Node Get(int key) => _dataMap[key];
+    public Graph.Node this[int key] => _dataMap[key];
 
     public void Resolve(Dictionary<string, object> _tables)
     {

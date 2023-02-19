@@ -20,4 +20,12 @@ namespace Bear {
     {
         public bool IsRotating;
     }
+	public class UpdateRotateSignal : INodeSignal {
+		public Quaternion direction;
+	}
+
+    public class UpdateFacingSignal : INodeSignal
+    {
+        public Vector3 direction;
+    }
 }

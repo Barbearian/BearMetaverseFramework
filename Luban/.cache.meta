@@ -1,9 +1,12 @@
 ﻿D:/Unity/UnityProject/BearMetaverseFramework/GenerateData/json/tbcansignals.json,63F7AECC9EEFD61C2A4E6DECE89C94CD,120,1676267096392
-D:/Unity/UnityProject/BearMetaverseFramework/Luban/Config/Data/__beans__.xlsx,D74E15162598A1284D7DAFA27B7825B6,9289,1676265424569
+D:/Unity/UnityProject/BearMetaverseFramework/Luban/Config/Data/__beans__.xlsx,62943AF008B2A156C9C3EFB6616652,9368,1676426816914
 D:/Unity/UnityProject/BearMetaverseFramework/Luban/Config/Data/__enums__.xlsx,9757267479224ACBB2DD41869BD9DF2,9327,1676265433857
-D:/Unity/UnityProject/BearMetaverseFramework/Luban/Config/Data/__tables__.xlsx,A45DD0262DE97D465AB95C73829DBF85,9521,1676267089326
-D:/Unity/UnityProject/BearMetaverseFramework/Luban/Config/Data/item.xlsx,38AB40C34A5AF5C3392BD3891C76C0B6,9847,1676266129620
-D:/Unity/UnityProject/BearMetaverseFramework/My Project/Assets/Gen/CanSignal.cs,D454CC03D2294CEC6A17059B394212A,2109,1676267096392
-D:/Unity/UnityProject/BearMetaverseFramework/My Project/Assets/Gen/Tables.cs,097A0E7CD5A13CAB8474D52597E8C7,1065,1676267096392
-D:/Unity/UnityProject/BearMetaverseFramework/My Project/Assets/Gen/TbCanSignals.cs,FB2F5AEA2C80F9A4B7574B5B5C3C33,1740,1676267096392
-D:/Unity/UnityProject/BearMetaverseFramework/My Project/Assets/GenerateData/json/tbcansignals.json,63F7AECC9EEFD61C2A4E6DECE89C94CD,120,1676267906854
+D:/Unity/UnityProject/BearMetaverseFramework/Luban/Config/Data/__tables__.xlsx,FDA0CC3027B2173A3FECB7BAA0CB1B18,9530,1676426818808
+D:/Unity/UnityProject/BearMetaverseFramework/Luban/Config/Data/nodeGraph.xlsx,A6BE2BCD891C68CDC427136547960F9,10259,1676426833903
+D:/Unity/UnityProject/BearMetaverseFramework/My Project/Assets/Gen/Graph/Edge.cs,A2E4FE164913D0D48ABEE5EBC7A2D43,1788,1676426855767
+D:/Unity/UnityProject/BearMetaverseFramework/My Project/Assets/Gen/Graph/Node.cs,53758A572435633D5211F7D1FD6655F,2170,1676426855767
+D:/Unity/UnityProject/BearMetaverseFramework/My Project/Assets/Gen/Graph/TbNodeGraph.cs,9EFEDAC336CEFB37B9FCF50E217B8A0,1756,1676426855768
+D:/Unity/UnityProject/BearMetaverseFramework/My Project/Assets/Gen/Tables.cs,38A9B356C663C61EF4CA33BF8DE2247,1080,1676426855767
+D:/Unity/UnityProject/BearMetaverseFramework/My Project/Assets/GenerateData/json/graph_tbedge.json,C528452496BA547B0C4D6DBD4163D86,84,1676341651534
+D:/Unity/UnityProject/BearMetaverseFramework/My Project/Assets/GenerateData/json/graph_tbnode.json,D751713988987E933198363E24189CE,2,1676341651534
+D:/Unity/UnityProject/BearMetaverseFramework/My Project/Assets/GenerateData/json/graph_tbnodegraph.json,14C0A77163D279F32AB45ECA29DFFEB,121,1676426855768

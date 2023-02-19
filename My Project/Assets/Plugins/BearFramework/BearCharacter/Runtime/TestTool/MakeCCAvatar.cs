@@ -52,6 +52,9 @@ namespace Bear{
 			cView.AddNodeData(AnimatorLinkNodeData);
 			AnimatorLinkNodeData.Link(animView);
 
+			//add adjust facedir
+			cView.AddNodeData(new CharacterDirectionAdjustNodeData());
+
 
         }
 	}

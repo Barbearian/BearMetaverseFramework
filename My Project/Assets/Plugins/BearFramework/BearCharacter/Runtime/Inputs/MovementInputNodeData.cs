@@ -4,19 +4,21 @@ using UnityEngine;
 
 namespace Bear
 {
-    public class MovementInputNode : INode, IGlobalNodeDataAccessor
+    public class MovementInputNodeData : INodeData, IGlobalNodeDataAccessor
     {
         private bool requsted;
         public CameraNodeData data;
         public System.Action<Vector3> forward;
-        public MovementInputNode()
+        public Vector3 dir;
+        public MovementInputNodeData()
         {
             this.RequestGlobalNodeData<CameraNodeData>(NodeDataRegistered);
         }
         public void Move(Vector2 inputDir)
         {
             if (requsted) {
-                forward?.Invoke(data.GetInputDir(inputDir));
+                dir = data.GetInputDir(inputDir);
+                forward?.Invoke(dir);
             }
         }
         private void NodeDataRegistered(CameraNodeData data)
@@ -27,10 +29,6 @@ namespace Bear
             
         }
 
-        public INode GetNode()
-        {
-            return this.GetDefaultNode();
-        }
     }
 
     public interface IMovementInputReceiver{

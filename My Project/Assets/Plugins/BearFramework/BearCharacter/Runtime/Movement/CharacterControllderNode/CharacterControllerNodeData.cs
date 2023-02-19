@@ -129,6 +129,17 @@ namespace Bear{
             root.RegisterSignalReceiver<UpdateRotatingSignal>((x) => {
                 CanRotating = x.IsRotating;
             }, true).AddTo(receivers);
+
+			//Add update rotate 
+			root.RegisterSignalReceiver<UpdateRotateSignal>((x) => {
+				_cc.transform.rotation = x.direction;
+			},true).AddTo(receivers);
+
+            //Add update facing 
+            root.RegisterSignalReceiver<UpdateFacingSignal>((x) => {
+				_cc.transform.forward = x.direction;
+            }, true).AddTo(receivers);
+
         }	
 	}
 }

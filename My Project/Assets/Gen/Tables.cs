@@ -14,22 +14,22 @@ namespace cfg
    
 public sealed partial class Tables
 {
-    public TbCanSignals TbCanSignals {get; }
+    public Graph.TbNodeGraph TbNodeGraph {get; }
 
     public Tables(System.Func<string, JSONNode> loader)
     {
         var tables = new System.Collections.Generic.Dictionary<string, object>();
-        TbCanSignals = new TbCanSignals(loader("tbcansignals")); 
-        tables.Add("TbCanSignals", TbCanSignals);
+        TbNodeGraph = new Graph.TbNodeGraph(loader("graph_tbnodegraph")); 
+        tables.Add("Graph.TbNodeGraph", TbNodeGraph);
         PostInit();
 
-        TbCanSignals.Resolve(tables); 
+        TbNodeGraph.Resolve(tables); 
         PostResolve();
     }
 
     public void TranslateText(System.Func<string, string, string> translator)
     {
-        TbCanSignals.TranslateText(translator); 
+        TbNodeGraph.TranslateText(translator); 
     }
     
     partial void PostInit();
