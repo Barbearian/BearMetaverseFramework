@@ -72,6 +72,16 @@ namespace Bear{
             }
         }
 
+		public static void ReceiveNodeSignal(this INode node, string key,params INodeSignal[] signals) {
+            if (node.TryGetNodeData<NodeSignalReceiverContainerNodeData>(out var data))
+            {
+                foreach (var signal in signals)
+                {
+                    data.ReceiveNodeSignal(key, signal);
+                }
+            }
+        }
+
         #region Reigster
         //Base Function
         public static void RegisterSignalReceiver(this INode node,string key,INodeSignalReceiver receiver,bool isAdditive = false){

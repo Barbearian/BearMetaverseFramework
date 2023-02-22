@@ -65,7 +65,6 @@ namespace Bear
         public bool CanPass(INodeSignal signal = null)
         {
             return signal is not ItemActExSignal;
-
         }
 
 

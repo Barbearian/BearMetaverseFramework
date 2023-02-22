@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Unity.Plastic.Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -33,7 +34,6 @@ namespace Bear
             var attackA = new SignalContainerTransferSignal() {
                 key = "AttackA"
             };
-
 
             var playAnimSignal = new PlayAnimationNodeSignal()
             {
@@ -148,7 +148,6 @@ namespace Bear
 
 
             pickView.transform.position = this.transform.position;
-
 
         }
 

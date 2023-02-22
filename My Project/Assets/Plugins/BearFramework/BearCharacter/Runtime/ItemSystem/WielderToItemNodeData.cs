@@ -22,6 +22,7 @@ namespace Bear
         public INodeSignal signal { get; set; }
     }
 
+    [System.Serializable]
     public struct WielderToItemSignal : IWielderToItemSignal
     {
         public INodeSignal signal { get ; set ; }
