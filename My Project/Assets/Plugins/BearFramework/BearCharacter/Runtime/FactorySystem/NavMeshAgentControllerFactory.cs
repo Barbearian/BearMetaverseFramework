@@ -100,28 +100,27 @@ namespace Bear
                 nanvData.Stop();
                 Debug.Log("I tried to let player stop");
             };
-            
-            
-	        //add play to controller
-	        controller.RegisterSignalReceiver<AnimatorClipsPlayerNodeSignal>(new ActionNodeSignalReceiver((signal)=>{
-	        	if(signal is AnimatorClipsPlayerNodeSignal asignal){
-	        		var info = asignal.info;
-	        		AnimatorNodeSystem.PlayInfo(animator,info);
-	        	}
-	        }));
+
+
+            //add play to controller
+            controller.AddNodeData(new AnimatorLinkNodeData() { 
+                Target = animatorView,
+            });
+
         }
 
-	    public static void LinkInputToAnimator(this NodeView controller, NodeView animatorView,int count = 0,int shift = 0) {
-            var inputData = controller.GetOrCreateNodeData(new InputAssociateNodeData());
-            var data = animatorView.GetOrCreateNodeData(new AnimatorNodeData());
+	    public static void LinkInputToAnimator(this NodeView controller,int count = 0,int shift = 0) {
             var naivesm = controller.GetOrCreateNodeData(new NaiveStateMachineNodeData());
 
 		    for (int i = 1+shift; i <= count+shift; i++)
             {
 			    var key = "UI/UIShortCut" +(i-shift);
                 var num = i - 1;
-                inputData.Register(key, (x) => {
-                    data.Play(num);
+                controller.Register(key, (x) => {
+                    controller.ReceiveNodeSignal(new PlayIndexedAnimationNodeSignal() { 
+                        index = num
+                    });
+
                     naivesm.EnterState("PlayStandingGesture");
                 });
             }

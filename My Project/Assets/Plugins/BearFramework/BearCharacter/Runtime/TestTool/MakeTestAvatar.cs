@@ -33,7 +33,7 @@ namespace Bear{
 			if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti = 3;
 			
 			nanvView.LinkNavMeshAgentToAnimator(animView);
-			nanvView.LinkInputToAnimator(animView);
+			nanvView.LinkInputToAnimator();
 			camView.Link(animView);
 			
 			SitterNodeDataSystem.AddSitterNodeData(nanvView,animView);

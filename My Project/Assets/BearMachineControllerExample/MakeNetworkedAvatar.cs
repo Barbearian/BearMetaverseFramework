@@ -37,7 +37,7 @@ namespace Bear{
 			if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti = 6;
 		
 			nanvView.LinkNavMeshAgentToAnimator(animView);
-			nanvView.LinkInputToAnimator(animView);
+			nanvView.LinkInputToAnimator();
 			camView.Link(animView);
 
 			SitterNodeDataSystem.AddSitterNodeData(nanvView,animView,1);
@@ -61,7 +61,7 @@ namespace Bear{
 			if(nanvView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti = 6;
 		
 			nanvView.LinkNavMeshAgentToAnimator(animView);
-			nanvView.LinkInputToAnimator(animView);
+			nanvView.LinkInputToAnimator();
 			
 			nanvView.AddNodeData<NetworkedObjectNodeData>(new NetworkedObjectNodeData("Bear",NetworkedObjectType.networked));
 			nanvView.AddNodeData<NetworkedNavigatorNodeData>(new NetworkedNavigatorNodeData(animView));

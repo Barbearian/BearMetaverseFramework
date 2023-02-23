@@ -26,7 +26,7 @@ namespace Bear{
 			if(cView.TryGetNodeData<MovementNodeData>(out var data))data.speedMulti = 3;
 
 			cView.LinkCharacterControllerToAnimator(animView);
-			cView.LinkInputToAnimator(animView);
+			cView.LinkInputToAnimator();
 			camView.Link(animView);
 
 			cView.AddNodeData(new SpeedUpNodeData());

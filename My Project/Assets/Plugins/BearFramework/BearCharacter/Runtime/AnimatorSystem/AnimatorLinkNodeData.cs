@@ -15,6 +15,10 @@ namespace Bear
             node.RegisterSignalReceiver<PlayAnimationNodeSignal>((x) => {
                 Target.ReceiveNodeSignal(x);
             }, true).AddTo(receivers);
+
+            node.RegisterSignalReceiver<PlayIndexedAnimationNodeSignal>((x) => {
+                Target.ReceiveNodeSignal(x);
+            }, true).AddTo(receivers);
         }
     }
 
