@@ -13,7 +13,7 @@ namespace Bear
         {
             base.Attached(node);
             node.RegisterSignalReceiver<PlayAnimationNodeSignal>((x) => {
-                node.ReceiveNodeSignal<AnimatorLinkNodeData>(x);
+                Target.ReceiveNodeSignal(x);
             }, true).AddTo(receivers);
         }
     }
