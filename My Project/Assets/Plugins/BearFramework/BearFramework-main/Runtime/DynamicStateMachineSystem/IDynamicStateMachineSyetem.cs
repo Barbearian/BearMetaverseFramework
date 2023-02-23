@@ -1,8 +1,5 @@
-using JetBrains.Annotations;
 using System.Collections.Generic;
 using System;
-using Codice.Client.BaseCommands;
-using System.Xml;
 
 namespace Bear
 {

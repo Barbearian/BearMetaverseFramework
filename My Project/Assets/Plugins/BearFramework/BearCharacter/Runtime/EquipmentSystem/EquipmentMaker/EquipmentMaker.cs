@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using Unity.Plastic.Newtonsoft.Json.Linq;
-using UnityEditor;
 using UnityEngine;
 
 namespace Bear
