@@ -69,7 +69,7 @@ namespace Bear
 
         public static void MoveAndRotate(this INavMeshAgentController view, Vector3 dir)
         {
-            view.Rotate(dir);
+            view.Rotate(Quaternion.LookRotation(dir));
             
             view.Move(dir);
         }

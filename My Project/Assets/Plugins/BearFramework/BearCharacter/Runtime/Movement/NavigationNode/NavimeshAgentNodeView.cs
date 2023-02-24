@@ -51,7 +51,7 @@ namespace Bear
             this.NotifySpeed();
 
             this.Move(directionalInputNode.MoveDir);
-            this.Rotate(directionalInputNode.RotateDir);
+            this.Rotate(Quaternion.LookRotation(directionalInputNode.RotateDir));
         }
 
 	    private void MoveTo(Vector3 target){
