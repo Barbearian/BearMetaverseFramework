@@ -48,7 +48,9 @@ namespace Bear
             this.NotifySpeed();
 
             this.Move(DirectionalMovementInputNode.MoveDir);
-            this.Rotate(DirectionalMovementInputNode.RotateDir);
+
+            lerp.SetTargetRotation(DirectionalMovementInputNode.RotateDir);
+            this.Rotate(lerp.GetRotation());
         }
 
         public void Init(INode root) {
