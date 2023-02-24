@@ -6,8 +6,6 @@ namespace Bear
 	using UnityEngine;
     public class NavMeshAgentNodeData : INodeData, IOnAttachedToNode,IOnDetachedFromNode, INavMeshAgentController
     {
-        public NavMeshAgent agent;
-
         public NavigatorInputNodeData PointInputNode { get; private set; } = new NavigatorInputNodeData();
 
         public DirectionalMovementInputNodeData DirectionalMovementInputNode { get; private set; } = new DirectionalMovementInputNodeData();
@@ -67,7 +65,7 @@ namespace Bear
             lerp = new CharacterRotationLerp()
             {
                 RotationSpeed= 10,
-                rotationTarget = agent.transform
+                rotationTarget = Agent.transform
             };
         }
         
