@@ -19,6 +19,7 @@ namespace Bear{
 		public float decay = 0.9f;
 		public Vector3 gravity;
 		private Vector3 gravityAccumulation;
+		private CharacterRotationLerp lerp;
 		public Vector3 rootPosition;
 
 		public bool CanMoving = true;
@@ -59,7 +60,10 @@ namespace Bear{
 		
 		public void MyFixedUpdate() {
 			//rotate
-            if (CanRotating) this.Rotate(DirectionalMovementInputNode.RotateDir);
+			if (CanRotating) {
+				lerp.SetTargetRotation(DirectionalMovementInputNode.RotateDir);
+                this.Rotate(lerp.GetRotation());
+            } 
 
 			//calculate gravity
 			gravityAccumulation += gravity *Time.deltaTime;
@@ -89,6 +93,11 @@ namespace Bear{
 		}
 		
 		private void Init(INode root){
+			lerp = new CharacterRotationLerp()
+			{
+				rotationTarget = _cc.transform,
+				RotationSpeed = 10f
+			};
 			DirectionalMovementInputNode = root.GetOrCreateNodeData<DirectionalMovementInputNodeData>(DirectionalMovementInputNode);
 
 			MovementData = root.GetOrCreateNodeData<MovementNodeData>(MovementData);

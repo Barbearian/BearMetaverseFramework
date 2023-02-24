@@ -17,9 +17,8 @@ namespace Bear{
 	}
 	
 	public static class ICharacterControllerSystem{
-		public static void Rotate(this ICharacterController controller,Vector3 forward){
-			if (forward.sqrMagnitude > 0)
-				controller.CharacterController.transform.forward  = forward;
+		public static void Rotate(this ICharacterController controller,Quaternion rotation){
+			controller.CharacterController.transform.rotation = rotation;
 		}
 		
 		public static void Move(this ICharacterController controller,Vector3 dir){

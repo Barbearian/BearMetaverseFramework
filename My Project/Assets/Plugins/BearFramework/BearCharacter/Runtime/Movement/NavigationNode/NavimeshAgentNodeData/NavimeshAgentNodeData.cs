@@ -17,7 +17,7 @@ namespace Bear
         public MovementObserverNodeData MovementObserver { get; private set; } = new MovementObserverNodeData();
 
         public NavMeshAgent Agent { get; private set; }
-
+        private CharacterRotationLerp lerp;
         public void Attached(INode node)
         {
             if (node is IOnUpdateUpdater uNode && node is NodeView view)
@@ -62,6 +62,11 @@ namespace Bear
             DirectionalMovementInputNode.DRotate += (dir) => { DirectionalMovementInputNode.MoveDir = dir; };
             PointInputNode.DMoveTo += this.MoveTo;
 
+            lerp = new CharacterRotationLerp()
+            {
+                RotationSpeed= 10,
+                rotationTarget = agent.transform
+            };
         }
         
 	    public void MoveTo(Vector3 moveTo){

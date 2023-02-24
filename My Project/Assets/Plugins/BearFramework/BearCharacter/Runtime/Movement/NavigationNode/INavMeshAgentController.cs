@@ -70,6 +70,7 @@ namespace Bear
         public static void MoveAndRotate(this INavMeshAgentController view, Vector3 dir)
         {
             view.Rotate(dir);
+            
             view.Move(dir);
         }
 
@@ -108,13 +109,9 @@ namespace Bear
 
         }
 
-        public static void Rotate(this INavMeshAgentController view, Vector3 faceDir)
+        public static void Rotate(this INavMeshAgentController view, Quaternion rotation)
         {
-            if (faceDir.sqrMagnitude > 0)
-            {
-                view.Agent.transform.forward = faceDir;
-            }
-
+            view.Agent.transform.rotation = rotation;
         }
 
 	    public static void MoveTo(this INavMeshAgentController view, Vector3 des,bool triggerStartMoving = true)
