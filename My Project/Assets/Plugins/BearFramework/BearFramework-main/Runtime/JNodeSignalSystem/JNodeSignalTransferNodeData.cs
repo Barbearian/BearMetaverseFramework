@@ -32,9 +32,15 @@ namespace Bear
             }
         }
 
+        public static void AssignTransferAddress(this JNodeSignal signal,string address) {
+            var key = typeof(JNodeSignalTransferNodeData).ToString();
+            signal.Token[key] = address;
+        }
+
         public static string PopTransferAddress(this JNodeSignal signal)
         {
             var token = signal.Token[typeof(JNodeSignalTransferNodeData).ToString()];
+
             if (token is JArray list)
             {
                 if (list.Count >= 1)
@@ -48,6 +54,11 @@ namespace Bear
                 }
             }
 
+            if (token is JValue value)
+            {
+                var address = value.ToObject<string>();
+                return address;
+            }
             return null;
         }
     }

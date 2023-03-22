@@ -16,5 +16,6 @@ namespace Bear{
 			DOTriggerExit?.Invoke(collider);
 
 		}
+
 	}
 }
